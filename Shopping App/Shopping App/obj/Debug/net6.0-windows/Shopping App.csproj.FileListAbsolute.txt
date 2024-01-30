@@ -1,0 +1,22 @@
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\bin\Debug\net6.0-windows\Shopping App.exe
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\bin\Debug\net6.0-windows\Shopping App.deps.json
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\bin\Debug\net6.0-windows\Shopping App.runtimeconfig.json
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\bin\Debug\net6.0-windows\Shopping App.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\bin\Debug\net6.0-windows\Shopping App.pdb
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\bin\Debug\net6.0-windows\Guna.UI2.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\bin\Debug\net6.0-windows\System.Management.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping App.csproj.AssemblyReference.cache
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping App.csproj.GenerateResource.cache
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping App.AssemblyInfoInputs.cache
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping App.AssemblyInfo.cs
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping App.csproj.CoreCompileInputs.cache
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping App.csproj.CopyComplete
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping App.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\refint\Shopping App.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping App.pdb
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping App.genruntimeconfig.cache
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\ref\Shopping App.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping_App.MainMenu.resources
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping_App.Properties.Resources.resources
