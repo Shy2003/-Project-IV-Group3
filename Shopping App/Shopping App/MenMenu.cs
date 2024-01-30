@@ -16,5 +16,15 @@ namespace Shopping_App
         {
             InitializeComponent();
         }
+
+        private void MenMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

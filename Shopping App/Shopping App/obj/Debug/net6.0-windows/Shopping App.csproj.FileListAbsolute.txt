@@ -20,3 +20,4 @@ C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\ref\Shopping App.dll
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping_App.MainMenu.resources
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping_App.Properties.Resources.resources
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Shopping App\obj\Debug\net6.0-windows\Shopping_App.MenMenu.resources

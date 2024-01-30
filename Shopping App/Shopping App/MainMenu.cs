@@ -56,5 +56,12 @@ namespace Shopping_App
         {
 
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e) // Men button
+        {
+            MenMenu menmenu = new MenMenu();
+            menmenu.Show();
+            Visible = false;
+        }
     }
 }
