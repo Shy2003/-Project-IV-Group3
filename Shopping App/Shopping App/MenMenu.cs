@@ -26,5 +26,22 @@ namespace Shopping_App
         {
 
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            MainMenu mainmenu = new MainMenu();
+            mainmenu.Show();
+            Visible = false;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
