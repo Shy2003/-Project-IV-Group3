@@ -31,6 +31,8 @@ public class ServerHandling
 
     void HandleClient(object obj)
     {
+       
+
         TcpClient client = (TcpClient)obj;
         NetworkStream stream = client.GetStream();
 
@@ -41,11 +43,11 @@ public class ServerHandling
             string data = Encoding.ASCII.GetString(bytes, 0, i);
             Console.WriteLine("Received: {0}", data);
 
-            data = data.ToUpper();
-            byte[] msg = Encoding.ASCII.GetBytes(data);
+            string response = "Hello From Server xD";
 
+            byte[] msg = Encoding.ASCII.GetBytes(response);
             stream.Write(msg, 0, msg.Length);
-            Console.WriteLine("Sent: {0}", data);
+            Console.WriteLine("Sent: {0}", response);
         }
         client.Close();
     }

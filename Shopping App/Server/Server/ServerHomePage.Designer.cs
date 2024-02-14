@@ -114,6 +114,7 @@
             guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Button16 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button17 = new Guna.UI2.WinForms.Guna2Button();
+            label8 = new Label();
             panel1.SuspendLayout();
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
@@ -135,7 +136,7 @@
             panel1.Controls.Add(guna2Button1);
             panel1.Location = new Point(0, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(481, 1016);
+            panel1.Size = new Size(477, 1016);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -399,7 +400,7 @@
             guna2Button10.ShadowDecoration.CustomizableEdges = customizableEdges27;
             guna2Button10.Size = new Size(315, 79);
             guna2Button10.TabIndex = 2;
-            guna2Button10.Text = "\U0001f9d1🏿‍💻    PC01";
+            guna2Button10.Text = "\U0001f9d1🏿‍💻    PC04";
             guna2Button10.TextAlign = HorizontalAlignment.Left;
             // 
             // guna2Panel4
@@ -448,7 +449,7 @@
             guna2Button12.ShadowDecoration.CustomizableEdges = customizableEdges33;
             guna2Button12.Size = new Size(315, 79);
             guna2Button12.TabIndex = 2;
-            guna2Button12.Text = "\U0001f9d1🏿‍💻    PC01";
+            guna2Button12.Text = "\U0001f9d1🏿‍💻    PC05";
             guna2Button12.TextAlign = HorizontalAlignment.Left;
             // 
             // guna2Button13
@@ -467,6 +468,7 @@
             guna2Button13.Size = new Size(315, 79);
             guna2Button13.TabIndex = 5;
             guna2Button13.Text = "Start Server";
+            guna2Button13.Click += guna2Button13_Click;
             // 
             // label2
             // 
@@ -580,7 +582,7 @@
             guna2Button15.ShadowDecoration.CustomizableEdges = customizableEdges41;
             guna2Button15.Size = new Size(315, 79);
             guna2Button15.TabIndex = 2;
-            guna2Button15.Text = "\U0001f9d1🏿‍💻    PC01";
+            guna2Button15.Text = "\U0001f9d1🏿‍💻    PC06";
             guna2Button15.TextAlign = HorizontalAlignment.Left;
             // 
             // guna2Panel6
@@ -629,14 +631,26 @@
             guna2Button17.ShadowDecoration.CustomizableEdges = customizableEdges47;
             guna2Button17.Size = new Size(315, 79);
             guna2Button17.TabIndex = 2;
-            guna2Button17.Text = "\U0001f9d1🏿‍💻    PC02";
+            guna2Button17.Text = "\U0001f9d1🏿‍💻    PC03";
             guna2Button17.TextAlign = HorizontalAlignment.Left;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.ForeColor = Color.LimeGreen;
+            label8.Location = new Point(828, 129);
+            label8.Name = "label8";
+            label8.Size = new Size(83, 57);
+            label8.TabIndex = 14;
+            label8.Text = "👋";
             // 
             // ServerHomePage
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1896, 1016);
+            Controls.Add(label8);
             Controls.Add(label6);
             Controls.Add(label7);
             Controls.Add(guna2Panel5);
@@ -704,5 +718,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2Button guna2Button16;
         private Guna.UI2.WinForms.Guna2Button guna2Button17;
+        private Label label8;
     }
 }
