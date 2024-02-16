@@ -19,3 +19,4 @@ C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\De
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.pdb
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.genruntimeconfig.cache
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\Debug\net6.0-windows\ref\Client_PC01.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.ChatBox.resources
