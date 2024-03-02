@@ -20,3 +20,4 @@ C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\obj\Debug\net6.0-windows\ref\Server.dll
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\obj\Debug\net6.0-windows\Server.Properties.Resources.resources
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\obj\Debug\net6.0-windows\Server.ServerHomePage.resources
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\obj\Debug\net6.0-windows\Server.ServerChatBox.resources
