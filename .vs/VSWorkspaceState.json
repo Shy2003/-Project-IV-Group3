@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Shopping App",
+    "\\Shopping App\\Client"
   ],
+  "SelectedNode": "\\Shopping App\\Client\\PC01Connection.cs",
   "PreviewInSolutionExplorer": false
 }

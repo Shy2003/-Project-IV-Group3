@@ -7,5 +7,8 @@
     <Compile Update="ServerHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ServerOrderPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

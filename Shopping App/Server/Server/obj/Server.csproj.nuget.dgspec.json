@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\Server.csproj": {}
+    "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\Server.csproj": {
+    "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\Server.csproj",
+        "projectUniqueName": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\Server.csproj",
-        "packagesPath": "C:\\Users\\EthanNguyen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\obj\\",
+        "projectPath": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj",
+        "packagesPath": "C:\\Users\\ajvwo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\EthanNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ajvwo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -64,7 +69,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
