@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ODoVjZrdl2Gw4jR7TmcpWff/YsRIF/rqzXiHxlgdfAWgNJNkzW4CabORVVGMuqjCG2WlWrIZ5YXPxUHkqldPeQ==",
+  "dgSpecHash": "lu2ChNFdGm+0tRNWlVhul1hRxMmSzR77CYO5DWxExvOBef9yDXxR3/7Jj9ka+YA0MIXdgzvSNKKpEkQPO+7lzQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client\\Client_PC01.csproj",
+  "projectFilePath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client\\Client_PC01.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\EthanNguyen\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",
-    "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
-    "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512"
+    "C:\\Users\\alimm\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",
+    "C:\\Users\\alimm\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\alimm\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\server\\server\\serverhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\serverhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|c:\\users\\alimm\\source\\repos\\-project-iv-group3\\shopping app\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\server\\server\\serverhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\serverhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\server\\server\\serverhandling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\serverhandling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\client\\pc01connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|solutionrelative:client\\pc01connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\client\\client_pc01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|solutionrelative:client\\client_pc01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\client\\client_pc01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|solutionrelative:client\\client_pc01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServerHandling.cs",
+              "DocumentMoniker": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerHandling.cs",
+              "RelativeDocumentMoniker": "Server\\Server\\ServerHandling.cs",
+              "ToolTip": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerHandling.cs",
+              "RelativeToolTip": "Server\\Server\\ServerHandling.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T18:03:37.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServerHomePage.cs",
+              "DocumentMoniker": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerHomePage.cs",
+              "RelativeDocumentMoniker": "Server\\Server\\ServerHomePage.cs",
+              "ToolTip": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerHomePage.cs",
+              "RelativeToolTip": "Server\\Server\\ServerHomePage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T18:03:37.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PC01Connection.cs",
+              "DocumentMoniker": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client\\PC01Connection.cs",
+              "RelativeDocumentMoniker": "Client\\PC01Connection.cs",
+              "ToolTip": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client\\PC01Connection.cs",
+              "RelativeToolTip": "Client\\PC01Connection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T18:03:37.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Client_PC01.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client\\Client_PC01.cs",
+              "RelativeDocumentMoniker": "Client\\Client_PC01.cs",
+              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client\\Client_PC01.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client\\Client_PC01.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-05T18:03:37.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Client_PC01.cs",
+              "DocumentMoniker": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client\\Client_PC01.cs",
+              "RelativeDocumentMoniker": "Client\\Client_PC01.cs",
+              "ToolTip": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client\\Client_PC01.cs",
+              "RelativeToolTip": "Client\\Client_PC01.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-05T18:03:37.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Program.cs",
+              "RelativeDocumentMoniker": "Server\\Server\\Program.cs",
+              "ToolTip": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Program.cs",
+              "RelativeToolTip": "Server\\Server\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T18:03:37.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServerHomePage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerHomePage.cs",
+              "RelativeDocumentMoniker": "Server\\Server\\ServerHomePage.cs",
+              "ToolTip": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerHomePage.cs [Design]",
+              "RelativeToolTip": "Server\\Server\\ServerHomePage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T18:03:37.697Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
