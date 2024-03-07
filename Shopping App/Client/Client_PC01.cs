@@ -19,6 +19,8 @@ namespace Client
 
         }
 
+        // Ali Test
+
         private void guna2Button13_Click(object sender, EventArgs e) // Connect to Server button
         {
             PC01Connection client = new PC01Connection("127.0.0.1", 13000);
