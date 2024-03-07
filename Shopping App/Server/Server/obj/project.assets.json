@@ -146,11 +146,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj",
+      "projectUniqueName": "C:\\Users\\alimm\\Desktop\\College\\Year 2\\Semester 2\\Project IV\\ProjectIV-Group3-NEW\\Shopping App\\Server\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj",
+      "projectPath": "C:\\Users\\alimm\\Desktop\\College\\Year 2\\Semester 2\\Project IV\\ProjectIV-Group3-NEW\\Shopping App\\Server\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\alimm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\obj\\",
+      "outputPath": "C:\\Users\\alimm\\Desktop\\College\\Year 2\\Semester 2\\Project IV\\ProjectIV-Group3-NEW\\Shopping App\\Server\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alimm\\AppData\\Roaming\\NuGet\\NuGet.Config",

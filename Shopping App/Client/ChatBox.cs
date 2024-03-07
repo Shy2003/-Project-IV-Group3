@@ -12,148 +12,159 @@ namespace Client_PC01
 {
     public partial class ChatBox : Form
     {
-        private PC01Connection pc01Connection;
-        private Button CloseChatButton;         //declare the CloseChatButton
+        //client connection object for managing server communication
+        private PC01Connection client;
 
+        //constructor initializes the form and sets initial visibility states for UI components
         public ChatBox()
         {
             InitializeComponent();
+            //hide chat UI components until the chatbox is explicitly opened
+            lstChat.Visible = txtMessage.Visible = btnSendMessage.Visible = btnSendImage.Visible = btnClearChat.Visible = false;
+            //ensure the button Connect to Server is visible and Disconnect Server is hidden initially
+            guna2Button1.Visible = true;
+            btnDisconnectServer.Visible = false;
+        }
 
-            pc01Connection = new PC01Connection("127.0.0.1", 8000);         //just an example for while I work
+        //event handler for toggling the chat box open/close
+        private void btnToggleChat_Click(object sender, EventArgs e)
+        {
+            //check current visibility state of the chat box to determine action
+            bool isChatOpen = btnSendMessage.Visible;
 
-            //initialize Open Chatbox button (FYI: guna2Button1 is the Open Chatbox button)
-            guna2Button1.Text = "Open Chatbox";
-            guna2Button1.Click += guna2Button1_Click;
-
-            //initialize Close Chatbox button
-            CloseChatButton = new Button
+            if (!isChatOpen)
             {
-                Text = "Close Chatbox",
-                Size = guna2Button1.Size,       //match the size of the Open Chatbox button
-                Location = guna2Button1.Location,       //place it in the same location too
-                Font = new Font("Segoe UI", 14.142858f, FontStyle.Bold),        //match the font as the Open Chatbox button
-                BackColor = SystemColors.ActiveBorder,      //set the background color aswell
-                ForeColor = Color.Black,        //lastly, set the text color
-                Visible = false     //initially hidden
-            };
-            this.Controls.Add(CloseChatButton);
-            CloseChatButton.Click += CloseChatButton_Click;
-
-            //initial visibility setup for chat components
-            MessageTextBox.Visible = false;
-            SendMessageButton.Visible = false;
-            ChatTextBox.Visible = false;
-        }
-
-        private void ChatBox_Load(object sender, EventArgs e)
-        {
-            //my initialization code will go here
-        }
-
-        private void SendMessageButton_Click(object sender, EventArgs e)
-        {
-            if (pc01Connection != null && !string.IsNullOrWhiteSpace(MessageTextBox.Text))
-            {
-                string response = pc01Connection.SendMessage(MessageTextBox.Text);
-                ChatTextBox.AppendText($"Server: {response}\n");
-                MessageTextBox.Clear();     //this clears the message box after sending
-            }
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            //show chat components
-            MessageTextBox.Visible = true;
-            SendMessageButton.Visible = true;
-            ChatTextBox.Visible = true;
-
-            //hide Open Chatbox button and show Close Chatbox button for better user experience
-            guna2Button1.Visible = false;
-            CloseChatButton.Visible = true;
-
-            MessageTextBox.Focus();         //focus the message box for immediate typing, enchancing user experience
-        }
-
-        public bool ConnectToServer()       //method had to be public
-        {
-            if (!pc01Connection.Connect())
-            {
-                MessageBox.Show("Failed to connect to server.", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                //if chatbox is not open, open it and hide instructions
+                lstChat.Visible = txtMessage.Visible = btnSendMessage.Visible = btnSendImage.Visible = true;
+                lblInstructions.Visible = false;        //hide the instructional text
+                btnToggleChat.Text = "Close Chatbox";
             }
             else
             {
-                MessageBox.Show("Successfully connected to server.", "Connection Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                //if chatbox is open, prompt the user to clear the chat history upon closing
+                var result = MessageBox.Show("Do you want to clear chat history?", "Clear History", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    //clear chat history if the user chooses yes
+                    lstChat.Items.Clear();
+                }
+
+                //close the chat box and show the instructions again
+                lstChat.Visible = txtMessage.Visible = btnSendMessage.Visible = btnSendImage.Visible = btnClearChat.Visible = false;
+                lblInstructions.Visible = true;
+                btnToggleChat.Text = "Open Chatbox";
             }
         }
 
-        private void CloseChatButton_Click(object sender, EventArgs e)
+        //clears the chat history
+        private void btnClearChat_Click(object sender, EventArgs e)
         {
-            //hide chat components
-            MessageTextBox.Visible = false;
-            SendMessageButton.Visible = false;
-            ChatTextBox.Visible = false;
+            lstChat.Items.Clear();
+        }
 
-            //show Open Chatbox button and hide Close Chatbox button
-            guna2Button1.Visible = true;
-            CloseChatButton.Visible = false;
-
-            //clear the chat history only if the user wishes to for enchanced user experience
-            if (MessageBox.Show("Do you want to delete the chat history?", "Clear Chat", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+        //attempts to connect or disconnect from the server depending on current state
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            //show message on successful connection and toggle visibility of connect/disconnect buttons
+            client = new PC01Connection("127.0.0.1", 13000);
+            if (client.Connect())
             {
-                ChatTextBox.Clear();
+                MessageBox.Show("Connected to server.");
+                guna2Button1.Visible = false;
+                btnDisconnectServer.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Failed to connect to the server.");
             }
         }
 
-        //private void ConfirmOrderButton_Click(object sender, EventArgs e)
-        //{
-        //    //collect order details and send them to the server
-        //    var orderDetails = GetOrderDetails();
-        //    if (pc01Connection != null && !string.IsNullOrWhiteSpace(orderDetails))
-        //    {
-        //        string response = pc01Connection.SendMessage(orderDetails);
-        //        MessageBox.Show($"Order response from server: {response}");
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Please select at least one item before confirming the order.");
-        //    }
-        //}
-
-        //private string GetOrderDetails()
-        //{
-        //    //retrieve the quantities from each numeric up-down control
-        //    int espressoQuantity = (int)espressoNumericUpDown.Value;
-        //    int americanoQuantity = (int)americanoNumericUpDown.Value;
-        //    int latteQuantity = (int)latteNumericUpDown.Value;
-        //    int cappuccinoQuantity = (int)cappuccinoNumericUpDown.Value;
-        //    int macchiatoQuantity = (int)macchiatoNumericUpDown.Value;
-        //    int cortadoQuantity = (int)cortadoNumericUpDown.Value;
-        //    int filterCoffeeQuantity = (int)filterCoffeeNumericUpDown.Value;
-        //    int teaQuantity = (int)teaNumericUpDown.Value;
-
-        //    //build the order details string
-        //    StringBuilder orderBuilder = new StringBuilder();
-        //    orderBuilder.AppendFormat("Espresso: {0}, ", espressoQuantity);
-        //    orderBuilder.AppendFormat("Americano: {0}, ", americanoQuantity);
-        //    orderBuilder.AppendFormat("Latte: {0}, ", latteQuantity);
-        //    orderBuilder.AppendFormat("Cappuccino: {0}, ", cappuccinoQuantity);
-        //    orderBuilder.AppendFormat("Macchiato: {0}, ", macchiatoQuantity);
-        //    orderBuilder.AppendFormat("Cortado: {0}, ", cortadoQuantity);
-        //    orderBuilder.AppendFormat("Filter Coffee: {0}, ", filterCoffeeQuantity);
-        //    orderBuilder.AppendFormat("Tea: {0}", teaQuantity);
-
-        //    //return the order details
-        //    return orderBuilder.ToString();
-        //}
-
-        private void ChatTextBox_TextChanged(object sender, EventArgs e)
+        //handles disconnection from the server
+        private void btnDisconnectServer_Click(object sender, EventArgs e)
         {
-
+            if (client != null)
+            {
+                client.Disconnect();
+                MessageBox.Show("Disconnected from server.");
+                //toggle visibility to show Connect to Server button again
+                guna2Button1.Visible = true;
+                btnDisconnectServer.Visible = false;
+            }
         }
 
-        private void MessageTextBox_TextChanged(object sender, EventArgs e)
+        //sends a message to the server and displays the servers response
+        private void btnSendMessage_Click(object sender, EventArgs e)
+        {
+            string message = txtMessage.Text.Trim();
+            if (!string.IsNullOrEmpty(message))
+            {
+                if (client == null || !client.IsConnected)      //check if not connected or client is null
+                {
+                    client = new PC01Connection("127.0.0.1", 13000);
+                    if (!client.Connect())
+                    {
+                        MessageBox.Show("Failed to connect to the server.");
+                        return;         //exit the method if connection fails
+                    }
+                }
+
+                //assuming connection is now established, send the message
+                string response = client.SendMessage(message);
+                lstChat.Items.Add("Me: " + message);
+                lstChat.Items.Add("Server: " + response);
+                txtMessage.Clear();
+
+                //keep the session alive for ongoing communication
+            }
+        }
+
+        //opens a dialog for the user to select an image to send
+        private void btnSendImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = openFileDialog.FileName;
+
+                //check if already connected or if the client is null
+                if (client == null || !client.IsConnected)
+                {
+                    client = new PC01Connection("127.0.0.1", 13000);
+                    if (!client.Connect())
+                    {
+                        MessageBox.Show("Failed to connect to the server.");
+                        return;         //exit if connection fails ;(
+                    }
+                }
+
+                //if connected, proceed to send the image :)
+                bool success = client.SendImage(imagePath);
+                if (success)
+                {
+                    lstChat.Items.Add("Me: [Image sent]");
+                }
+                else
+                {
+                    lstChat.Items.Add("Failed to send image.");
+                }
+
+                //Note: I am assuming we don't need to receive a confirmation message from the server here
+                //keep the session alive for further communication
+            }
+        }
+
+        private void txtMessage_TextChanged(object sender, EventArgs e)
+        {
+            //potentially to be used
+        }
+
+        private void lstChat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //this might be used if selecting chat items should trigger actions, I doubt it though
+        }
+
+        private void lblInstructions_Click(object sender, EventArgs e)
         {
 
         }

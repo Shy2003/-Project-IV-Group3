@@ -20,3 +20,26 @@ C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\De
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.genruntimeconfig.cache
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\Debug\net6.0-windows\ref\Client_PC01.dll
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.ChatBox.resources
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.csproj.AssemblyReference.cache
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.ChatBox.resources
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\Client.Client_PC01.resources
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.csproj.GenerateResource.cache
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.AssemblyInfoInputs.cache
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.AssemblyInfo.cs
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.csproj.CoreCompileInputs.cache
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.sourcelink.json
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.dll
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\refint\Client_PC01.dll
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.pdb
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\bin\Debug\net6.0-windows\Client_PC01.exe
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\bin\Debug\net6.0-windows\Client_PC01.deps.json
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\bin\Debug\net6.0-windows\Client_PC01.runtimeconfig.json
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\bin\Debug\net6.0-windows\Client_PC01.dll
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\bin\Debug\net6.0-windows\Client_PC01.pdb
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\bin\Debug\net6.0-windows\Guna.UI2.dll
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\bin\Debug\net6.0-windows\System.Management.dll
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\Client_P.865E0448.Up2Date
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.genruntimeconfig.cache
+C:\Users\alimm\Desktop\College\Year 2\Semester 2\Project IV\ProjectIV-Group3-NEW\Shopping App\Client\obj\Debug\net6.0-windows\ref\Client_PC01.dll
