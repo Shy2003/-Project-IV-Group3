@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\server\\server\\serverorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|c:\\users\\ajvwo\\source\\repos\\-project-iv-group3\\shopping app\\server\\server\\serverorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\serverorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|c:\\users\\ajvwo\\source\\repos\\-project-iv-group3\\shopping app\\server\\server\\serverorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\server\\server\\serverorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\serverorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|c:\\users\\ajvwo\\source\\repos\\-project-iv-group3\\shopping app\\server\\server\\serverorderpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\server\\server\\serverorderpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\serverorderpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|c:\\users\\ajvwo\\source\\repos\\-project-iv-group3\\shopping app\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -110,8 +110,7 @@
               "RelativeToolTip": "Server\\Server\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T01:01:35.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T01:01:35.862Z"
             },
             {
               "$type": "Document",
@@ -121,7 +120,7 @@
               "RelativeDocumentMoniker": "Server\\Server\\ServerOrderPage.Designer.cs",
               "ToolTip": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerOrderPage.Designer.cs",
               "RelativeToolTip": "Server\\Server\\ServerOrderPage.Designer.cs",
-              "ViewState": "AQIAAAoBAAAAAAAAAAAowCQBAAAAAAAA",
+              "ViewState": "AQIAACgBAAAAAAAAAAAowCQBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-07T00:51:11.475Z",
               "EditorCaption": ""
@@ -134,7 +133,7 @@
               "RelativeDocumentMoniker": "Server\\Server\\ServerOrderPage.cs",
               "ToolTip": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerOrderPage.cs",
               "RelativeToolTip": "Server\\Server\\ServerOrderPage.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAgwCYAAABYAAAA",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAmwGQAAABbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-04T19:56:15.337Z",
               "EditorCaption": ""
@@ -160,8 +159,7 @@
               "ToolTip": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerHomePage.cs [Design]",
               "RelativeToolTip": "Server\\Server\\ServerHomePage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T18:05:11.776Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-04T18:05:11.776Z"
             }
           ]
         }

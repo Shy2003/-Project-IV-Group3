@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,29 +21,10 @@ namespace Server
 
         private void ServerOrderPage_Load(object sender, EventArgs e)
         {
-            // changing text test
-            String exampleText = "PC 01";
-            PcName.Text = exampleText;
-
-            // cloning order panel test
-            int BasePanelOffset = OrderBox.Location.Y + OrderBox.Height + 15;
-            int noOffset = 0;
-            Guna2Panel mainBoxCopy = ClonePanel(OrderBox, OrderItems, BasePanelOffset);
-
-            // cloning children of main panel
-            Guna2Panel titleBoxCopy = ClonePanel(PcNameBox, mainBoxCopy, noOffset);
-            Guna2Panel listBoxCopy = ClonePanel(OrderTextBox, mainBoxCopy, noOffset);
-            Guna2PictureBox imageCopy = ClonePanel(OrderImage, mainBoxCopy, noOffset);
-
-            // cloning text of sub-panels
-            Guna2HtmlLabel titleTextCopy = CloneLabel(PcName, titleBoxCopy, noOffset);
-            Guna2HtmlLabel orderTextCopy = CloneLabel(OrderText, listBoxCopy, noOffset);
-
-            // alter clone text test
-            exampleText = "PC 03";
-            titleTextCopy.Text = exampleText;
-            exampleText = "This is a test";
-            orderTextCopy.Text = exampleText;
+            // test of creating three orders
+            setOrderData(PcName, OrderText, OrderImage, "PC 01", "Espresso x1", "Untitled.png");
+            CloneOrderItem("PC 02", "Tea x2", "Untitled.png", 1);
+            CloneOrderItem("PC 04", "Filtered Coffee x1", "Untitled.png", 2);
         }
 
         // in case of panel being picture box
@@ -112,8 +94,31 @@ namespace Server
             return newLabel;
         }
 
-        // clone entire order item
-        private void CloneOrderItem() { 
+        // create a new order item - should be called whenever a new order is recieved from client
+        // may need to alter it once the client is integrated
+        private void CloneOrderItem(String pcName, String orderItems, String orderImage, int iteration) {
+            // cloning order panel test
+            int BasePanelOffset = (OrderBox.Location.Y + OrderBox.Height + 15) * iteration;
+            int noOffset = 0;
+            Guna2Panel mainBoxCopy = ClonePanel(OrderBox, OrderItems, BasePanelOffset);
+
+            // cloning children of main panel
+            Guna2Panel titleBoxCopy = ClonePanel(PcNameBox, mainBoxCopy, noOffset);
+            Guna2Panel listBoxCopy = ClonePanel(OrderTextBox, mainBoxCopy, noOffset);
+            Guna2PictureBox imageCopy = ClonePanel(OrderImage, mainBoxCopy, noOffset);
+
+            // cloning text of sub-panels
+            Guna2HtmlLabel titleTextCopy = CloneLabel(PcName, titleBoxCopy, noOffset);
+            Guna2HtmlLabel orderTextCopy = CloneLabel(OrderText, listBoxCopy, noOffset);
+
+            setOrderData(titleTextCopy, orderTextCopy, imageCopy, pcName, orderItems, orderImage);
+        }
+
+        private void setOrderData(Guna2HtmlLabel titleUI, Guna2HtmlLabel orderUI, Guna2PictureBox imageUI, String pcName, String orderItems, String orderImage)
+        {
+            titleUI.Text = pcName;
+            orderUI.Text = orderItems;
+            imageUI.ImageLocation = orderImage;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
