@@ -9,16 +9,25 @@ namespace Server
         public ServerHomePage()
         {
             InitializeComponent();
+           
         }
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void StartServer()
+
+        private void guna2Button13_Click(object sender, EventArgs e) // Start Server button
         {
-            ServerHandling server = new ServerHandling("127.0.0.1", 13000);
+            // Start the server
+            ServerHandling server = new ServerHandling(13000);
             server.Start();
+
+            // Update the status label
+            lblStatus.Text = "Status: Server is running";
+
+            // Show a message box indicating that the server is running
+            MessageBox.Show("Server is running", "Server Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
@@ -31,10 +40,8 @@ namespace Server
 
         }
 
-        private void guna2Button13_Click(object sender, EventArgs e) // Start Server button
-        {
-            Task.Run(() => StartServer());
-        }
+
+
 
     }
 }

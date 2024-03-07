@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ttKqhQV+kjx/5a6FUKaVg7x3uCk5ccGYSX5ooOGsLYHoDy8KU8KQ9nn8iH/M9UcYFdJ6Fp3lNV2YfG/W0Qv24Q==",
+  "dgSpecHash": "wtIWvr59kjCGgAFcNbRtDPe6GOxlvHQxofZeWsOyMG5C08FwIBuACk4+GC8krScwUlOdWk/GR++2lL51J/jFrw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\soory\\Downloads\\PROJ-IV\\Shopping App\\Client\\Client_PC01.csproj",
+  "projectFilePath": "C:\\Users\\brian\\Pictures\\Project IV Recent\\Shopping App\\Client\\Client_PC01.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\soory\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",
-    "C:\\Users\\soory\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
-    "C:\\Users\\soory\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512"
+    "C:\\Users\\brian\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",
+    "C:\\Users\\brian\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\brian\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
