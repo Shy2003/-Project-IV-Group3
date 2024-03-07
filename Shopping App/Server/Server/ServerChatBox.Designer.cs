@@ -29,86 +29,73 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            label2 = new Label();
-            ServerRunningLabel = new Label();
-            SendButton = new Button();
-            BroadcastMessageTextBox = new TextBox();
-            MessageDisplayListBox = new ListBox();
+            RecievedMessages = new ListBox();
+            label3 = new Label();
+            textBox1 = new TextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(294, 23);
+            label1.Location = new Point(12, 648);
             label1.Name = "label1";
-            label1.Size = new Size(140, 20);
-            label1.TabIndex = 12;
-            label1.Text = "Received Messages:";
+            label1.Size = new Size(117, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Server Running...";
             label1.Click += label1_Click;
             // 
-            // label2
+            // RecievedMessages
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(294, 420);
-            label2.Name = "label2";
-            label2.Size = new Size(205, 20);
-            label2.TabIndex = 11;
-            label2.Text = "Enter a Message to Broadcast";
-            label2.Click += label2_Click;
+            RecievedMessages.FormattingEnabled = true;
+            RecievedMessages.ItemHeight = 20;
+            RecievedMessages.Location = new Point(135, 74);
+            RecievedMessages.Name = "RecievedMessages";
+            RecievedMessages.Size = new Size(840, 464);
+            RecievedMessages.TabIndex = 1;
+            RecievedMessages.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
-            // ServerRunningLabel
+            // label3
             // 
-            ServerRunningLabel.AutoSize = true;
-            ServerRunningLabel.Location = new Point(12, 648);
-            ServerRunningLabel.Name = "ServerRunningLabel";
-            ServerRunningLabel.Size = new Size(108, 20);
-            ServerRunningLabel.TabIndex = 10;
-            ServerRunningLabel.Text = "Server Running";
-            ServerRunningLabel.Click += ServerRunningLabel_Click;
+            label3.AutoSize = true;
+            label3.Location = new Point(135, 541);
+            label3.Name = "label3";
+            label3.Size = new Size(205, 20);
+            label3.TabIndex = 3;
+            label3.Text = "Enter a Message to Broadcast";
+            label3.Click += label3_Click;
             // 
-            // SendButton
+            // textBox1
             // 
-            SendButton.Location = new Point(294, 476);
-            SendButton.Name = "SendButton";
-            SendButton.Size = new Size(80, 29);
-            SendButton.TabIndex = 9;
-            SendButton.Text = "Send";
-            SendButton.UseVisualStyleBackColor = true;
-            SendButton.Click += SendButton_Click;
+            textBox1.Location = new Point(135, 564);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(310, 27);
+            textBox1.TabIndex = 4;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // BroadcastMessageTextBox
+            // button1
             // 
-            BroadcastMessageTextBox.Location = new Point(294, 443);
-            BroadcastMessageTextBox.Name = "BroadcastMessageTextBox";
-            BroadcastMessageTextBox.Size = new Size(316, 27);
-            BroadcastMessageTextBox.TabIndex = 8;
-            BroadcastMessageTextBox.TextChanged += BroadcastMessageTextBox_TextChanged;
-            // 
-            // MessageDisplayListBox
-            // 
-            MessageDisplayListBox.FormattingEnabled = true;
-            MessageDisplayListBox.ItemHeight = 20;
-            MessageDisplayListBox.Location = new Point(294, 58);
-            MessageDisplayListBox.Name = "MessageDisplayListBox";
-            MessageDisplayListBox.Size = new Size(651, 344);
-            MessageDisplayListBox.TabIndex = 7;
-            MessageDisplayListBox.SelectedIndexChanged += MessageDisplayListBox_SelectedIndexChanged;
+            button1.Location = new Point(135, 597);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 5;
+            button1.Text = "Send";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // ServerChatBox
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1264, 677);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
+            Controls.Add(label3);
+            Controls.Add(RecievedMessages);
             Controls.Add(label1);
-            Controls.Add(label2);
-            Controls.Add(ServerRunningLabel);
-            Controls.Add(SendButton);
-            Controls.Add(BroadcastMessageTextBox);
-            Controls.Add(MessageDisplayListBox);
             Margin = new Padding(2);
             Name = "ServerChatBox";
             Text = "ServerChatBox";
-            Load += ServerChatBox_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -116,10 +103,9 @@
         #endregion
 
         private Label label1;
-        private Label label2;
-        private Label ServerRunningLabel;
-        private Button SendButton;
-        private TextBox BroadcastMessageTextBox;
-        private ListBox MessageDisplayListBox;
+        private ListBox RecievedMessages;
+        private Label label3;
+        private TextBox textBox1;
+        private Button button1;
     }
 }

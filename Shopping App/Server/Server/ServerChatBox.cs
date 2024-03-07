@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.Sockets;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,150 +13,77 @@ namespace Server
 {
     public partial class ServerChatBox : Form
     {
-        private TcpListener tcpListener;
-        private List<TcpClient> connectedClients = new List<TcpClient>();
-        private Thread listenThread;
+        ServerHandling server;
 
         public ServerChatBox()
         {
             InitializeComponent();
-            StartServer();
+            server = new ServerHandling(13000);
         }
 
-        private void StartServer()
+        private void label2_Click(object sender, EventArgs e)       //"Recieved Messages" Label
         {
-            tcpListener = new TcpListener(IPAddress.Any, 8080);
-            listenThread = new Thread(new ThreadStart(ListenForClients));
-            listenThread.Start();
+
         }
 
-        private void ListenForClients()
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tcpListener.Start();
-
-            while (true)
+            // Check if there is any selected item in the list box
+            if (RecievedMessages.SelectedItem != null)
             {
-                TcpClient client = tcpListener.AcceptTcpClient();
-                connectedClients.Add(client);
+                // Get the selected item
+                string selectedItem = RecievedMessages.SelectedItem.ToString();
 
-                Thread clientThread = new Thread(new ParameterizedThreadStart(HandleClientComm));
-                clientThread.Start(client);
+                // Assuming you have a method to create or obtain a TcpClient object based on the selected item
+                // Here, you would need to implement this method or provide a way to create the TcpClient object
+                TcpClient client = server.CreateTcpClientFromSelectedItem(selectedItem);
+
+                // Check if the client object is not null
+                if (client != null)
+                {
+                    // Call the HandleClient method to start processing the client connection
+                    server.HandleClient(client, RecievedMessages);
+                }
+                else
+                {
+                    // Handle the case where the TcpClient object could not be created
+                    MessageBox.Show("Failed to create TcpClient object.");
+                }
             }
         }
 
-
-        private void HandleClientComm(object client)
+        private void label3_Click(object sender, EventArgs e)      //"Enter message to broadcast" label
         {
-            TcpClient tcpClient = (TcpClient)client;
-            NetworkStream clientStream = tcpClient.GetStream();
 
-            byte[] messageBuffer = new byte[4096];
-            StringBuilder completeMessage = new StringBuilder();
-            int bytesRead;
-
-            while (true)
-            {
-                try
-                {
-                    bytesRead = clientStream.Read(messageBuffer, 0, messageBuffer.Length);
-                }
-                catch (Exception ex)
-                {
-                    // Handle exception (e.g., client disconnected)
-                    Console.WriteLine("Error reading message: " + ex.Message);
-                    break;
-                }
-
-                if (bytesRead == 0)
-                {
-                    // Client disconnected
-                    break;
-                }
-
-                string message = Encoding.ASCII.GetString(messageBuffer, 0, bytesRead);
-                completeMessage.Append(message);
-
-                // Check for end of message
-                if (completeMessage.ToString().Contains("<EOF>"))
-                {
-                    string finalMessage = completeMessage.ToString().Replace("<EOF>", "");
-
-                    // Display message in the ListBox
-                    AddMessageToListBox(finalMessage);
-
-                    completeMessage.Clear();
-                }
-            }
-
-            // Remove client from the list of connected clients
-            connectedClients.Remove(tcpClient);
         }
 
-        private void AddMessageToListBox(string message)
+        private void textBox1_TextChanged(object sender, EventArgs e)       //textbox for message
         {
-            if (MessageDisplayListBox.InvokeRequired)
+
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)           //send button
+        {
+
+            // Get the message from the text box
+            string message = textBox1.Text;
+
+            // Send the message to the server
+            if (server != null)
             {
-                MessageDisplayListBox.Invoke(new MethodInvoker(delegate
-                {
-                    MessageDisplayListBox.Items.Add(message);
-                }));
+                server.SendMessage(message);
+
+                // Clear the text box after sending the message
+                textBox1.Clear();
             }
             else
             {
-                MessageDisplayListBox.Items.Add(message);
+                MessageBox.Show("Server is not running", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // This is the event handler for the "Send" button
-            string message = BroadcastMessageTextBox.Text;
-
-            // Broadcast the message to all connected clients
-            byte[] messageBytes = Encoding.ASCII.GetBytes(message + "<EOF>");
-            foreach (TcpClient client in connectedClients)
-            {
-                NetworkStream stream = client.GetStream();
-                stream.Write(messageBytes, 0, messageBytes.Length);
-            }
-
-            // Clear the broadcast message TextBox
-            BroadcastMessageTextBox.Clear();
-        }
-
-
-
-        private void ServerChatBox_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SendButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MessageDisplayListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BroadcastMessageTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ServerRunningLabel_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)           //server running label
         {
 
         }
