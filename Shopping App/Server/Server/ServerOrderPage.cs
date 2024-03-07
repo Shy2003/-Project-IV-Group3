@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,67 +24,96 @@ namespace Server
             String exampleText = "PC 01";
             PcName.Text = exampleText;
 
-            // BELOW WILL BE TURNED INTO PROPER METHOD LATER - TESTING PURPOSES ONLY
             // cloning order panel test
-            int PanelOffset = OrderBox.Location.Y + OrderBox.Height + 15;
-            Guna.UI2.WinForms.Guna2Panel mainBoxCopy = new Guna.UI2.WinForms.Guna2Panel
-            {
-                Size = OrderBox.Size,
-                FillColor = OrderBox.FillColor,
-                Location = new Point(OrderBox.Location.X, PanelOffset),
-                Parent = OrderItems,
-                Name = "OrderBox2"
-            };
+            int BasePanelOffset = OrderBox.Location.Y + OrderBox.Height + 15;
+            int noOffset = 0;
+            Guna2Panel mainBoxCopy = ClonePanel(OrderBox, OrderItems, BasePanelOffset);
+
             // cloning children of main panel
-            Guna.UI2.WinForms.Guna2Panel titleBoxCopy = new Guna.UI2.WinForms.Guna2Panel
-            {
-                Size = PcNameBox.Size,
-                FillColor = PcNameBox.FillColor,
-                Location = PcNameBox.Location,
-                Parent = mainBoxCopy,
-                Name = "PcNameBox2"
-            };
-            Guna.UI2.WinForms.Guna2Panel listBoxCopy = new Guna.UI2.WinForms.Guna2Panel
-            {
-                Size = OrderTextBox.Size,
-                FillColor = OrderTextBox.FillColor,
-                Location = OrderTextBox.Location,
-                Parent = mainBoxCopy,
-                Name = "OrderTextBox2"
-            };
-            Guna.UI2.WinForms.Guna2PictureBox imageCopy = new Guna.UI2.WinForms.Guna2PictureBox
-            {
-                Size = OrderImage.Size,
-                FillColor = OrderImage.FillColor,
-                Location = OrderImage.Location,
-                Parent = mainBoxCopy,
-                Name = "OrderImage2"
-            };
+            Guna2Panel titleBoxCopy = ClonePanel(PcNameBox, mainBoxCopy, noOffset);
+            Guna2Panel listBoxCopy = ClonePanel(OrderTextBox, mainBoxCopy, noOffset);
+            Guna2PictureBox imageCopy = ClonePanel(OrderImage, mainBoxCopy, noOffset);
+
             // cloning text of sub-panels
-            Guna.UI2.WinForms.Guna2HtmlLabel titleTextCopy = new Guna.UI2.WinForms.Guna2HtmlLabel
-            {
-                Size = PcName.Size,
-                Location = PcName.Location,
-                Parent = titleBoxCopy,
-                Font = PcName.Font,
-                ForeColor = PcName.ForeColor,
-                Text = PcName.Text,
-                Name = "PcName2"
-            };
-            Guna.UI2.WinForms.Guna2HtmlLabel orderTextCopy = new Guna.UI2.WinForms.Guna2HtmlLabel
-            {
-                Size = OrderText.Size,
-                Location = OrderText.Location,
-                Parent = listBoxCopy,
-                Font = OrderText.Font,
-                ForeColor = OrderText.ForeColor,
-                Text = OrderText.Text,
-                Name = "OrderText2"
-            };
+            Guna2HtmlLabel titleTextCopy = CloneLabel(PcName, titleBoxCopy, noOffset);
+            Guna2HtmlLabel orderTextCopy = CloneLabel(OrderText, listBoxCopy, noOffset);
 
             // alter clone text test
             exampleText = "PC 03";
             titleTextCopy.Text = exampleText;
+            exampleText = "This is a test";
+            orderTextCopy.Text = exampleText;
+        }
+
+        // in case of panel being picture box
+        private Guna2PictureBox ClonePanel(Guna2PictureBox ogPanel, Guna2Panel parentPanel, int PanelOffset)
+        {
+            if (PanelOffset == 0)
+            {
+                PanelOffset = ogPanel.Location.Y;
+            }
+            Guna2PictureBox newPanel = new()
+            {
+                Size = ogPanel.Size,
+                Location = new Point(ogPanel.Location.X, PanelOffset),
+                Parent = parentPanel
+            };
+            return newPanel;
+        }
+
+        // In case of parent panel being container
+        private Guna2Panel ClonePanel(Guna2Panel ogPanel, Guna2ContainerControl parentPanel, int PanelOffset)
+        {
+            if (PanelOffset == 0){
+                PanelOffset = ogPanel.Location.Y;
+            }
+            Guna2Panel newPanel = new()
+            {
+                Size = ogPanel.Size,
+                FillColor = ogPanel.FillColor,
+                Location = new Point(ogPanel.Location.X, PanelOffset),
+                Parent = parentPanel
+            };
+            return newPanel;
+        }
+
+        // default case
+        private Guna2Panel ClonePanel(Guna2Panel ogPanel, Guna2Panel parentPanel, int PanelOffset)
+        {
+            if (PanelOffset == 0)
+            {
+                PanelOffset = ogPanel.Location.Y;
+            }
+            Guna2Panel newPanel = new()
+            {
+                Size = ogPanel.Size,
+                FillColor = ogPanel.FillColor,
+                Location = new Point(ogPanel.Location.X, PanelOffset),
+                Parent = parentPanel
+            };
+            return newPanel;
+        }
+
+        // slightly different clone for labels
+        private Guna2HtmlLabel CloneLabel(Guna2HtmlLabel ogLabel, Guna2Panel parentPanel, int LabelOffset)
+        {
+            if (LabelOffset == 0)
+            {
+                LabelOffset = ogLabel.Location.Y;
+            }
+            Guna2HtmlLabel newLabel = new()
+            {
+                Size = ogLabel.Size,
+                Location = new Point(ogLabel.Location.X, LabelOffset),
+                Parent = parentPanel,
+                Font = ogLabel.Font,
+                ForeColor = ogLabel.ForeColor,
+            };
+            return newLabel;
+        }
+
+        // clone entire order item
+        private void CloneOrderItem() { 
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

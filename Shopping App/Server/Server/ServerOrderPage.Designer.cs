@@ -246,7 +246,7 @@
             OrderText.BackColor = Color.Transparent;
             OrderText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             OrderText.ForeColor = SystemColors.ControlText;
-            OrderText.Location = new Point(3, 3);
+            OrderText.Location = new Point(2, 1);
             OrderText.Name = "OrderText";
             OrderText.Size = new Size(85, 22);
             OrderText.TabIndex = 2;
@@ -283,11 +283,12 @@
             PcName.BackColor = Color.Transparent;
             PcName.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point);
             PcName.ForeColor = SystemColors.ControlText;
-            PcName.Location = new Point(21, 3);
+            PcName.Location = new Point(31, 4);
             PcName.Name = "PcName";
             PcName.Size = new Size(63, 33);
             PcName.TabIndex = 8;
             PcName.Text = "PC #";
+            PcName.TextAlignment = ContentAlignment.TopCenter;
             // 
             // guna2HtmlLabel6
             // 
