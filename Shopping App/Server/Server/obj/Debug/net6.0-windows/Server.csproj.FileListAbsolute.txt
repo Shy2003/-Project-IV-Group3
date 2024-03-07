@@ -45,3 +45,4 @@ C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Server\Server\obj\De
 C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Server\Server\obj\Debug\net6.0-windows\Server.pdb
 C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Server\Server\obj\Debug\net6.0-windows\Server.genruntimeconfig.cache
 C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Server\Server\obj\Debug\net6.0-windows\ref\Server.dll
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Server\Server\obj\Debug\net6.0-windows\Server.ServerOrderPage.resources

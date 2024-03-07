@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\server\\server\\serverorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\serverorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|c:\\users\\ajvwo\\source\\repos\\-project-iv-group3\\shopping app\\server\\server\\serverorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\serverorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|c:\\users\\ajvwo\\source\\repos\\-project-iv-group3\\shopping app\\server\\server\\serverorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\serverorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|c:\\users\\ajvwo\\source\\repos\\-project-iv-group3\\shopping app\\server\\server\\serverorderpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\serverorderpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|c:\\users\\ajvwo\\source\\repos\\-project-iv-group3\\shopping app\\server\\server\\serverhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|c:\\users\\ajvwo\\source\\repos\\-project-iv-group3\\shopping app\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\server\\server\\serverhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\serverhomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|c:\\users\\ajvwo\\source\\repos\\-project-iv-group3\\shopping app\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,20 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 19,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client\\Program.cs",
-              "RelativeDocumentMoniker": "Client\\Program.cs",
-              "ToolTip": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client\\Program.cs",
-              "RelativeToolTip": "Client\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T04:25:04.809Z",
-              "IsPinned": true
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
@@ -107,32 +102,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Program.cs",
+              "RelativeDocumentMoniker": "Server\\Server\\Program.cs",
+              "ToolTip": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Program.cs",
+              "RelativeToolTip": "Server\\Server\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T01:01:35.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServerOrderPage.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerOrderPage.Designer.cs",
+              "RelativeDocumentMoniker": "Server\\Server\\ServerOrderPage.Designer.cs",
+              "ToolTip": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerOrderPage.Designer.cs",
+              "RelativeToolTip": "Server\\Server\\ServerOrderPage.Designer.cs",
+              "ViewState": "AQIAAAoBAAAAAAAAAAAowCMBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T00:51:11.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "ServerOrderPage.cs",
               "DocumentMoniker": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerOrderPage.cs",
               "RelativeDocumentMoniker": "Server\\Server\\ServerOrderPage.cs",
               "ToolTip": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerOrderPage.cs",
               "RelativeToolTip": "Server\\Server\\ServerOrderPage.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAAAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAiwFUAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-04T19:56:15.337Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ServerOrderPage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerOrderPage.cs",
               "RelativeDocumentMoniker": "Server\\Server\\ServerOrderPage.cs",
               "ToolTip": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerOrderPage.cs [Design]",
               "RelativeToolTip": "Server\\Server\\ServerOrderPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T18:23:03.512Z",
+              "WhenOpened": "2024-03-07T00:58:08.028Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ServerHomePage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\ServerHomePage.cs",
               "RelativeDocumentMoniker": "Server\\Server\\ServerHomePage.cs",

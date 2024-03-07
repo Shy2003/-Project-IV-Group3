@@ -39,22 +39,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             OrdersTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             Sidebar = new Panel();
             label1 = new Label();
@@ -65,31 +57,20 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             TitleBox = new Panel();
             OrderBox = new Guna.UI2.WinForms.Guna2Panel();
-            this.OrderText = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2vScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
-            PcNameBox = new Guna.UI2.WinForms.Guna2Panel();
-            OrderImage = new Guna.UI2.WinForms.Guna2PictureBox();
             OrderTextBox = new Guna.UI2.WinForms.Guna2Panel();
-            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            OrderText = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            OrderImage = new Guna.UI2.WinForms.Guna2PictureBox();
+            PcNameBox = new Guna.UI2.WinForms.Guna2Panel();
             PcName = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            OrderItems = new Guna.UI2.WinForms.Guna2ContainerControl();
             Sidebar.SuspendLayout();
             TitleBox.SuspendLayout();
             OrderBox.SuspendLayout();
-            PcNameBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)OrderImage).BeginInit();
             OrderTextBox.SuspendLayout();
-            guna2Panel1.SuspendLayout();
-            guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
-            guna2Panel3.SuspendLayout();
-            guna2ContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)OrderImage).BeginInit();
+            PcNameBox.SuspendLayout();
+            OrderItems.SuspendLayout();
             SuspendLayout();
             // 
             // OrdersTitle
@@ -241,37 +222,52 @@
             OrderBox.Controls.Add(OrderImage);
             OrderBox.Controls.Add(PcNameBox);
             OrderBox.CustomizableEdges = customizableEdges16;
-            OrderBox.Location = new Point(2, 2);
+            OrderBox.FillColor = Color.LightGray;
+            OrderBox.Location = new Point(0, 0);
             OrderBox.Margin = new Padding(2);
             OrderBox.Name = "OrderBox";
             OrderBox.ShadowDecoration.CustomizableEdges = customizableEdges17;
             OrderBox.Size = new Size(620, 209);
             OrderBox.TabIndex = 5;
             // 
+            // OrderTextBox
+            // 
+            OrderTextBox.Controls.Add(OrderText);
+            OrderTextBox.CustomizableEdges = customizableEdges10;
+            OrderTextBox.FillColor = Color.LightGray;
+            OrderTextBox.Location = new Point(18, 50);
+            OrderTextBox.Name = "OrderTextBox";
+            OrderTextBox.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            OrderTextBox.Size = new Size(337, 144);
+            OrderTextBox.TabIndex = 9;
+            // 
             // OrderText
             // 
-            this.OrderText.BackColor = Color.Transparent;
-            this.OrderText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            this.OrderText.ForeColor = SystemColors.ControlText;
-            this.OrderText.Location = new Point(3, 3);
-            this.OrderText.Name = "OrderText";
-            this.OrderText.Size = new Size(205, 22);
-            this.OrderText.TabIndex = 1;
-            this.OrderText.Text = "Espresso x1, Filter Coffee x2";
+            OrderText.BackColor = Color.Transparent;
+            OrderText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            OrderText.ForeColor = SystemColors.ControlText;
+            OrderText.Location = new Point(3, 3);
+            OrderText.Name = "OrderText";
+            OrderText.Size = new Size(85, 22);
+            OrderText.TabIndex = 2;
+            OrderText.Text = "Order items";
+            OrderText.Click += guna2HtmlLabel1_Click_1;
             // 
-            // guna2vScrollBar1
+            // OrderImage
             // 
-            guna2vScrollBar1.InUpdate = false;
-            guna2vScrollBar1.LargeChange = 10;
-            guna2vScrollBar1.Location = new Point(793, 0);
-            guna2vScrollBar1.Name = "guna2vScrollBar1";
-            guna2vScrollBar1.ScrollbarSize = 18;
-            guna2vScrollBar1.Size = new Size(18, 407);
-            guna2vScrollBar1.TabIndex = 6;
-            guna2vScrollBar1.Scroll += guna2vScrollBar1_Scroll;
+            OrderImage.BackColor = Color.White;
+            OrderImage.CustomizableEdges = customizableEdges12;
+            OrderImage.ImageRotate = 0F;
+            OrderImage.Location = new Point(385, 12);
+            OrderImage.Name = "OrderImage";
+            OrderImage.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            OrderImage.Size = new Size(221, 182);
+            OrderImage.TabIndex = 8;
+            OrderImage.TabStop = false;
             // 
             // PcNameBox
             // 
+            PcNameBox.BackColor = SystemColors.ControlDark;
             PcNameBox.Controls.Add(PcName);
             PcNameBox.CustomizableEdges = customizableEdges14;
             PcNameBox.FillColor = SystemColors.ControlDark;
@@ -282,27 +278,16 @@
             PcNameBox.TabIndex = 7;
             PcNameBox.Paint += guna2Panel2_Paint;
             // 
-            // OrderImage
+            // PcName
             // 
-            OrderImage.CustomizableEdges = customizableEdges12;
-            OrderImage.ImageRotate = 0F;
-            OrderImage.Location = new Point(385, 12);
-            OrderImage.Name = "OrderImage";
-            OrderImage.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            OrderImage.Size = new Size(221, 182);
-            OrderImage.TabIndex = 8;
-            OrderImage.TabStop = false;
-            // 
-            // OrderTextBox
-            // 
-            OrderTextBox.Controls.Add(this.OrderText);
-            OrderTextBox.CustomizableEdges = customizableEdges10;
-            OrderTextBox.FillColor = Color.LightGray;
-            OrderTextBox.Location = new Point(18, 50);
-            OrderTextBox.Name = "OrderTextBox";
-            OrderTextBox.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            OrderTextBox.Size = new Size(337, 144);
-            OrderTextBox.TabIndex = 9;
+            PcName.BackColor = Color.Transparent;
+            PcName.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            PcName.ForeColor = SystemColors.ControlText;
+            PcName.Location = new Point(21, 3);
+            PcName.Name = "PcName";
+            PcName.Size = new Size(63, 33);
+            PcName.TabIndex = 8;
+            PcName.Text = "PC #";
             // 
             // guna2HtmlLabel6
             // 
@@ -315,109 +300,25 @@
             guna2HtmlLabel6.TabIndex = 8;
             guna2HtmlLabel6.Text = "x";
             // 
-            // PcName
+            // OrderItems
             // 
-            PcName.BackColor = Color.Transparent;
-            PcName.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            PcName.ForeColor = SystemColors.ControlText;
-            PcName.Location = new Point(21, 3);
-            PcName.Name = "PcName";
-            PcName.Size = new Size(78, 33);
-            PcName.TabIndex = 8;
-            PcName.Text = "PC 01";
-            // 
-            // guna2Panel1
-            // 
-            guna2Panel1.BackColor = Color.LightGray;
-            guna2Panel1.BorderColor = Color.White;
-            guna2Panel1.Controls.Add(guna2Panel2);
-            guna2Panel1.Controls.Add(guna2PictureBox1);
-            guna2Panel1.Controls.Add(guna2Panel3);
-            guna2Panel1.CustomizableEdges = customizableEdges24;
-            guna2Panel1.Location = new Point(2, 236);
-            guna2Panel1.Margin = new Padding(2);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges25;
-            guna2Panel1.Size = new Size(620, 209);
-            guna2Panel1.TabIndex = 10;
-            // 
-            // guna2Panel2
-            // 
-            guna2Panel2.Controls.Add(guna2HtmlLabel1);
-            guna2Panel2.CustomizableEdges = customizableEdges18;
-            guna2Panel2.FillColor = Color.LightGray;
-            guna2Panel2.Location = new Point(18, 50);
-            guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            guna2Panel2.Size = new Size(337, 144);
-            guna2Panel2.TabIndex = 9;
-            // 
-            // guna2HtmlLabel1
-            // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2HtmlLabel1.ForeColor = SystemColors.ControlText;
-            guna2HtmlLabel1.Location = new Point(3, 3);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(85, 22);
-            guna2HtmlLabel1.TabIndex = 1;
-            guna2HtmlLabel1.Text = "Order items";
-            guna2HtmlLabel1.Click += guna2HtmlLabel1_Click;
-            // 
-            // guna2PictureBox1
-            // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges20;
-            guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(385, 12);
-            guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges21;
-            guna2PictureBox1.Size = new Size(221, 182);
-            guna2PictureBox1.TabIndex = 8;
-            guna2PictureBox1.TabStop = false;
-            // 
-            // guna2Panel3
-            // 
-            guna2Panel3.Controls.Add(guna2HtmlLabel2);
-            guna2Panel3.CustomizableEdges = customizableEdges22;
-            guna2Panel3.FillColor = SystemColors.ControlDark;
-            guna2Panel3.Location = new Point(0, 0);
-            guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges23;
-            guna2Panel3.Size = new Size(132, 42);
-            guna2Panel3.TabIndex = 7;
-            // 
-            // guna2HtmlLabel2
-            // 
-            guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2HtmlLabel2.ForeColor = SystemColors.ControlText;
-            guna2HtmlLabel2.Location = new Point(21, 3);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(63, 33);
-            guna2HtmlLabel2.TabIndex = 8;
-            guna2HtmlLabel2.Text = "PC #";
-            guna2HtmlLabel2.Click += guna2HtmlLabel2_Click_1;
-            // 
-            // guna2ContainerControl1
-            // 
-            guna2ContainerControl1.Controls.Add(guna2Panel1);
-            guna2ContainerControl1.Controls.Add(guna2vScrollBar1);
-            guna2ContainerControl1.Controls.Add(OrderBox);
-            guna2ContainerControl1.CustomizableEdges = customizableEdges26;
-            guna2ContainerControl1.FillColor = SystemColors.ControlLight;
-            guna2ContainerControl1.Location = new Point(284, 87);
-            guna2ContainerControl1.Name = "guna2ContainerControl1";
-            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges27;
-            guna2ContainerControl1.Size = new Size(814, 411);
-            guna2ContainerControl1.TabIndex = 11;
-            guna2ContainerControl1.Text = "OrdersContainer";
+            OrderItems.AutoScroll = true;
+            OrderItems.Controls.Add(OrderBox);
+            OrderItems.CustomizableEdges = customizableEdges18;
+            OrderItems.FillColor = SystemColors.ControlLight;
+            OrderItems.Location = new Point(276, 83);
+            OrderItems.Name = "OrderItems";
+            OrderItems.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            OrderItems.Size = new Size(822, 415);
+            OrderItems.TabIndex = 11;
+            OrderItems.Text = "OrdersContainer";
             // 
             // ServerOrderPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1110, 510);
-            Controls.Add(guna2ContainerControl1);
+            Controls.Add(OrderItems);
             Controls.Add(TitleBox);
             Controls.Add(Sidebar);
             Name = "ServerOrderPage";
@@ -428,18 +329,12 @@
             TitleBox.ResumeLayout(false);
             TitleBox.PerformLayout();
             OrderBox.ResumeLayout(false);
-            PcNameBox.ResumeLayout(false);
-            PcNameBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)OrderImage).EndInit();
             OrderTextBox.ResumeLayout(false);
             OrderTextBox.PerformLayout();
-            guna2Panel1.ResumeLayout(false);
-            guna2Panel2.ResumeLayout(false);
-            guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
-            guna2Panel3.ResumeLayout(false);
-            guna2Panel3.PerformLayout();
-            guna2ContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)OrderImage).EndInit();
+            PcNameBox.ResumeLayout(false);
+            PcNameBox.PerformLayout();
+            OrderItems.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -455,19 +350,13 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Panel TitleBox;
         private Guna.UI2.WinForms.Guna2Panel OrderBox;
-        private Guna.UI2.WinForms.Guna2VScrollBar guna2vScrollBar1;
         private Guna.UI2.WinForms.Guna2Panel PcNameBox;
         private Guna.UI2.WinForms.Guna2HtmlLabel x;
         private Guna.UI2.WinForms.Guna2PictureBox OrderImage;
         private Guna.UI2.WinForms.Guna2Panel OrderTextBox;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel PcName;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel OrderText;
+        private Guna.UI2.WinForms.Guna2ContainerControl OrderItems;
     }
 }

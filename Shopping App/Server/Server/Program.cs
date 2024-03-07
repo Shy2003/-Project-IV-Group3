@@ -12,7 +12,8 @@ namespace Server
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             // Application.Run(new ServerChatBox());
-            Application.Run(new ServerHomePage());
+            // Application.Run(new ServerHomePage());
+            Application.Run(new ServerOrderPage());
         }
     }
 }
