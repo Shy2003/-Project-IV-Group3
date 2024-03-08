@@ -78,7 +78,7 @@
             OrdersTitle.BackColor = Color.Transparent;
             OrdersTitle.Font = new Font("Microsoft Sans Serif", 20.1428585F, FontStyle.Regular, GraphicsUnit.Point);
             OrdersTitle.ForeColor = SystemColors.ControlText;
-            OrdersTitle.Location = new Point(322, 12);
+            OrdersTitle.Location = new Point(731, 12);
             OrdersTitle.Name = "OrdersTitle";
             OrdersTitle.Size = new Size(203, 33);
             OrdersTitle.TabIndex = 0;
@@ -96,7 +96,7 @@
             Sidebar.Location = new Point(0, 0);
             Sidebar.Margin = new Padding(2);
             Sidebar.Name = "Sidebar";
-            Sidebar.Size = new Size(261, 519);
+            Sidebar.Size = new Size(261, 1042);
             Sidebar.TabIndex = 1;
             Sidebar.Paint += panel1_Paint;
             // 
@@ -211,7 +211,7 @@
             TitleBox.Location = new Point(260, 0);
             TitleBox.Margin = new Padding(2);
             TitleBox.Name = "TitleBox";
-            TitleBox.Size = new Size(851, 68);
+            TitleBox.Size = new Size(1644, 68);
             TitleBox.TabIndex = 4;
             // 
             // OrderBox
@@ -227,7 +227,7 @@
             OrderBox.Margin = new Padding(2);
             OrderBox.Name = "OrderBox";
             OrderBox.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            OrderBox.Size = new Size(620, 209);
+            OrderBox.Size = new Size(947, 436);
             OrderBox.TabIndex = 5;
             // 
             // OrderTextBox
@@ -235,20 +235,20 @@
             OrderTextBox.Controls.Add(OrderText);
             OrderTextBox.CustomizableEdges = customizableEdges10;
             OrderTextBox.FillColor = Color.LightGray;
-            OrderTextBox.Location = new Point(18, 50);
+            OrderTextBox.Location = new Point(12, 79);
             OrderTextBox.Name = "OrderTextBox";
             OrderTextBox.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            OrderTextBox.Size = new Size(337, 144);
+            OrderTextBox.Size = new Size(481, 346);
             OrderTextBox.TabIndex = 9;
             // 
             // OrderText
             // 
             OrderText.BackColor = Color.Transparent;
-            OrderText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            OrderText.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point);
             OrderText.ForeColor = SystemColors.ControlText;
             OrderText.Location = new Point(2, 1);
             OrderText.Name = "OrderText";
-            OrderText.Size = new Size(85, 22);
+            OrderText.Size = new Size(170, 39);
             OrderText.TabIndex = 2;
             OrderText.Text = "Order items";
             OrderText.Click += guna2HtmlLabel1_Click_1;
@@ -258,10 +258,10 @@
             OrderImage.BackColor = Color.White;
             OrderImage.CustomizableEdges = customizableEdges12;
             OrderImage.ImageRotate = 0F;
-            OrderImage.Location = new Point(385, 12);
+            OrderImage.Location = new Point(499, 12);
             OrderImage.Name = "OrderImage";
             OrderImage.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            OrderImage.Size = new Size(221, 182);
+            OrderImage.Size = new Size(437, 413);
             OrderImage.TabIndex = 8;
             OrderImage.TabStop = false;
             // 
@@ -274,18 +274,18 @@
             PcNameBox.Location = new Point(0, 0);
             PcNameBox.Name = "PcNameBox";
             PcNameBox.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            PcNameBox.Size = new Size(132, 42);
+            PcNameBox.Size = new Size(243, 73);
             PcNameBox.TabIndex = 7;
             PcNameBox.Paint += guna2Panel2_Paint;
             // 
             // PcName
             // 
             PcName.BackColor = Color.Transparent;
-            PcName.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            PcName.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point);
             PcName.ForeColor = SystemColors.ControlText;
-            PcName.Location = new Point(31, 4);
+            PcName.Location = new Point(60, 3);
             PcName.Name = "PcName";
-            PcName.Size = new Size(63, 33);
+            PcName.Size = new Size(119, 63);
             PcName.TabIndex = 8;
             PcName.Text = "PC #";
             PcName.TextAlignment = ContentAlignment.TopCenter;
@@ -310,7 +310,7 @@
             OrderItems.Location = new Point(276, 83);
             OrderItems.Name = "OrderItems";
             OrderItems.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            OrderItems.Size = new Size(822, 415);
+            OrderItems.Size = new Size(1616, 946);
             OrderItems.TabIndex = 11;
             OrderItems.Text = "OrdersContainer";
             // 
@@ -318,7 +318,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1110, 510);
+            ClientSize = new Size(1904, 1041);
             Controls.Add(OrderItems);
             Controls.Add(TitleBox);
             Controls.Add(Sidebar);
