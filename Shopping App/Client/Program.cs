@@ -15,6 +15,8 @@ namespace Client
             ApplicationConfiguration.Initialize();
             Application.Run(new ChatBox());
             //Application.Run(new Client_PC01());
+
+            // ethan is so handsome
         }
     }
 }
