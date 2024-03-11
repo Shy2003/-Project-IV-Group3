@@ -4,86 +4,165 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Net.Sockets;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Server
 {
     public partial class ServerChatBox : Form
     {
-        ServerHandling server;
+        private ServerHandling server; // Instance of ServerHandling class
+
 
         public ServerChatBox()
         {
             InitializeComponent();
-            server = new ServerHandling(13000);
+            server = new ServerHandling(8080);
+
+            // Subscribe to events
+            server.OnMessageReceived += UpdateReceivedTextMessage;
+            server.OnImageReceived += UpdateReceivedImage;
+
+            server.Start(); // Start the server to listen for incoming connections
         }
 
-        private void label2_Click(object sender, EventArgs e)       //"Recieved Messages" Label
+        private void button1_Click(object sender, EventArgs e)      //close chatbox
+        {
+            // Close the chatbox form
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)       //sender label
         {
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)       //PC Name label
         {
-            // Check if there is any selected item in the list box
-            if (RecievedMessages.SelectedItem != null)
+            string senderName = "PC Name";
+            UpdateSender(senderName);
+        }
+
+        private void label3_Click(object sender, EventArgs e)       //received message label
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)       //textbox to display message
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)           //recieved picture label
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)      //picturebox for picture
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)       //enter reply label
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)       //textbox to type reply
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)      //send button
+        {
+
+        }
+
+
+
+
+
+
+        private void UpdateSender(string senderName)
+        {
+            // Update the sender label with the name of the PC sending the message
+            if (label2.InvokeRequired)
             {
-                // Get the selected item
-                string selectedItem = RecievedMessages.SelectedItem.ToString();
-
-                // Assuming you have a method to create or obtain a TcpClient object based on the selected item
-                // Here, you would need to implement this method or provide a way to create the TcpClient object
-                TcpClient client = server.CreateTcpClientFromSelectedItem(selectedItem);
-
-                // Check if the client object is not null
-                if (client != null)
+                label2.Invoke((MethodInvoker)delegate
                 {
-                    // Call the HandleClient method to start processing the client connection
-                    server.HandleClient(client, RecievedMessages);
-                }
-                else
-                {
-                    // Handle the case where the TcpClient object could not be created
-                    MessageBox.Show("Failed to create TcpClient object.");
-                }
-            }
-        }
-
-        private void label3_Click(object sender, EventArgs e)      //"Enter message to broadcast" label
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)       //textbox for message
-        {
-
-        }
-
-
-        private void button1_Click(object sender, EventArgs e)           //send button
-        {
-
-            // Get the message from the text box
-            string message = textBox1.Text;
-
-            // Send the message to the server
-            if (server != null)
-            {
-                server.SendMessage(message);
-
-                // Clear the text box after sending the message
-                textBox1.Clear();
+                    label2.Text = senderName;
+                });
             }
             else
             {
-                MessageBox.Show("Server is not running", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                label2.Text = senderName;
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)           //server running label
+        // Updates the UI with received text message
+        private void UpdateReceivedTextMessage(string message)
+        {
+            if (textBox1.InvokeRequired)
+            {
+                textBox1.Invoke((MethodInvoker)delegate { textBox1.AppendText(message + Environment.NewLine); });
+            }
+            else
+            {
+                textBox1.AppendText(message + Environment.NewLine);
+            }
+        }
+
+        // Updates the UI with received image
+        private void UpdateReceivedImage(byte[] imageData)
+        {
+            if (pictureBox1.InvokeRequired)
+            {
+                pictureBox1.Invoke((MethodInvoker)delegate
+                {
+                    DisplayImage(imageData);
+                });
+            }
+            else
+            {
+                DisplayImage(imageData);
+            }
+        }
+
+        // Helper method to display image from byte array
+        private void DisplayImage(byte[] imageData)
+        {
+            using (MemoryStream ms = new MemoryStream(imageData))
+            {
+                pictureBox1.Image = Image.FromStream(ms);
+            }
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            // Example sender name update
+            UpdateSender("Client Name");
+        }
+
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }

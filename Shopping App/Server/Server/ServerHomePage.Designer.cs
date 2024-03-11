@@ -204,6 +204,7 @@
             guna2Button3.TabIndex = 1;
             guna2Button3.Text = "💬    Chat";
             guna2Button3.TextAlign = HorizontalAlignment.Left;
+            guna2Button3.Click += guna2Button3_Click;
             // 
             // guna2Button2
             // 

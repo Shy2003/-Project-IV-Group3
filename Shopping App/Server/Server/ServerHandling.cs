@@ -4,152 +4,135 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using System.Windows.Forms;
 
 
 namespace Server
 {
     public class ServerHandling
     {
-        private TcpListener server;
+        private TcpListener listener;
         private TcpClient client;
         private NetworkStream stream;
+        public event Action<string> OnMessageReceived;
+        public event Action<byte[]> OnImageReceived;
+
         private int port;
 
+        // initializes server on a specific port
         public ServerHandling(int port)
         {
             this.port = port;
-            this.server = new TcpListener(IPAddress.Any, port);
         }
 
-        public bool Connect()
+        //starts server and begins listening for client connections
+        public void Start()
         {
-            try
-            {
-                client = server.AcceptTcpClient();
-                stream = client.GetStream();
-                return true;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Exception: {e.Message}");
-                return false;
-            }
+            listener = new TcpListener(IPAddress.Any, port);
+            listener.Start();
+            Console.WriteLine($"Server started on port {port}.");
+
+            listener.BeginAcceptTcpClient(new AsyncCallback(HandleClientConnection), listener);
         }
 
-        public string ReceiveMessage()
+        //handles incoming client connections
+        private void HandleClientConnection(IAsyncResult ar)
         {
-            try
-            {
-                byte[] data = new byte[256];
-                int bytes = stream.Read(data, 0, data.Length);
-                string receivedMessage = Encoding.ASCII.GetString(data, 0, bytes);
-                Console.WriteLine($"Received: {receivedMessage}");
-                return receivedMessage;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Exception: {e.Message}");
-                return null;
-            }
+            client = listener.EndAcceptTcpClient(ar);
+            stream = client.GetStream();
+            Console.WriteLine("Client connected.");
+
+            BeginRead();
         }
 
-        public void SendMessage(string message)
+        //begins asynchronous read operation on the network stream
+        private void BeginRead()
         {
-            try
+            var buffer = new byte[4096];
+            stream.BeginRead(buffer, 0, buffer.Length, new AsyncCallback(ReadCallback), buffer);
+        }
+
+        //callback method for asynchronous read operation
+        private void ReadCallback(IAsyncResult ar)
+        {
+            int bytesRead = stream.EndRead(ar);
+            if (bytesRead > 0)
             {
-                byte[] data = Encoding.ASCII.GetBytes(message);
-                stream.Write(data, 0, data.Length);
-                Console.WriteLine($"Sent: {message}");
+                byte[] buffer = (byte[])ar.AsyncState;
+                ProcessDataBuffer(buffer, bytesRead);
+                BeginRead();            //continue reading from the stream
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine($"Exception: {e.Message}");
+                DisconnectClient();
             }
         }
 
-        public void Disconnect()
+        //processes received data from client
+        private void ProcessDataBuffer(byte[] buffer, int bytesRead)
         {
+            byte dataType = buffer[0];
+            // Copy the next 4 bytes for the length, ensuring not to alter the original buffer
+            byte[] lengthBytes = new byte[4];
+            Array.Copy(buffer, 1, lengthBytes, 0, 4);
+
+            // If your system uses little-endian but the data is big-endian, reverse the bytes
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(lengthBytes);
+            }
+            int dataLength = BitConverter.ToInt32(lengthBytes, 0);
+
+            //ensure the data length is positive and there is enough data received
+            if (dataLength > 0 && bytesRead >= (dataLength + 5))            //dataType (1 byte) + length (4 bytes) + data
+            {
+                if (dataType == 0x01)       //text message
+                {
+                    //ensure not to read beyond the buffer size
+                    int textLength = Math.Min(dataLength, bytesRead - 5);
+                    string message = Encoding.UTF8.GetString(buffer, 5, textLength);
+                    Console.WriteLine($"Received text: {message}");
+                    OnMessageReceived?.Invoke(message);
+                }
+                else if (dataType == 0x02)          //image
+                {
+                    byte[] imageData = new byte[dataLength];
+                    Array.Copy(buffer, 5, imageData, 0, Math.Min(dataLength, bytesRead - 5));
+                    Console.WriteLine("Received image data.");
+                    OnImageReceived?.Invoke(imageData);
+                }
+            }
+        }
+
+        //sends message to the connected client
+        public void SendMessageToClient(string message)
+        {
+            if (client != null && client.Connected)
+            {
+                NetworkStream clientStream = client.GetStream();
+                if (clientStream.CanWrite)
+                {
+                    byte[] messageBytes = Encoding.UTF8.GetBytes(message);
+                    // You might need to prepend the message with its length or a message type identifier,
+                    // depending on your client-server protocol
+                    clientStream.Write(messageBytes, 0, messageBytes.Length);
+                }
+            }
+        }
+
+        //disconnects the client
+        private void DisconnectClient()
+        {
+            Console.WriteLine("Client disconnected.");
             stream.Close();
             client.Close();
         }
 
-        public void Start()
-        {
-            try
-            {
-                server.Start();
-                Console.WriteLine("Server is listening on port " + port);
-
-                // Connect with client
-                Connect();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Exception: " + e.Message);
-            }
-        }
-
+        //finally, this stops the server
         public void Stop()
         {
-            server.Stop();
+            listener.Stop();
+            Console.WriteLine("Server stopped.");
         }
-
-
-        public void HandleClient(TcpClient client, ListBox listBox)
-        {
-            NetworkStream stream = client.GetStream();
-
-            byte[] data = new byte[256];
-            string receivedMessage = string.Empty;
-
-            while (true)
-            {
-                try
-                {
-                    // Receive message from client
-                    int bytes = stream.Read(data, 0, data.Length);
-                    receivedMessage = Encoding.ASCII.GetString(data, 0, bytes);
-
-                    // Update the list box with the received message
-                    listBox.Invoke(new Action(() =>
-                    {
-                        listBox.Items.Add(receivedMessage);
-                    }));
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Exception: " + ex.Message);
-                    break;
-                }
-            }
-
-            // Close the connection
-            client.Close();
-        }
-
-        public TcpClient CreateTcpClientFromSelectedItem(string selectedItem)
-        {
-            // Parse the selected item to extract connection information
-            // For example, parse IP address and port number from the selected item
-            string[] parts = selectedItem.Split(':');
-            string ipAddress = parts[0];
-            int port = int.Parse(parts[1]);
-
-            try
-            {
-                // Create and return a TcpClient object based on the connection information
-                return new TcpClient(ipAddress, port);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error creating TcpClient: " + ex.Message);
-                return null;
-            }
-        }
-
     }
-
-
-
-
 }
