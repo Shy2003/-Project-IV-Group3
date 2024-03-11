@@ -6,9 +6,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace Server
 {
@@ -21,10 +25,38 @@ namespace Server
 
         private void ServerOrderPage_Load(object sender, EventArgs e)
         {
+            String testOrder = RecieveOrderData("127.0.0.1", 8888);
             // test of creating three orders
             setOrderData(PcName, OrderText, OrderImage, "PC 01", "Espresso x1", "Untitled.png");
-            CloneOrderItem("PC 02", "Tea x2", "Untitled.png", 1);
-            CloneOrderItem("PC 04", "Filtered Coffee x1", "Untitled.png", 2);
+            CloneOrderItem(testOrder, 1);
+            CloneOrderItem("PC 04, Filtered Coffee x1, Untitled.png", 2);
+        }
+
+        private String RecieveOrderData(string IpAddress, int port)
+        {
+            IPAddress localIpAddress = IPAddress.Parse(IpAddress);
+            TcpListener listener = new TcpListener(localIpAddress, port);
+
+            listener.Start();
+            // accept incoming connection       
+            TcpClient client = listener.AcceptTcpClient();
+            Console.WriteLine("Client connected!");
+
+            // get the network stream
+            NetworkStream stream = client.GetStream();
+
+            // read incoming data
+            byte[] buffer = new byte[1024];
+            int bytesRead = stream.Read(buffer, 0, buffer.Length);
+            string dataReceived = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+
+            // process the received order
+            Console.WriteLine($"Order received from client: {dataReceived}");
+
+            client.Close();
+            listener.Stop();
+
+            return dataReceived;
         }
 
         // in case of panel being picture box
@@ -46,7 +78,8 @@ namespace Server
         // In case of parent panel being container
         private Guna2Panel ClonePanel(Guna2Panel ogPanel, Guna2ContainerControl parentPanel, int PanelOffset)
         {
-            if (PanelOffset == 0){
+            if (PanelOffset == 0)
+            {
                 PanelOffset = ogPanel.Location.Y;
             }
             Guna2Panel newPanel = new()
@@ -95,9 +128,38 @@ namespace Server
         }
 
         // create a new order item - should be called whenever a new order is recieved from client
-        // may need to alter it once the client is integrated
-        private void CloneOrderItem(String pcName, String orderItems, String orderImage, int iteration) {
-            // cloning order panel test
+        private void CloneOrderItem(string recievedData, int iteration)
+        {
+            string pcName = "Unknown";
+            string orderItems = "";
+            string orderImage = "Untitled.png";
+
+            // seperate order data into strings
+            string[] orderList = recievedData.Split(", ");
+            foreach (string item in orderList)
+            {
+                if (item.Contains("PC"))
+                {
+                    pcName = item;
+                }
+                else if (item.Contains(" x"))
+                {
+                    if (orderItems != "")
+                    {
+                        orderItems += ", " + item;
+                    }
+                    else
+                    {
+                        orderItems = item;
+                    }
+                }
+                else if (item.Contains(".png"))
+                {
+                    orderImage = item;
+                }
+            }
+
+            // cloning order panel
             int BasePanelOffset = (OrderBox.Location.Y + OrderBox.Height + 15) * iteration;
             int noOffset = 0;
             Guna2Panel mainBoxCopy = ClonePanel(OrderBox, OrderItems, BasePanelOffset);
@@ -135,5 +197,12 @@ namespace Server
         {
 
         }
+
+        private void PcName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
+
 }

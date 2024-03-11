@@ -62,7 +62,6 @@
             OrderImage = new Guna.UI2.WinForms.Guna2PictureBox();
             PcNameBox = new Guna.UI2.WinForms.Guna2Panel();
             PcName = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             OrderItems = new Guna.UI2.WinForms.Guna2ContainerControl();
             Sidebar.SuspendLayout();
             TitleBox.SuspendLayout();
@@ -229,6 +228,7 @@
             OrderBox.ShadowDecoration.CustomizableEdges = customizableEdges17;
             OrderBox.Size = new Size(947, 436);
             OrderBox.TabIndex = 5;
+            OrderBox.Paint += OrderBox_Paint;
             // 
             // OrderTextBox
             // 
@@ -289,17 +289,6 @@
             PcName.TabIndex = 8;
             PcName.Text = "PC #";
             PcName.TextAlignment = ContentAlignment.TopCenter;
-            // 
-            // guna2HtmlLabel6
-            // 
-            guna2HtmlLabel6.BackColor = Color.Transparent;
-            guna2HtmlLabel6.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2HtmlLabel6.ForeColor = SystemColors.ControlText;
-            guna2HtmlLabel6.Location = new Point(18, 3);
-            guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(16, 33);
-            guna2HtmlLabel6.TabIndex = 8;
-            guna2HtmlLabel6.Text = "x";
             // 
             // OrderItems
             // 
