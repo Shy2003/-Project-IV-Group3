@@ -59,6 +59,8 @@
             btnToggleChat = new Guna.UI2.WinForms.Guna2Button();
             btnClearChat = new Guna.UI2.WinForms.Guna2Button();
             btnDisconnectServer = new Guna.UI2.WinForms.Guna2Button();
+            pictureBoxReceived = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxReceived).BeginInit();
             SuspendLayout();
             // 
             // lblInstructions
@@ -79,7 +81,7 @@
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = Color.Maroon;
-            guna2Button1.Font = new Font("Segoe UI", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Location = new Point(23, 84);
             guna2Button1.Margin = new Padding(2);
@@ -141,7 +143,7 @@
             // 
             btnToggleChat.CustomizableEdges = customizableEdges7;
             btnToggleChat.FillColor = Color.Olive;
-            btnToggleChat.Font = new Font("Segoe UI", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            btnToggleChat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnToggleChat.ForeColor = Color.White;
             btnToggleChat.Location = new Point(23, 191);
             btnToggleChat.Name = "btnToggleChat";
@@ -181,11 +183,21 @@
             btnDisconnectServer.Visible = false;
             btnDisconnectServer.Click += btnDisconnectServer_Click;
             // 
+            // pictureBoxReceived
+            // 
+            pictureBoxReceived.Location = new Point(361, 374);
+            pictureBoxReceived.Name = "pictureBoxReceived";
+            pictureBoxReceived.Size = new Size(508, 341);
+            pictureBoxReceived.TabIndex = 8;
+            pictureBoxReceived.TabStop = false;
+            pictureBoxReceived.Click += pictureBox1_Click;
+            // 
             // ChatBox
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1580, 847);
+            Controls.Add(pictureBoxReceived);
             Controls.Add(lblInstructions);
             Controls.Add(guna2Button1);
             Controls.Add(lstChat);
@@ -198,6 +210,7 @@
             Margin = new Padding(2);
             Name = "ChatBox";
             Text = "ChatBox";
+            ((System.ComponentModel.ISupportInitialize)pictureBoxReceived).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -205,5 +218,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private PictureBox pictureBoxReceived;
     }
 }

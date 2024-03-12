@@ -13,8 +13,8 @@ namespace Client
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new ChatBox());
-            //Application.Run(new Client_PC01());
+            //Application.Run(new ChatBox());
+            Application.Run(new Client_PC01());
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Server
 
         private void StartServer()
         {
-            ServerHandling server = new ServerHandling("127.0.0.1", 13000);
+            ServerHandling server = new ServerHandling(13000);
             server.Start();
         }
 
@@ -38,5 +38,11 @@ namespace Server
             Task.Run(() => StartServer());
         }
 
+        private void guna2Button3_Click(object sender, EventArgs e)     //this opens the chatbox for the server
+        {
+            ServerChatBox serverChatBox = new ServerChatBox();
+
+            serverChatBox.ShowDialog();
+        }
     }
 }

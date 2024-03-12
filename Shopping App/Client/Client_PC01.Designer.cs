@@ -70,11 +70,12 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.LimeGreen;
-            label2.Location = new Point(1354, 41);
+            label2.Location = new Point(1128, 34);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(140, 37);
+            label2.Size = new Size(109, 29);
             label2.TabIndex = 21;
             label2.Text = "Active \U0001f7e2";
             // 
@@ -86,12 +87,13 @@
             guna2Button13.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button13.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button13.FillColor = Color.LightGray;
-            guna2Button13.Font = new Font("Roboto", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button13.Font = new Font("Microsoft Sans Serif", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button13.ForeColor = Color.Black;
-            guna2Button13.Location = new Point(1512, 21);
+            guna2Button13.Location = new Point(1260, 18);
+            guna2Button13.Margin = new Padding(2, 2, 2, 2);
             guna2Button13.Name = "guna2Button13";
             guna2Button13.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button13.Size = new Size(315, 79);
+            guna2Button13.Size = new Size(262, 66);
             guna2Button13.TabIndex = 20;
             guna2Button13.Text = "Connect To Server";
             guna2Button13.Click += guna2Button13_Click;
@@ -105,18 +107,20 @@
             panel1.Controls.Add(guna2Button3);
             panel1.Controls.Add(guna2Button2);
             panel1.Controls.Add(guna2Button1);
-            panel1.Location = new Point(6, 0);
+            panel1.Location = new Point(5, 0);
+            panel1.Margin = new Padding(2, 2, 2, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(477, 1016);
+            panel1.Size = new Size(398, 847);
             panel1.TabIndex = 15;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Roboto", 20.1428585F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(118, 21);
+            label1.Font = new Font("Microsoft Sans Serif", 20.1428585F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(98, 18);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(254, 63);
+            label1.Size = new Size(212, 47);
             label1.TabIndex = 3;
             label1.Text = "PC_01  🖥️";
             label1.Click += label1_Click;
@@ -124,13 +128,14 @@
             // guna2Shapes1
             // 
             guna2Shapes1.FillColor = Color.DimGray;
-            guna2Shapes1.Location = new Point(12, 68);
+            guna2Shapes1.Location = new Point(10, 57);
+            guna2Shapes1.Margin = new Padding(2, 2, 2, 2);
             guna2Shapes1.Name = "guna2Shapes1";
             guna2Shapes1.PolygonSkip = 1;
             guna2Shapes1.Rotate = 0F;
             guna2Shapes1.RoundedEdges = customizableEdges3;
             guna2Shapes1.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
-            guna2Shapes1.Size = new Size(451, 69);
+            guna2Shapes1.Size = new Size(376, 58);
             guna2Shapes1.TabIndex = 2;
             guna2Shapes1.Text = "guna2Shapes1";
             guna2Shapes1.Zoom = 80;
@@ -143,12 +148,13 @@
             guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button4.FillColor = SystemColors.ControlDark;
-            guna2Button4.Font = new Font("Roboto", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button4.Font = new Font("Microsoft Sans Serif", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button4.ForeColor = SystemColors.ControlDarkDark;
-            guna2Button4.Location = new Point(22, 721);
+            guna2Button4.Location = new Point(18, 601);
+            guna2Button4.Margin = new Padding(2, 2, 2, 2);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            guna2Button4.Size = new Size(315, 79);
+            guna2Button4.Size = new Size(262, 66);
             guna2Button4.TabIndex = 1;
             guna2Button4.Text = "💸    Orders";
             guna2Button4.TextAlign = HorizontalAlignment.Left;
@@ -161,15 +167,17 @@
             guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button3.FillColor = SystemColors.ControlDark;
-            guna2Button3.Font = new Font("Roboto", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button3.Font = new Font("Microsoft Sans Serif", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button3.ForeColor = SystemColors.ControlDarkDark;
-            guna2Button3.Location = new Point(22, 519);
+            guna2Button3.Location = new Point(18, 432);
+            guna2Button3.Margin = new Padding(2, 2, 2, 2);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            guna2Button3.Size = new Size(315, 79);
+            guna2Button3.Size = new Size(262, 66);
             guna2Button3.TabIndex = 1;
             guna2Button3.Text = "💬    Chat";
             guna2Button3.TextAlign = HorizontalAlignment.Left;
+            guna2Button3.Click += guna2Button3_Click;
             // 
             // guna2Button2
             // 
@@ -179,12 +187,13 @@
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button2.FillColor = SystemColors.ControlDark;
-            guna2Button2.Font = new Font("Roboto", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button2.Font = new Font("Microsoft Sans Serif", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button2.ForeColor = SystemColors.ControlDarkDark;
-            guna2Button2.Location = new Point(22, 325);
+            guna2Button2.Location = new Point(18, 271);
+            guna2Button2.Margin = new Padding(2, 2, 2, 2);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            guna2Button2.Size = new Size(315, 79);
+            guna2Button2.Size = new Size(262, 66);
             guna2Button2.TabIndex = 1;
             guna2Button2.Text = "\U0001f9d1🏿‍💻    Users";
             guna2Button2.TextAlign = HorizontalAlignment.Left;
@@ -198,19 +207,25 @@
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = SystemColors.ControlDark;
-            guna2Button1.Font = new Font("Roboto", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button1.Font = new Font("Microsoft Sans Serif", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button1.ForeColor = SystemColors.ControlDarkDark;
-            guna2Button1.Location = new Point(22, 143);
+            guna2Button1.Location = new Point(18, 119);
+            guna2Button1.Margin = new Padding(2, 2, 2, 2);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            guna2Button1.Size = new Size(315, 79);
+            guna2Button1.Size = new Size(262, 66);
             guna2Button1.TabIndex = 0;
             guna2Button1.Text = "🖥️    Home";
             guna2Button1.TextAlign = HorizontalAlignment.Left;
             // 
             // guna2ColorTransition1
             // 
-            guna2ColorTransition1.ColorArray = new Color[] { Color.Red, Color.Blue, Color.Orange };
+            guna2ColorTransition1.ColorArray = new Color[]
+    {
+    Color.Red,
+    Color.Blue,
+    Color.Orange
+    };
             // 
             // guna2Panel6
             // 
@@ -220,10 +235,11 @@
             guna2Panel6.Controls.Add(guna2Button16);
             guna2Panel6.Controls.Add(guna2Button17);
             guna2Panel6.CustomizableEdges = customizableEdges18;
-            guna2Panel6.Location = new Point(516, 143);
+            guna2Panel6.Location = new Point(430, 119);
+            guna2Panel6.Margin = new Padding(2, 2, 2, 2);
             guna2Panel6.Name = "guna2Panel6";
             guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            guna2Panel6.Size = new Size(917, 212);
+            guna2Panel6.Size = new Size(764, 177);
             guna2Panel6.TabIndex = 22;
             // 
             // guna2Button5
@@ -234,12 +250,13 @@
             guna2Button5.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button5.FillColor = Color.Snow;
-            guna2Button5.Font = new Font("Roboto", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button5.Font = new Font("Microsoft Sans Serif", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button5.ForeColor = SystemColors.ControlDarkDark;
-            guna2Button5.Location = new Point(535, 131);
+            guna2Button5.Location = new Point(446, 109);
+            guna2Button5.Margin = new Padding(2, 2, 2, 2);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            guna2Button5.Size = new Size(351, 61);
+            guna2Button5.Size = new Size(292, 51);
             guna2Button5.TabIndex = 23;
             guna2Button5.Text = "UserNumber: 2496";
             guna2Button5.TextAlign = HorizontalAlignment.Left;
@@ -252,12 +269,13 @@
             guna2Button16.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button16.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button16.FillColor = Color.Snow;
-            guna2Button16.Font = new Font("Roboto", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button16.Font = new Font("Microsoft Sans Serif", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button16.ForeColor = SystemColors.ControlDarkDark;
-            guna2Button16.Location = new Point(23, 131);
+            guna2Button16.Location = new Point(19, 109);
+            guna2Button16.Margin = new Padding(2, 2, 2, 2);
             guna2Button16.Name = "guna2Button16";
             guna2Button16.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            guna2Button16.Size = new Size(456, 61);
+            guna2Button16.Size = new Size(380, 51);
             guna2Button16.TabIndex = 3;
             guna2Button16.Text = "Time: 5:20";
             guna2Button16.TextAlign = HorizontalAlignment.Left;
@@ -270,12 +288,13 @@
             guna2Button17.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button17.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button17.FillColor = Color.RosyBrown;
-            guna2Button17.Font = new Font("Roboto", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button17.Font = new Font("Microsoft Sans Serif", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button17.ForeColor = SystemColors.ControlDarkDark;
-            guna2Button17.Location = new Point(23, 26);
+            guna2Button17.Location = new Point(19, 22);
+            guna2Button17.Margin = new Padding(2, 2, 2, 2);
             guna2Button17.Name = "guna2Button17";
             guna2Button17.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            guna2Button17.Size = new Size(796, 79);
+            guna2Button17.Size = new Size(663, 66);
             guna2Button17.TabIndex = 2;
             guna2Button17.Text = "\U0001f9d1🏿‍💻    ID: Shyyisreckless";
             guna2Button17.TextAlign = HorizontalAlignment.Left;
@@ -283,14 +302,13 @@
             // 
             // Client_PC01
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1896, 1016);
+            ClientSize = new Size(1580, 847);
             Controls.Add(guna2Panel6);
             Controls.Add(label2);
             Controls.Add(guna2Button13);
             Controls.Add(panel1);
-            Margin = new Padding(4);
             Name = "Client_PC01";
             Text = "Form1";
             Load += Form1_Load;
