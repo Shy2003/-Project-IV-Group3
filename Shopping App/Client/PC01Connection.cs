@@ -8,140 +8,142 @@ using System.IO;
 
 namespace Client_PC01
 {
-    //class to manage the connection to the server, sending and receiving messages
-    internal class PC01Connection
+    public class PC01Connection
     {
-        private TcpClient client;       //client for TCP network services
-        private NetworkStream stream;       //stream for reading and writing data
-        private string serverIp;        //server IP address
-        private int serverPort;     //server port number
+        //TcpClient used for TCP network services
+        private TcpClient client;
+        //NetworkStream for reading and writing data
+        private NetworkStream stream;
+        //IP address of the server
+        private string serverIp;
+        //port number for the server connection
+        private int serverPort;
+        //event triggered when a text message is received from the server
+        public event Action<string> TextMessageReceived;
+        //event triggered when an image data byte array is received from the server
+        public event Action<byte[]> ImageReceived;
 
-        //constructor: initializes a new instance of the PC01Connection class with specified IP and port
+        //constructor initializing the connection with the server's IP address and port
+        //automatically attempts to connect upon instantiation
         public PC01Connection(string ip, int port)
         {
             serverIp = ip;
             serverPort = port;
+            Connect();
         }
 
-       // test
-
-        //attempts to connect to the server using provided IP and port
+        //attempts to establish a connection to the server. returns true if successful
         public bool Connect()
         {
             try
             {
-                client = new TcpClient(serverIp, serverPort);       //establishes a connection
-                stream = client.GetStream();        //retrieves the network stream
-                return true;        //connection successful
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Exception: {e.Message}");           //logs any exceptions
-                return false;       //connection failed
-            }
-        }
-
-        //sends a text message to the server and waits for a response
-        public string SendMessage(string message)
-        {
-            try
-            {
-                byte[] data = Encoding.ASCII.GetBytes(message);     //converts the message into bytes
-                stream.Write(data, 0, data.Length);         //sends the message bytes to the server
-                Console.WriteLine($"Sent: {message}");
-
-                //awaits response from the server
-                data = new byte[256];       //allocates buffer for response
-                int bytes = stream.Read(data, 0, data.Length);      //reads response from the server
-                string responseData = Encoding.ASCII.GetString(data, 0, bytes);         //converts response bytes back into a string
-                Console.WriteLine($"Received: {responseData}");
-                return responseData;            //returns the servers response
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Exception: {e.Message}");           //logs any exceptions
-                return null;            //indicates an error occurred
-            }
-        }
-
-        //sends an image file to the server
-        public bool SendImage(string imagePath)
-        {
-            try
-            {
-                //read the file into a byte array
-                byte[] imageBytes = File.ReadAllBytes(imagePath);
-
-                //define a message type byte array (0x02 for image) (0x01 is for text)
-                byte[] messageType = new byte[] { 0x02 };
-
-                //get the length of the imageBytes array as a byte array
-                byte[] imageLength = BitConverter.GetBytes(imageBytes.Length);
-
-                //ensure byte order matches between client and server
-                if (BitConverter.IsLittleEndian)
-                {
-                    Array.Reverse(imageLength);         //reverse to big-endian if system architecture is little-endian, I am assuming we are using modern PC's
-                }
-
-                //concatenate messageType, imageLength, and imageBytes
-                byte[] messageToSend = messageType
-                                       .Concat(imageLength)
-                                       .Concat(imageBytes)
-                                       .ToArray();
-
-                //send the concatenated byte array to the server
-                stream.Write(messageToSend, 0, messageToSend.Length);
-                Console.WriteLine($"Sent image: {imagePath}");
-
-                //I am assuming we don't want a confirmation response from the server
-                //byte[] data = new byte[256];
-                //int bytes = stream.Read(data, 0, data.Length);
-                //string responseData = Encoding.ASCII.GetString(data, 0, bytes);
-                //Console.WriteLine($"Received: {responseData}");
-
+                //initializes the TCP connection to the specified server IP and port
+                client = new TcpClient(serverIp, serverPort);
+                stream = client.GetStream();
+                //begins listening for incoming messages as soon as the connection is established
+                BeginReceiveMessages();
                 return true;
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Exception: {e.Message}");
-                return false;       //indicates failure to send the image
+                Console.WriteLine($"Connection exception: {e.Message}");
+                return false;
             }
         }
 
-        //receives a message from the server
-        public string ReceiveMessage()
-        {
-            try
-            {
-                byte[] data = new byte[1024];           //buffer for incoming data
-                int bytes = stream.Read(data, 0, data.Length);      //reads data from the stream
-                string responseData = Encoding.ASCII.GetString(data, 0, bytes);     //converts bytes to string
-                Console.WriteLine($"Received: {responseData}");
-
-                return responseData;        //returns the received message
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Exception in receiving message: {e.Message}");          //logs any exceptions
-                return "Error in receiving message.";           //indicates an error occurred while receiving
-            }
-
-            //connection is not closed here, allowing for further messages to be received or sent
-        }
-
-        //property to check if the client is currently connected
-        public bool IsConnected
-        {
-            get { return client != null && client.Connected; }          //returns true if client is connected
-        }
-
-        //closes the connection and the network stream
+        //closes the connection and releases the resources
         public void Disconnect()
         {
-            //defensive programming practice
-            if (stream != null) stream.Close();         //closes the stream if it's not null
-            if (client != null) client.Close();         //closes the client connection if it's not null
+            stream?.Close();
+            client?.Close();
+        }
+
+        //checks if the client is currently connected to the server
+        public bool IsConnected => client != null && client.Connected;
+
+        //sends a text message to the server using the established TCP connection
+        public void SendMessage(string message)
+        {
+            var messageBytes = Encoding.UTF8.GetBytes(message);
+            SendData(0x01, messageBytes);
+        }
+
+        //sends an image file to the server by reading the file content and sending it as byte array
+        public void SendImage(string imagePath)
+        {
+            var imageBytes = File.ReadAllBytes(imagePath);
+            SendData(0x02, imageBytes);
+        }
+
+        //generic method for sending data with a specified data type to the server
+        private void SendData(byte dataType, byte[] data)
+        {
+            //prepares the data packet with the data type, data length, and data content
+            var dataLength = BitConverter.GetBytes(data.Length);
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(dataLength);
+            }
+
+            var packet = new byte[1 + 4 + data.Length];
+            packet[0] = dataType;                   //indicates the type of data being sent (text or image)
+            Array.Copy(dataLength, 0, packet, 1, 4);            //includes the length of the data
+            Array.Copy(data, 0, packet, 5, data.Length);        //includes the actual data
+            stream.Write(packet, 0, packet.Length);
+        }
+
+        //begins the asynchronous operation to listen for incoming messages from the server
+        private void BeginReceiveMessages()
+        {
+            var buffer = new byte[4096];        //buffer for the incoming data
+            stream.BeginRead(buffer, 0, buffer.Length, new AsyncCallback(ReadCallback), buffer);
+        }
+
+        //callback function for asynchronous read operation. processes the received data
+        private void ReadCallback(IAsyncResult ar)
+        {
+            int bytesRead = stream.EndRead(ar);
+            if (bytesRead > 0)
+            {
+                byte[] buffer = (byte[])ar.AsyncState;
+                ProcessReceivedData(buffer.Take(bytesRead).ToArray());
+                BeginReceiveMessages();     //continues listening for more messages
+            }
+            else
+            {
+                Console.WriteLine("No data read, client might have disconnected.");
+                Disconnect();
+            }
+        }
+
+        //processes the data received from the server, triggering the appropriate events
+        private void ProcessReceivedData(byte[] data)
+        {
+            if (data.Length < 5) return;            //minimum length check (1 byte for dataType + 4 bytes for length) to ensure data integrity
+
+            byte dataType = data[0];            //the first byte indicates the type of data (text or image)
+            int dataLength = BitConverter.ToInt32(data, 1);             //the next 4 bytes represent the data length
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(data, 1, 4);          //adjusts for endianess
+                dataLength = BitConverter.ToInt32(data, 1);
+            }
+
+            //ensure data length is valid and does not exceed buffer bounds
+            if (dataLength <= 0 || dataLength > data.Length - 5) return;
+
+            byte[] messageData = data.Skip(5).Take(dataLength).ToArray();       //extracts the actual data
+
+            //triggers the corresponding event based on the data type
+            if (dataType == 0x01)           //text message
+            {
+                var message = Encoding.UTF8.GetString(messageData);
+                TextMessageReceived?.Invoke(message);
+            }
+            else if (dataType == 0x02)          //image data
+            {
+                ImageReceived?.Invoke(messageData);
+            }
         }
     }
 }

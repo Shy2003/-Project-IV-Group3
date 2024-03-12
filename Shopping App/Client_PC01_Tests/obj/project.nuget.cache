@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "mOfGpf7DQ4l7pM+/3gK82DhtBaG6wAiQ9NeVK5vbP+iZDXE1Rn/B5HXPDyehBt564MliGSe/GGImU08j5sFWAQ==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client_PC01_Tests\\Client_PC01_Tests.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project Client_PC01 is not compatible with net6.0 (.NETCoreApp,Version=v6.0). Project Client_PC01 supports: net6.0-windows7.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Client_PC01",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}
