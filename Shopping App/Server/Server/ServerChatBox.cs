@@ -15,18 +15,24 @@ namespace Server
     public partial class ServerChatBox : Form
     {
         private ServerHandling server; // Instance of ServerHandling class
-
+        private UIUpdater uiUpdater;    //Instance of UIUpdater Class
 
         public ServerChatBox()
         {
             InitializeComponent();
-            server = new ServerHandling(8080);
+            // Initialize the server instance
+            server = new ServerHandling(13000);
+
+
+            // Create an instance of UIUpdater with the required UI controls
+            uiUpdater = new UIUpdater(textBox1, label2, pictureBox1);
 
             // Subscribe to events
-            server.OnMessageReceived += UpdateReceivedTextMessage;
-            server.OnImageReceived += UpdateReceivedImage;
+            server.OnMessageReceived += uiUpdater.UpdateReceivedTextMessage;
+            server.OnImageReceived += uiUpdater.UpdateReceivedImage;
 
-            server.Start(); // Start the server to listen for incoming connections
+            //start() function is already called in the ServerHomePage.cs when "Start Server" is clicked
+            //server.Start(); // Start the server to listen for incoming connections
         }
 
         private void button1_Click(object sender, EventArgs e)      //close chatbox
@@ -43,7 +49,7 @@ namespace Server
         private void label2_Click(object sender, EventArgs e)       //PC Name label
         {
             string senderName = "PC Name";
-            UpdateSender(senderName);
+            uiUpdater.UpdateSender(senderName);
         }
 
         private void label3_Click(object sender, EventArgs e)       //received message label
@@ -86,59 +92,6 @@ namespace Server
 
 
 
-        private void UpdateSender(string senderName)
-        {
-            // Update the sender label with the name of the PC sending the message
-            if (label2.InvokeRequired)
-            {
-                label2.Invoke((MethodInvoker)delegate
-                {
-                    label2.Text = senderName;
-                });
-            }
-            else
-            {
-                label2.Text = senderName;
-            }
-        }
-
-        // Updates the UI with received text message
-        private void UpdateReceivedTextMessage(string message)
-        {
-            if (textBox1.InvokeRequired)
-            {
-                textBox1.Invoke((MethodInvoker)delegate { textBox1.AppendText(message + Environment.NewLine); });
-            }
-            else
-            {
-                textBox1.AppendText(message + Environment.NewLine);
-            }
-        }
-
-        // Updates the UI with received image
-        private void UpdateReceivedImage(byte[] imageData)
-        {
-            if (pictureBox1.InvokeRequired)
-            {
-                pictureBox1.Invoke((MethodInvoker)delegate
-                {
-                    DisplayImage(imageData);
-                });
-            }
-            else
-            {
-                DisplayImage(imageData);
-            }
-        }
-
-        // Helper method to display image from byte array
-        private void DisplayImage(byte[] imageData)
-        {
-            using (MemoryStream ms = new MemoryStream(imageData))
-            {
-                pictureBox1.Image = Image.FromStream(ms);
-            }
-        }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
@@ -158,7 +111,7 @@ namespace Server
         private void label2_Click_1(object sender, EventArgs e)
         {
             // Example sender name update
-            UpdateSender("Client Name");
+            //UpdateSender("Client Name");
         }
 
 
