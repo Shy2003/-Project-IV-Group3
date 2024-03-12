@@ -23,6 +23,8 @@ namespace Client_PC01
             serverPort = port;
         }
 
+       // test
+
         //attempts to connect to the server using provided IP and port
         public bool Connect()
         {
