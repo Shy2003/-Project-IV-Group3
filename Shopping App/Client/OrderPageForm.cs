@@ -1,16 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Net.Sockets;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Client_PC01
 {
     public partial class OrderPageForm : Form
     {
+
+        private PC01Connection connection;
+
         // Constructor
         public OrderPageForm()
         {
             InitializeComponent();
+            connection = new PC01Connection("127.0.0.1", 13000);
         }
 
         // Method to initialize form components
@@ -18,47 +24,56 @@ namespace Client_PC01
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderPageForm));
             headerLabel = new Label();
+
             dishLabel1 = new Label();
             dishLabel2 = new Label();
             dishLabel3 = new Label();
-            dishLabel4 = new Label();
             dishLabel5 = new Label();
             dishLabel6 = new Label();
             dishLabel7 = new Label();
-            dishLabel8 = new Label();
+
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
-            pictureBox8 = new PictureBox();
+
             numericUpDown1 = new NumericUpDown();
             numericUpDown2 = new NumericUpDown();
             numericUpDown3 = new NumericUpDown();
-            numericUpDown4 = new NumericUpDown();
             numericUpDown5 = new NumericUpDown();
             numericUpDown6 = new NumericUpDown();
             numericUpDown7 = new NumericUpDown();
-            numericUpDown8 = new NumericUpDown();
+
             confirmOrderButton = new Button();
+
+            priceLabel1 = new Label();
+            priceLabel2 = new Label();
+            priceLabel3 = new Label();
+            priceLabel5 = new Label();
+            priceLabel6 = new Label();
+            priceLabel7 = new Label();
+
+            orderDetailsGroupBox = new GroupBox();
+
+            orderDetailsListBox = new ListBox();
+
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown8).BeginInit();
+
+            orderDetailsGroupBox.SuspendLayout();
+
             SuspendLayout();
             // 
             // headerLabel
@@ -75,12 +90,13 @@ namespace Client_PC01
             headerLabel.Size = new Size(299, 44);
             headerLabel.TabIndex = 0;
             headerLabel.Text = "ORDER YOUR FOOD";
+            headerLabel.Click += headerLabel_Click;
             // 
             // dishLabel1
             // 
             dishLabel1.AutoSize = true;
             dishLabel1.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dishLabel1.Location = new Point(50, 120);
+            dishLabel1.Location = new Point(50, 130);
             dishLabel1.Name = "dishLabel1";
             dishLabel1.Size = new Size(77, 19);
             dishLabel1.TabIndex = 1;
@@ -90,7 +106,7 @@ namespace Client_PC01
             // 
             dishLabel2.AutoSize = true;
             dishLabel2.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dishLabel2.Location = new Point(216, 120);
+            dishLabel2.Location = new Point(216, 130);
             dishLabel2.Name = "dishLabel2";
             dishLabel2.Size = new Size(88, 19);
             dishLabel2.TabIndex = 2;
@@ -100,27 +116,17 @@ namespace Client_PC01
             // 
             dishLabel3.AutoSize = true;
             dishLabel3.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dishLabel3.Location = new Point(390, 120);
+            dishLabel3.Location = new Point(390, 130);
             dishLabel3.Name = "dishLabel3";
             dishLabel3.Size = new Size(44, 19);
             dishLabel3.TabIndex = 3;
             dishLabel3.Text = "Latte";
             // 
-            // dishLabel4
-            // 
-            dishLabel4.AutoSize = true;
-            dishLabel4.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dishLabel4.Location = new Point(577, 120);
-            dishLabel4.Name = "dishLabel4";
-            dishLabel4.Size = new Size(97, 19);
-            dishLabel4.TabIndex = 4;
-            dishLabel4.Text = "Cappuccino";
-            // 
             // dishLabel5
             // 
             dishLabel5.AutoSize = true;
             dishLabel5.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dishLabel5.Location = new Point(50, 305);
+            dishLabel5.Location = new Point(50, 338);
             dishLabel5.Name = "dishLabel5";
             dishLabel5.Size = new Size(84, 19);
             dishLabel5.TabIndex = 5;
@@ -130,7 +136,7 @@ namespace Client_PC01
             // 
             dishLabel6.AutoSize = true;
             dishLabel6.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dishLabel6.Location = new Point(216, 305);
+            dishLabel6.Location = new Point(216, 338);
             dishLabel6.Name = "dishLabel6";
             dishLabel6.Size = new Size(67, 19);
             dishLabel6.TabIndex = 6;
@@ -140,21 +146,11 @@ namespace Client_PC01
             // 
             dishLabel7.AutoSize = true;
             dishLabel7.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dishLabel7.Location = new Point(390, 305);
+            dishLabel7.Location = new Point(390, 338);
             dishLabel7.Name = "dishLabel7";
             dishLabel7.Size = new Size(99, 19);
             dishLabel7.TabIndex = 7;
             dishLabel7.Text = "Filter Coffee";
-            // 
-            // dishLabel8
-            // 
-            dishLabel8.AutoSize = true;
-            dishLabel8.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dishLabel8.Location = new Point(577, 305);
-            dishLabel8.Name = "dishLabel8";
-            dishLabel8.Size = new Size(34, 19);
-            dishLabel8.TabIndex = 8;
-            dishLabel8.Text = "Tea";
             // 
             // pictureBox1
             // 
@@ -185,21 +181,12 @@ namespace Client_PC01
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 11;
             pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(577, 152);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(100, 100);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 12;
-            pictureBox4.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(50, 337);
+            pictureBox5.Location = new Point(50, 360);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(100, 100);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -209,7 +196,7 @@ namespace Client_PC01
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(216, 337);
+            pictureBox6.Location = new Point(216, 360);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(100, 100);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -219,22 +206,12 @@ namespace Client_PC01
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(390, 337);
+            pictureBox7.Location = new Point(390, 360);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(100, 100);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 15;
             pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(577, 337);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(100, 100);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 16;
-            pictureBox8.TabStop = false;
             // 
             // numericUpDown1
             // 
@@ -260,17 +237,9 @@ namespace Client_PC01
             numericUpDown3.TabIndex = 19;
             numericUpDown3.ValueChanged += numericUpDown_ValueChanged;
             // 
-            // numericUpDown4
-            // 
-            numericUpDown4.Location = new Point(577, 258);
-            numericUpDown4.Name = "numericUpDown4";
-            numericUpDown4.Size = new Size(120, 27);
-            numericUpDown4.TabIndex = 20;
-            numericUpDown4.ValueChanged += numericUpDown_ValueChanged;
-            // 
             // numericUpDown5
             // 
-            numericUpDown5.Location = new Point(50, 443);
+            numericUpDown5.Location = new Point(50, 466);
             numericUpDown5.Name = "numericUpDown5";
             numericUpDown5.Size = new Size(120, 27);
             numericUpDown5.TabIndex = 21;
@@ -278,7 +247,7 @@ namespace Client_PC01
             // 
             // numericUpDown6
             // 
-            numericUpDown6.Location = new Point(216, 443);
+            numericUpDown6.Location = new Point(216, 466);
             numericUpDown6.Name = "numericUpDown6";
             numericUpDown6.Size = new Size(120, 27);
             numericUpDown6.TabIndex = 22;
@@ -286,26 +255,19 @@ namespace Client_PC01
             // 
             // numericUpDown7
             // 
-            numericUpDown7.Location = new Point(390, 443);
+            numericUpDown7.Location = new Point(390, 466);
             numericUpDown7.Name = "numericUpDown7";
             numericUpDown7.Size = new Size(120, 27);
             numericUpDown7.TabIndex = 23;
             numericUpDown7.ValueChanged += numericUpDown_ValueChanged;
             // 
-            // numericUpDown8
-            // 
-            numericUpDown8.Location = new Point(577, 443);
-            numericUpDown8.Name = "numericUpDown8";
-            numericUpDown8.Size = new Size(120, 27);
-            numericUpDown8.TabIndex = 24;
-            numericUpDown8.ValueChanged += numericUpDown_ValueChanged;
-            // 
             // confirmOrderButton
             // 
             confirmOrderButton.BackColor = Color.Green;
+            confirmOrderButton.Enabled = false;
             confirmOrderButton.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             confirmOrderButton.ForeColor = Color.White;
-            confirmOrderButton.Location = new Point(282, 498);
+            confirmOrderButton.Location = new Point(282, 546);
             confirmOrderButton.Name = "confirmOrderButton";
             confirmOrderButton.Size = new Size(150, 50);
             confirmOrderButton.TabIndex = 25;
@@ -313,37 +275,137 @@ namespace Client_PC01
             confirmOrderButton.UseVisualStyleBackColor = false;
             confirmOrderButton.Click += ConfirmOrderButton_Click;
             // 
+            // priceLabel1
+            // 
+            priceLabel1.Location = new Point(50, 288);
+            priceLabel1.Name = "priceLabel1";
+            priceLabel1.Size = new Size(100, 23);
+            priceLabel1.TabIndex = 0;
+            priceLabel1.Text = "$12";
+            // 
+            // priceLabel2
+            // 
+            priceLabel2.Location = new Point(216, 288);
+            priceLabel2.Name = "priceLabel2";
+            priceLabel2.Size = new Size(100, 23);
+            priceLabel2.TabIndex = 1;
+            priceLabel2.Text = "$10";
+            // 
+            // priceLabel3
+            // 
+            priceLabel3.Location = new Point(390, 288);
+            priceLabel3.Name = "priceLabel3";
+            priceLabel3.Size = new Size(100, 23);
+            priceLabel3.TabIndex = 2;
+            priceLabel3.Text = "$8";
+            // 
+            // priceLabel5
+            // 
+            priceLabel5.Location = new Point(50, 496);
+            priceLabel5.Name = "priceLabel5";
+            priceLabel5.Size = new Size(100, 23);
+            priceLabel5.TabIndex = 4;
+            priceLabel5.Text = "$9";
+            // 
+            // priceLabel6
+            // 
+            priceLabel6.Location = new Point(216, 496);
+            priceLabel6.Name = "priceLabel6";
+            priceLabel6.Size = new Size(100, 23);
+            priceLabel6.TabIndex = 5;
+            priceLabel6.Text = "$11";
+            // 
+            // priceLabel7
+            // 
+            priceLabel7.Location = new Point(390, 496);
+            priceLabel7.Name = "priceLabel7";
+            priceLabel7.Size = new Size(100, 23);
+            priceLabel7.TabIndex = 6;
+            priceLabel7.Text = "$7";
+            // 
+            // orderDetailsGroupBox
+            // 
+            orderDetailsGroupBox.Controls.Add(orderDetailsListBox);
+            orderDetailsGroupBox.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            orderDetailsGroupBox.ForeColor = Color.DarkRed;
+            orderDetailsGroupBox.Location = new Point(600, 77);
+            orderDetailsGroupBox.Name = "orderDetailsGroupBox";
+            orderDetailsGroupBox.Size = new Size(300, 502);
+            orderDetailsGroupBox.TabIndex = 0;
+            orderDetailsGroupBox.TabStop = false;
+            orderDetailsGroupBox.Text = "ORDER DETAILS";
+            // 
+            // orderDetailsListBox
+            // 
+            orderDetailsListBox.Font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            orderDetailsListBox.HorizontalScrollbar = true;
+            orderDetailsListBox.ItemHeight = 19;
+            orderDetailsListBox.Location = new Point(0, 102);
+            orderDetailsListBox.Name = "orderDetailsListBox";
+            orderDetailsListBox.Size = new Size(250, 346);
+            orderDetailsListBox.TabIndex = 0;
+
+            // Add a clear button to the orderDetailsGroupBox
+            Button clearButton = new Button();
+            clearButton.BackColor = Color.Red;
+            clearButton.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            clearButton.ForeColor = Color.White;
+            clearButton.Location = new Point(200, 460);
+            clearButton.Name = "clearButton";
+            clearButton.Size = new Size(80, 30);
+            clearButton.TabIndex = 1;
+            clearButton.Text = "Clear";
+            clearButton.UseVisualStyleBackColor = false;
+            clearButton.Click += ClearButton_Click;
+            orderDetailsGroupBox.Controls.Add(clearButton);
+
+            // Create and configure the calculateTotalButton
+            calculateTotalButton = new Button();
+            calculateTotalButton.BackColor = Color.Blue;
+            calculateTotalButton.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            calculateTotalButton.ForeColor = Color.White;
+            calculateTotalButton.Location = new Point(100, 460); // Adjust the position as needed
+            calculateTotalButton.Name = "calculateTotalButton";
+            calculateTotalButton.Size = new Size(80, 30);
+            calculateTotalButton.TabIndex = 2;
+            calculateTotalButton.Text = "Calculate";
+            calculateTotalButton.UseVisualStyleBackColor = false;
+            calculateTotalButton.Click += CalculateTotalButton_Click;
+            orderDetailsGroupBox.Controls.Add(calculateTotalButton);
+
+            // 
             // OrderPageForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(867, 625);
+            Controls.Add(orderDetailsGroupBox);
             Controls.Add(numericUpDown1);
             Controls.Add(numericUpDown2);
             Controls.Add(numericUpDown3);
-            Controls.Add(numericUpDown4);
             Controls.Add(numericUpDown5);
             Controls.Add(numericUpDown6);
             Controls.Add(numericUpDown7);
-            Controls.Add(numericUpDown8);
             Controls.Add(headerLabel);
             Controls.Add(dishLabel1);
             Controls.Add(dishLabel2);
             Controls.Add(dishLabel3);
-            Controls.Add(dishLabel4);
             Controls.Add(dishLabel5);
             Controls.Add(dishLabel6);
             Controls.Add(dishLabel7);
-            Controls.Add(dishLabel8);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox3);
-            Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox7);
-            Controls.Add(pictureBox8);
             Controls.Add(confirmOrderButton);
+            Controls.Add(priceLabel1);
+            Controls.Add(priceLabel2);
+            Controls.Add(priceLabel3);
+            Controls.Add(priceLabel5);
+            Controls.Add(priceLabel6);
+            Controls.Add(priceLabel7);
             Margin = new Padding(2);
             Name = "OrderPageForm";
             Text = "Order Page";
@@ -351,73 +413,248 @@ namespace Client_PC01
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown5).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown6).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown8).EndInit();
+            orderDetailsGroupBox.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         private Label headerLabel;
+
         private Label dishLabel1;
         private Label dishLabel2;
         private Label dishLabel3;
-        private Label dishLabel4;
         private Label dishLabel5;
         private Label dishLabel6;
         private Label dishLabel7;
-        private Label dishLabel8;
+
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
-        private PictureBox pictureBox8;
+
         private NumericUpDown numericUpDown1;
         private NumericUpDown numericUpDown2;
         private NumericUpDown numericUpDown3;
-        private NumericUpDown numericUpDown4;
         private NumericUpDown numericUpDown5;
         private NumericUpDown numericUpDown6;
         private NumericUpDown numericUpDown7;
-        private NumericUpDown numericUpDown8;
+
+        private Label priceLabel1;
+        private Label priceLabel2;
+        private Label priceLabel3;
+        private Label priceLabel5;
+        private Label priceLabel6;
+        private Label priceLabel7;
+
+        private GroupBox orderDetailsGroupBox;
+
+        private ListBox orderDetailsListBox;
+
         private Button confirmOrderButton;
+
+        // Add a field to track the state of the confirmation button
+        private bool isOrderConfirmed = false;
+
+        // Add a calculateTotalButton field to your form
+        private Button calculateTotalButton;
+
+        // Event handler for the Calculate Total button
+        private void CalculateTotalButton_Click(object sender, EventArgs e)
+        {
+            int total = 0;
+
+            // Loop through the items in the order details list and calculate the total price
+            foreach (var item in orderDetailsListBox.Items)
+            {
+                string itemString = item.ToString();
+                int startIndex = itemString.LastIndexOf('$') + 1;
+                int endIndex = itemString.Length;
+                int price = int.Parse(itemString.Substring(startIndex, endIndex - startIndex));
+
+                total += price;
+            }
+
+            // Display the total price
+            MessageBox.Show($"Total Price: ${total}");
+        }
+
+        // Handle the click event of the clear button
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            // Retrieve the order details listbox
+            GroupBox orderDetailsGroupBox = Controls.Find("orderDetailsGroupBox", true).FirstOrDefault() as GroupBox;
+            ListBox orderDetailsListBox = orderDetailsGroupBox.Controls.OfType<ListBox>().FirstOrDefault();
+
+            // Clear one item from the order details list
+            if (orderDetailsListBox != null && orderDetailsListBox.Items.Count > 0)
+            {
+                orderDetailsListBox.Items.RemoveAt(orderDetailsListBox.Items.Count - 1);
+            }
+        }
+
         private void ConfirmOrderButton_Click(object sender, EventArgs e)
         {
-            // Add your logic here for confirming the order
-            MessageBox.Show("Order Confirmed!");
+            if (!isOrderConfirmed)
+            {
+                // Retrieve the order details listbox
+                GroupBox orderDetailsGroupBox = Controls.Find("orderDetailsGroupBox", true).FirstOrDefault() as GroupBox;
+                ListBox orderDetailsListBox = orderDetailsGroupBox.Controls.OfType<ListBox>().FirstOrDefault();
+
+                // Check if orderDetailsListBox is null
+                if (orderDetailsListBox != null)
+                {
+                    // Gather order details from the orderDetailsListBox
+                    List<string> orderDetails = new List<string>();
+                    foreach (var item in orderDetailsListBox.Items)
+                    {
+                        orderDetails.Add(item.ToString());
+                    }
+
+                    // Convert the list of order details into a single string
+                    string orderDetailsString = string.Join(", ", orderDetails);
+
+                    // Send the order details string to the server
+                    Client client = new Client();
+                    client.SendOrder(orderDetailsString);
+
+                    // Add your logic here for confirming the order
+                    MessageBox.Show("Order Confirmed!");
+                    isOrderConfirmed = true; // Set the order confirmation state
+                }
+                else
+                {
+                    // Handle the case where orderDetailsListBox is null
+                    MessageBox.Show("Error: Unable to retrieve order details.");
+                }
+            }
         }
+
+
+
 
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
             // Get the sender control which triggered the event
             var numericUpDown = sender as NumericUpDown;
 
-            // Check if the sender control is not null
-            if (numericUpDown != null)
+            // Check if the sender control is not null and the value is greater than 0
+            if (numericUpDown != null && numericUpDown.Value > 0)
             {
-
                 int value = (int)numericUpDown.Value;
 
+                // Calculate the total price based on the quantity
+                int totalPrice = value * GetPrice((Control)numericUpDown);
 
+                // Update the order details list
+                UpdateOrderDetailsList((Control)numericUpDown, value, totalPrice);
+
+                // Enable the confirmOrderButton
+                confirmOrderButton.Enabled = true;
             }
         }
 
+        // Helper method to get the price of an item
+        private int GetPrice(Control control)
+        {
+            // Retrieve the corresponding price label based on the control's name
+            string priceLabelName = "priceLabel" + control.Name.Substring(control.Name.Length - 1);
+            Label priceLabel = Controls.Find(priceLabelName, true).FirstOrDefault() as Label;
+
+            if (priceLabel != null)
+            {
+                // Extract the price value from the label's text
+                string priceText = priceLabel.Text.Replace("$", "");
+                return int.Parse(priceText);
+            }
+
+            return 0; // Default to 0 if price label not found
+        }
+
+        // Helper method to update the order details list
+        private void UpdateOrderDetailsList(Control control, int quantity, int totalPrice)
+        {
+            // Retrieve the corresponding dish label based on the control's name
+            string dishLabelName = "dishLabel" + control.Name.Substring(control.Name.Length - 1);
+            Label dishLabel = Controls.Find(dishLabelName, true).FirstOrDefault() as Label;
+
+            // Retrieve the order details listbox
+            GroupBox orderDetailsGroupBox = Controls.Find("orderDetailsGroupBox", true).FirstOrDefault() as GroupBox;
+            ListBox orderDetailsListBox = orderDetailsGroupBox.Controls.OfType<ListBox>().FirstOrDefault();
+
+            // Update the order details list with the selected item, quantity, and total price
+            if (orderDetailsListBox != null && dishLabel != null)
+            {
+                string orderDetail = $"{quantity} x {dishLabel.Text} - Total Price: ${totalPrice}";
+                orderDetailsListBox.Items.Add(orderDetail);
+            }
+        }
         private void OrderPageForm_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void headerLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+    public class Client
+    {
+        public void SendOrder(string orderDetails)
+        {
+            string serverIpAddress = "127.0.0.1"; // Server running on the same machine
+            int serverPort = 8888; // Port on which the server is listening
+
+            // Establish a connection with the server
+            using (TcpClient client = new TcpClient(serverIpAddress, serverPort))
+            {
+                // Get the network stream
+                using (NetworkStream stream = client.GetStream())
+                {
+                    // Convert the order details to bytes
+                    byte[] data = Encoding.ASCII.GetBytes(orderDetails);
+
+                    // Send the data to the server
+                    stream.Write(data, 0, data.Length);
+                    Console.WriteLine("Order sent to server: " + orderDetails);
+                }
+            }
+        }
     }
 }
+
+
+
+/*  class Program
+  {
+      static void Main(string[] args)
+      {
+          // Client sends the order to the server
+          Client client = new Client();
+          client.SendOrder("PC 01, Espresso x2, Latte x1");
+      }
+  }
+}*/
+
+
+
+
+
+
