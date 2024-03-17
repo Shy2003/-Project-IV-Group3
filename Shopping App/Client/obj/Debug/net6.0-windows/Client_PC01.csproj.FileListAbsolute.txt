@@ -20,3 +20,26 @@ C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\De
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.genruntimeconfig.cache
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\Debug\net6.0-windows\ref\Client_PC01.dll
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.ChatBox.resources
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\bin\Debug\net6.0-windows\Client_PC01.exe
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\bin\Debug\net6.0-windows\Client_PC01.deps.json
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\bin\Debug\net6.0-windows\Client_PC01.runtimeconfig.json
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\bin\Debug\net6.0-windows\Client_PC01.dll
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\bin\Debug\net6.0-windows\Client_PC01.pdb
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\bin\Debug\net6.0-windows\Guna.UI2.dll
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\bin\Debug\net6.0-windows\System.Management.dll
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.csproj.AssemblyReference.cache
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.ChatBox.resources
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\Client.Client_PC01.resources
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.csproj.GenerateResource.cache
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.AssemblyInfoInputs.cache
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.AssemblyInfo.cs
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.csproj.CoreCompileInputs.cache
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.sourcelink.json
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\Client_P.865E0448.Up2Date
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.dll
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\refint\Client_PC01.dll
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.pdb
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\Client_PC01.genruntimeconfig.cache
+C:\Users\ajvwo\source\repos\-Project-IV-Group3\Shopping App\Client\obj\Debug\net6.0-windows\ref\Client_PC01.dll

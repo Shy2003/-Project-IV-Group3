@@ -228,7 +228,7 @@
             OrderBox.ShadowDecoration.CustomizableEdges = customizableEdges17;
             OrderBox.Size = new Size(947, 436);
             OrderBox.TabIndex = 5;
-            OrderBox.Paint += OrderBox_Paint;
+            //OrderBox.Paint += OrderBox_Paint;
             // 
             // OrderTextBox
             // 
@@ -341,7 +341,6 @@
         private Panel TitleBox;
         private Guna.UI2.WinForms.Guna2Panel OrderBox;
         private Guna.UI2.WinForms.Guna2Panel PcNameBox;
-        private Guna.UI2.WinForms.Guna2HtmlLabel x;
         private Guna.UI2.WinForms.Guna2PictureBox OrderImage;
         private Guna.UI2.WinForms.Guna2Panel OrderTextBox;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;

@@ -25,11 +25,12 @@ namespace Server
 
         private void ServerOrderPage_Load(object sender, EventArgs e)
         {
-            String testOrder = RecieveOrderData("127.0.0.1", 8888);
+            // String testOrder = RecieveOrderData("127.0.0.1", 8888);
             // test of creating three orders
-            setOrderData(PcName, OrderText, OrderImage, "PC 01", "Espresso x1", "Untitled.png");
-            CloneOrderItem(testOrder, 1);
-            CloneOrderItem("PC 04, Filtered Coffee x1, Untitled.png", 2);
+            CloneOrderItem("PC 01, Espresso x1, Untitled.png", 0);
+            //CloneOrderItem(testOrder, 1);
+            CloneOrderItem("PC 02, Filtered Coffee x1, Tea x1, Untitled.png", 1);
+            CloneOrderItem("PC 04, Tea x2, Untitled.png", 2);
         }
 
         private String RecieveOrderData(string IpAddress, int port)
@@ -128,7 +129,7 @@ namespace Server
         }
 
         // create a new order item - should be called whenever a new order is recieved from client
-        private void CloneOrderItem(string recievedData, int iteration)
+        public void CloneOrderItem(string recievedData, int iteration)
         {
             string pcName = "Unknown";
             string orderItems = "";
@@ -159,21 +160,27 @@ namespace Server
                 }
             }
 
-            // cloning order panel
-            int BasePanelOffset = (OrderBox.Location.Y + OrderBox.Height + 15) * iteration;
-            int noOffset = 0;
-            Guna2Panel mainBoxCopy = ClonePanel(OrderBox, OrderItems, BasePanelOffset);
+            if (iteration != 0){
+                // cloning order panel
+                int BasePanelOffset = (OrderBox.Location.Y + OrderBox.Height + 15) * iteration;
+                int noOffset = 0;
+                Guna2Panel mainBoxCopy = ClonePanel(OrderBox, OrderItems, BasePanelOffset);
 
-            // cloning children of main panel
-            Guna2Panel titleBoxCopy = ClonePanel(PcNameBox, mainBoxCopy, noOffset);
-            Guna2Panel listBoxCopy = ClonePanel(OrderTextBox, mainBoxCopy, noOffset);
-            Guna2PictureBox imageCopy = ClonePanel(OrderImage, mainBoxCopy, noOffset);
+                // cloning children of main panel
+                Guna2Panel titleBoxCopy = ClonePanel(PcNameBox, mainBoxCopy, noOffset);
+                Guna2Panel listBoxCopy = ClonePanel(OrderTextBox, mainBoxCopy, noOffset);
+                Guna2PictureBox imageCopy = ClonePanel(OrderImage, mainBoxCopy, noOffset);
 
-            // cloning text of sub-panels
-            Guna2HtmlLabel titleTextCopy = CloneLabel(PcName, titleBoxCopy, noOffset);
-            Guna2HtmlLabel orderTextCopy = CloneLabel(OrderText, listBoxCopy, noOffset);
+                // cloning text of sub-panels
+                Guna2HtmlLabel titleTextCopy = CloneLabel(PcName, titleBoxCopy, noOffset);
+                Guna2HtmlLabel orderTextCopy = CloneLabel(OrderText, listBoxCopy, noOffset);
 
-            setOrderData(titleTextCopy, orderTextCopy, imageCopy, pcName, orderItems, orderImage);
+                setOrderData(titleTextCopy, orderTextCopy, imageCopy, pcName, orderItems, orderImage);
+            }
+            else
+            {
+                setOrderData(PcName, OrderText, OrderImage, pcName, orderItems, orderImage);
+            }
         }
 
         private void setOrderData(Guna2HtmlLabel titleUI, Guna2HtmlLabel orderUI, Guna2PictureBox imageUI, String pcName, String orderItems, String orderImage)

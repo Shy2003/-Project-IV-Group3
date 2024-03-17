@@ -1,16 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "wLeDPW9we/teSN3CYInLjJ70oxmO/bk1zufDjCI2fNE1mKAngZRMszF4xH2uYO8wYZw3KQp7+P9Wt8n49+Q/KA==",
+  "dgSpecHash": "qtDps63bm5oFp51wCJ6J8Y040NZiLhTxwz0WKfNS8sXCnC7VmO0HBcqndW7E7DUUcZ3XW+2jJOgpR5rf5PPWtQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client\\Client_PC01.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ajvwo\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",
     "C:\\Users\\ajvwo\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
-    "C:\\Users\\ajvwo\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512",
-    "C:\\Users\\ajvwo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\ajvwo\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\ajvwo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\ajvwo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.27\\microsoft.netcore.app.host.win-x64.6.0.27.nupkg.sha512"
+    "C:\\Users\\ajvwo\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
