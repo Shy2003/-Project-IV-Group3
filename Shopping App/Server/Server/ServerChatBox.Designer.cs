@@ -56,7 +56,6 @@
             // 
             // pictureBoxReceived
             // 
-            pictureBoxReceived.Image = (Image)resources.GetObject("pictureBoxReceived.Image");
             pictureBoxReceived.Location = new Point(352, 378);
             pictureBoxReceived.Name = "pictureBoxReceived";
             pictureBoxReceived.Size = new Size(508, 341);

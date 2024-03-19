@@ -15,7 +15,7 @@ namespace Server
             lstChat.Visible = txtMessage.Visible = btnSendMessage.Visible = btnSendImage.Visible = btnClearChat.Visible = false;
             guna2Button1.Visible = true;
             btnDisconnectServer.Visible = false;
-            pictureBoxReceived.Visible = true;
+            pictureBoxReceived.Visible = false;
 
             btnToggleChat.Click += (sender, e) => ServerUI.ToggleChatVisibility(btnToggleChat, lstChat, txtMessage, btnSendMessage, btnSendImage, btnClearChat, lblInstructions);
             btnClearChat.Click += (sender, e) => lstChat.Items.Clear();
