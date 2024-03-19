@@ -1,6 +1,7 @@
 using Client_PC01;
 using Server;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Threading;
 
 namespace EthanTests
 {
@@ -30,40 +31,58 @@ namespace EthanTests
             Assert.IsTrue(connection.Connected, "Connection not marked as connected.");
         }
 
-        [TestCleanup]
-        public void Cleanup()
+        [TestMethod]
+        public void TestSendingTextMessage()
         {
-            // Stop the server
-            server.Stop();
-        }
-    }
+            // Arrange
+            var connection = new PC01Connection("127.0.0.1", 13000);
+            connection.Connect();
+            string testMessage = "Hello, server!";
+            bool messageReceived = false;
+            server.TextMessageReceived += (message) => messageReceived = message == testMessage;
 
+            // Act
+            connection.SendTextMessage(testMessage);
+            Thread.Sleep(500); // Wait for the message to be processed
 
-    [TestClass]
-    public class MessageTests
-    {
-        private ServerHandling server;
-
-        [TestInitialize]
-        public void Initialize()
-        {
-            // Start the server
-            server = new ServerHandling(13000);
+            // Assert
+            Assert.IsTrue(messageReceived, "Text message was not received by the server.");
         }
 
         [TestMethod]
-        public void TestSendMessage()
+        public void TestSendingImage()
         {
             // Arrange
-            var connection = new PC01Connection("127.0.0.1", 13000); 
+            var connection = new PC01Connection("127.0.0.1", 13000);
+            connection.Connect();
+            byte[] testImageBytes = File.ReadAllBytes("C:\\Users\\EthanNguyen\\Downloads\\pngtest.png");
+            bool imageReceived = false;
+            server.ImageReceived += (imageBytes) => imageReceived = imageBytes.SequenceEqual(testImageBytes);
+
+            // Act
+            connection.SendImage(testImageBytes);
+            Thread.Sleep(500); // Wait for the image to be processed
+
+            // Assert
+            Assert.IsTrue(imageReceived, "Image was not received by the server.");
+        }
+
+        [TestMethod]
+        public void TestDisconnection()
+        {
+            // Arrange
+            var connection = new PC01Connection("127.0.0.1", 13000);
             connection.Connect();
 
             // Act
-            string messageToSend = "Test message";
-            connection.SendMessage(messageToSend);
+            connection.Disconnect();
 
             // Assert
+            Assert.IsFalse(connection.Connected, "Client is still marked as connected after disconnection.");
         }
+
+
+
 
         [TestCleanup]
         public void Cleanup()
@@ -72,4 +91,6 @@ namespace EthanTests
             server.Stop();
         }
     }
+
+
 }
