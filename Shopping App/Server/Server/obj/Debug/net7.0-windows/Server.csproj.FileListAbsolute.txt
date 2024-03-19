@@ -21,3 +21,5 @@ C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\obj\Debug\net7.0-windows\Server.pdb
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\obj\Debug\net7.0-windows\Server.genruntimeconfig.cache
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\obj\Debug\net7.0-windows\ref\Server.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\System.Windows.Extensions.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\runtimes\win\lib\net7.0\System.Windows.Extensions.dll

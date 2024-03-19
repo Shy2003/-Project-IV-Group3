@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RgITio0t8t83UO6N+kcwWZ/Ir3vcglwO4URlAq7/e5dbEUm/wQFJx52EWT/KXShbLtoLVUTSd8Zpb3NeCAX5pg==",
+  "dgSpecHash": "4v6DPlIsgu8cfgmZr+FB3/SVayDhOFnis80JPQiyGYHRnayG2lJ3MogChDsWM3AicaCdT+CNTA9DqjP3qFxyJA==",
   "success": true,
   "projectFilePath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\EthanTests\\EthanTests.csproj",
   "expectedPackageFiles": [
@@ -33,7 +33,8 @@
     "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
-    "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
+    "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

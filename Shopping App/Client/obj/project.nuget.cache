@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "SZMrIP1qXD1UWRAqteeazkcen+o89C3XkxgJN1Jm9I8u77tH90ox2m/k9Ny307kI9LOzf6iYu7C2QL/9TY8bHg==",
+  "dgSpecHash": "KBSuvIoo3V9qV/zxkanEtywRmN6yQkY3nz5RtDKMzDjOyfeI4/VqDGx0zB0YiuOk+ZujyqouxY+olSO8Vzt4qg==",
   "success": true,
   "projectFilePath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client\\Client_PC01.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EthanNguyen\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",
     "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
-    "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
+    "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512",
+    "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

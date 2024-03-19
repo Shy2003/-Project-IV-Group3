@@ -20,3 +20,5 @@ C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\De
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\Debug\net7.0-windows\Client_PC01.pdb
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\Debug\net7.0-windows\Client_PC01.genruntimeconfig.cache
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\obj\Debug\net7.0-windows\ref\Client_PC01.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\bin\Debug\net7.0-windows\System.Windows.Extensions.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\bin\Debug\net7.0-windows\runtimes\win\lib\net7.0\System.Windows.Extensions.dll

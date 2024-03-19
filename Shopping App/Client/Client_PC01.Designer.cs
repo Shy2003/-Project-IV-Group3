@@ -139,6 +139,7 @@
             // 
             // guna2Button3
             // 
+            guna2Button3.AccessibleName = "ChatButton";
             guna2Button3.CustomizableEdges = customizableEdges4;
             guna2Button3.DisabledState.BorderColor = Color.DarkGray;
             guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;

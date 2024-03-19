@@ -655,11 +655,31 @@
           }
         }
       },
+      "System.Windows.Extensions/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Windows.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Windows.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Windows.Extensions.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "Client_PC01/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Guna.UI2.WinForms": "2.0.4.6"
+          "Guna.UI2.WinForms": "2.0.4.6",
+          "System.Windows.Extensions": "8.0.0"
         },
         "compile": {
           "bin/placeholder/Client_PC01.dll": {}
@@ -2442,6 +2462,33 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "System.Windows.Extensions/8.0.0": {
+      "sha512": "Obg3a90MkOw9mYKxrardLpY2u0axDMrSmy4JCdq2cYbelM2cUwmUir5Bomvd1yxmPL9h5LVHU1tuKBZpUjfASg==",
+      "type": "package",
+      "path": "system.windows.extensions/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/System.Windows.Extensions.dll",
+        "lib/net6.0/System.Windows.Extensions.xml",
+        "lib/net7.0/System.Windows.Extensions.dll",
+        "lib/net7.0/System.Windows.Extensions.xml",
+        "lib/net8.0/System.Windows.Extensions.dll",
+        "lib/net8.0/System.Windows.Extensions.xml",
+        "runtimes/win/lib/net6.0/System.Windows.Extensions.dll",
+        "runtimes/win/lib/net6.0/System.Windows.Extensions.xml",
+        "runtimes/win/lib/net7.0/System.Windows.Extensions.dll",
+        "runtimes/win/lib/net7.0/System.Windows.Extensions.xml",
+        "runtimes/win/lib/net8.0/System.Windows.Extensions.dll",
+        "runtimes/win/lib/net8.0/System.Windows.Extensions.xml",
+        "system.windows.extensions.8.0.0.nupkg.sha512",
+        "system.windows.extensions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Client_PC01/1.0.0": {
       "type": "project",
       "path": "../Client/Client_PC01.csproj",
@@ -2454,6 +2501,7 @@
       "MSTest.TestAdapter >= 2.2.10",
       "MSTest.TestFramework >= 2.2.10",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
+      "System.Windows.Extensions >= 8.0.0",
       "coverlet.collector >= 3.2.0"
     ]
   },
@@ -2511,6 +2559,10 @@
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.5.0, )"
+          },
+          "System.Windows.Extensions": {
+            "target": "Package",
+            "version": "[8.0.0, )"
           },
           "coverlet.collector": {
             "target": "Package",
