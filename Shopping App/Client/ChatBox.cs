@@ -14,13 +14,14 @@ namespace Client_PC01
             lstChat.Visible = txtMessage.Visible = btnSendMessage.Visible = btnSendImage.Visible = btnClearChat.Visible = false;
             guna2Button1.Visible = true;
             btnDisconnectServer.Visible = false;
-            pictureBoxReceived.Visible = false;
+            pictureBoxReceived.Visible = true;
 
             btnToggleChat.Click += (sender, e) => UIUpdater.ToggleChatVisibility(btnToggleChat, lstChat, txtMessage, btnSendMessage, btnSendImage, btnClearChat, lblInstructions);
             btnClearChat.Click += (sender, e) => lstChat.Items.Clear();
             guna2Button1.Click += (sender, e) => AttemptConnection();
             btnDisconnectServer.Click += (sender, e) => DisconnectFromServer();
             btnSendMessage.Click += (sender, e) => SendMessageToServer();
+            btnSendImage.Click += (sender, e) => SendImageToServer();
         }
 
 
@@ -32,7 +33,9 @@ namespace Client_PC01
                 MessageBox.Show("Connected to server.");
                 guna2Button1.Visible = false;
                 btnDisconnectServer.Visible = true;
+                btnSendMessage.Enabled = true;
                 client.TextMessageReceived += OnTextMessageReceived;
+                client.ImageReceived += OnImageReceived;
             }
             else
             {
@@ -45,9 +48,9 @@ namespace Client_PC01
             if (client != null)
             {
                 client.Disconnect();
-                guna2Button1.Visible = true; // Show the "Connect" button
-                btnDisconnectServer.Visible = false; // Hide the "Disconnect" button
-                btnSendMessage.Enabled = false; // Disable the "Send Message" button
+                guna2Button1.Visible = true;
+                btnDisconnectServer.Visible = false;
+                btnSendMessage.Enabled = false;
             }
         }
 
@@ -55,15 +58,50 @@ namespace Client_PC01
         {
             if (!string.IsNullOrEmpty(txtMessage.Text))
             {
-                client.SendMessage(txtMessage.Text);
+                client.SendTextMessage(txtMessage.Text);
                 lstChat.Items.Add("You: " + txtMessage.Text);
                 txtMessage.Clear();
             }
         }
 
+
+        private void SendImageToServer()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+
+                // Read the image file into a byte array
+                byte[] imageBytes = File.ReadAllBytes(filePath);
+
+                // Send the byte array to the server
+                client.SendImage(imageBytes);
+
+                // Update the PictureBox with the sent image
+                pictureBoxReceived.Image = Image.FromFile(filePath);
+            }
+        }
+
+
+
         private void OnTextMessageReceived(string message)
         {
             lstChat.Invoke(new Action(() => lstChat.Items.Add("Server: " + message)));
+
+
+        }
+
+        private void OnImageReceived(byte[] imageBytes)
+        {
+            Invoke(new Action(() =>
+            {
+                using (var ms = new MemoryStream(imageBytes))
+                {
+                    pictureBoxReceived.Image = Image.FromStream(ms);
+                }
+            }));
         }
 
         private void btnClearChat_Click(object sender, EventArgs e)
@@ -92,7 +130,7 @@ namespace Client_PC01
 
         private void btnSendImage_Click(object sender, EventArgs e)
         {
-            // Not implemented
+       
         }
 
         private void btnToggleChat_Click(object sender, EventArgs e)

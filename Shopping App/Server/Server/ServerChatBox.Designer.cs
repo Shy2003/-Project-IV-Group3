@@ -56,6 +56,7 @@
             // 
             // pictureBoxReceived
             // 
+            pictureBoxReceived.Image = (Image)resources.GetObject("pictureBoxReceived.Image");
             pictureBoxReceived.Location = new Point(352, 378);
             pictureBoxReceived.Name = "pictureBoxReceived";
             pictureBoxReceived.Size = new Size(508, 341);
@@ -137,6 +138,7 @@
             btnSendImage.Size = new Size(160, 36);
             btnSendImage.TabIndex = 14;
             btnSendImage.Text = "Send an Image";
+            btnSendImage.Click += btnSendImage_Click;
             // 
             // btnToggleChat
             // 
@@ -204,8 +206,6 @@
         }
 
         #endregion
-
-        private PictureBox pictureBoxReceived;
         private Label lblInstructions;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private ListBox lstChat;
@@ -215,5 +215,6 @@
         private Guna.UI2.WinForms.Guna2Button btnToggleChat;
         private Guna.UI2.WinForms.Guna2Button btnClearChat;
         private Guna.UI2.WinForms.Guna2Button btnDisconnectServer;
+        public PictureBox pictureBoxReceived;
     }
 }

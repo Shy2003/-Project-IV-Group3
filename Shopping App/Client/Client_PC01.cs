@@ -9,7 +9,7 @@ namespace Client
         public Client_PC01()
         {
             InitializeComponent();
-            InitializePictureBoxReceived();
+            //InitializePictureBoxReceived();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -36,35 +36,35 @@ namespace Client
             //}
         }
 
-        private void Client_TextMessageReceived(string message)
-        {
-            Invoke((MethodInvoker)delegate
-            {
-                // Update your UI here, e.g., display the message in a text box
-                MessageBox.Show($"Received message: {message}");
-            });
-        }
+        //private void Client_TextMessageReceived(string message)
+        //{
+        //    Invoke((MethodInvoker)delegate
+        //    {
+        //        // Update your UI here, e.g., display the message in a text box
+        //        MessageBox.Show($"Received message: {message}");
+        //    });
+        //}
 
-        private void Client_ImageReceived(byte[] imageData)
-        {
-            Invoke((MethodInvoker)delegate
-            {
-                // Handle the image data, e.g., display it in pictureBoxReceived
-                using (var ms = new MemoryStream(imageData))
-                {
-                    pictureBoxReceived.Image = Image.FromStream(ms);
-                }
-            });
-        }
+        //private void Client_ImageReceived(byte[] imageData)
+        //{
+        //    Invoke((MethodInvoker)delegate
+        //    {
+        //        // Handle the image data, e.g., display it in pictureBoxReceived
+        //        using (var ms = new MemoryStream(imageData))
+        //        {
+        //            pictureBoxReceived.Image = Image.FromStream(ms);
+        //        }
+        //    });
+        //}
 
-        private void InitializePictureBoxReceived()
-        {
-            pictureBoxReceived = new PictureBox();
-            pictureBoxReceived.Location = new Point(10, 10); // Adjust location as needed
-            pictureBoxReceived.Size = new Size(200, 200); // Adjust size as needed
-            pictureBoxReceived.SizeMode = PictureBoxSizeMode.StretchImage; // Optional: Adjust for better image fit
-            this.Controls.Add(pictureBoxReceived);
-        }
+        //private void InitializePictureBoxReceived()
+        //{
+        //    pictureBoxReceived = new PictureBox();
+        //    pictureBoxReceived.Location = new Point(10, 10); // Adjust location as needed
+        //    pictureBoxReceived.Size = new Size(200, 200); // Adjust size as needed
+        //    pictureBoxReceived.SizeMode = PictureBoxSizeMode.StretchImage; // Optional: Adjust for better image fit
+        //    this.Controls.Add(pictureBoxReceived);
+        //}
 
         private void guna2Button17_Click(object sender, EventArgs e)
         {
