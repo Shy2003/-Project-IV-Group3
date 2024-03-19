@@ -27,7 +27,7 @@
             {
                 Invoke(new Action(() =>
                 {
-                    lstChat.Items.Add(message);
+                    lstChat.Items.Add("Client:" + message);
                 }));
             };
             MessageBox.Show("Server started");
