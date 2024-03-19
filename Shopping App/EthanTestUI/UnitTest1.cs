@@ -19,16 +19,17 @@ namespace EthanTestUI
             {
                 using (var automation = new UIA3Automation())
                 {
-                    var mainWindow = app.GetAllTopLevelWindows(automation).FirstOrDefault(window => window.Title == "Client_PC01");
-                    var chatButton = mainWindow.FindFirstDescendant(cf => cf.ByText("ChatButton")); 
+                    var mainWindow = app.GetMainWindow(automation);
+                    var chatButton = mainWindow.FindFirstDescendant(cf => cf.ByText("ChatButton"));
 
                     chatButton?.AsButton().Click();
 
-                    Thread.Sleep(1000); // Wait for the ChatBox to open
-                    var chatBoxWindow = mainWindow.FindFirstDescendant(cf => cf.ByText("ChatBox"));
+                    Thread.Sleep(5000); // Wait for the ChatBox to open
+                    var chatBoxWindow = automation.GetDesktop().FindFirstDescendant(cf => cf.ByText("ChatBox"));
                     Assert.IsNotNull(chatBoxWindow, "ChatBox form was not opened.");
                 }
             }
         }
+
     }
 }
