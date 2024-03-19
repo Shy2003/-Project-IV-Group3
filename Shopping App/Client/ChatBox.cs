@@ -45,8 +45,9 @@ namespace Client_PC01
             if (client != null)
             {
                 client.Disconnect();
-                guna2Button1.Visible = true;
-                btnDisconnectServer.Visible = false;
+                guna2Button1.Visible = true; // Show the "Connect" button
+                btnDisconnectServer.Visible = false; // Hide the "Disconnect" button
+                btnSendMessage.Enabled = false; // Disable the "Send Message" button
             }
         }
 
@@ -72,7 +73,6 @@ namespace Client_PC01
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            AttemptConnection();
         }
 
         private void lstChat_SelectedIndexChanged(object sender, EventArgs e)

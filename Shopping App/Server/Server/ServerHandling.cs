@@ -13,7 +13,6 @@ public class ServerHandling
     private NetworkStream stream;
 
     public event Action<string> MessageReceived;
-    public event Action<string> TextMessageReceived;
 
     public ServerHandling(int port)
     {
@@ -27,12 +26,18 @@ public class ServerHandling
     {
         client = listener.AcceptTcpClient();
         stream = client.GetStream();
+        Console.WriteLine("Client connected.");
 
         var reader = new StreamReader(stream, Encoding.UTF8, leaveOpen: true);
         try
         {
             while (true)
             {
+                if (!client.Connected)
+                {
+                    DisconnectClient();
+                    break;
+                }
                 string message = reader.ReadLine();
                 if (message == null)
                 {
@@ -41,7 +46,6 @@ public class ServerHandling
                 }
 
                 MessageReceived?.Invoke(message);
-                Console.WriteLine("Client connected.");
             }
         }
         catch (IOException)
@@ -52,7 +56,7 @@ public class ServerHandling
 
     public void SendMessage(string message)
     {
-        if (client.Connected)
+        if (client != null && client.Connected)
         {
             var writer = new StreamWriter(stream, Encoding.UTF8, leaveOpen: true);
             writer.WriteLine(message); // WriteLine automatically adds a newline character
@@ -85,7 +89,10 @@ public class ServerHandling
         }
     }
 
-
+    public void OnTextMessageReceived(string message)
+    {
+        MessageReceived?.Invoke(message);
+    }
 
     public void DisconnectClient()
     {

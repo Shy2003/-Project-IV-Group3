@@ -23,17 +23,19 @@
         private void StartServer()
         {
             server = new ServerHandling(13000);
-            server.MessageReceived += (message) =>
-            {
-                Invoke(new Action(() =>
-                {
-                    lstChat.Items.Add("Client:" + message);
-                }));
-            };
+            server.MessageReceived += OnMessageReceived;
             MessageBox.Show("Server started");
             guna2Button1.Visible = false;
             btnDisconnectServer.Visible = true;
         }
+
+
+        private void OnMessageReceived(string message)
+        {
+            lstChat.Invoke(new Action(() => lstChat.Items.Add("Client: " + message)));
+        }
+
+
 
         private void StopServer()
         {

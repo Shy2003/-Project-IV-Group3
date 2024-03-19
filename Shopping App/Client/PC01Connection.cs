@@ -60,14 +60,7 @@ namespace Client_PC01
         {
             if (Connected)
             {
-                //using (var writer = new BinaryWriter(stream, Encoding.UTF8, leaveOpen: true))
-                //{
-                //    // Write message size
-                //    writer.Write(message.Length);
-                //    // Write message
-                //    writer.Write(message.ToCharArray());
-                //    writer.Flush();
-                //}
+                
                 var writer = new StreamWriter(stream, Encoding.UTF8, leaveOpen: true);
                 writer.WriteLine(message); // WriteLine automatically adds a newline character
                 writer.Flush();
