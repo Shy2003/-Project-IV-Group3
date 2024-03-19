@@ -24,16 +24,16 @@ namespace Client
 
         private void guna2Button13_Click(object sender, EventArgs e) // Connect to Server button
         {
-            client = new PC01Connection("127.0.0.1", 13000);
-            if (client.Connect())
-            {
-                client.TextMessageReceived += Client_TextMessageReceived;
-                client.ImageReceived += Client_ImageReceived;
-            }
-            else
-            {
-                MessageBox.Show("Failed to connect to the server.");
-            }
+            //client = new PC01Connection("127.0.0.1", 13000);
+            //if (client.Connect())
+            //{
+            //    client.TextMessageReceived += Client_TextMessageReceived;
+            //    client.ImageReceived += Client_ImageReceived;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Failed to connect to the server.");
+            //}
         }
 
         private void Client_TextMessageReceived(string message)
