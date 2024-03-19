@@ -22,13 +22,13 @@
 
         #region Windows Form Designer generated code
 
-        private System.Windows.Forms.ListBox lstChat;
-        private System.Windows.Forms.TextBox txtMessage;
+        private ListBox lstChat;
+        private TextBox txtMessage;
         private Guna.UI2.WinForms.Guna2Button btnSendMessage;
         private Guna.UI2.WinForms.Guna2Button btnSendImage;
         private Guna.UI2.WinForms.Guna2Button btnToggleChat;
         private Guna.UI2.WinForms.Guna2Button btnClearChat;
-        private System.Windows.Forms.Label lblInstructions;
+        private Label lblInstructions;
         private Guna.UI2.WinForms.Guna2Button btnDisconnectServer;
 
         /// <summary>

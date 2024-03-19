@@ -4,167 +4,139 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Server
 {
     public partial class ServerChatBox : Form
     {
-        private ServerHandling server; // Instance of ServerHandling class
-
+        private ServerHandling server;
 
         public ServerChatBox()
         {
             InitializeComponent();
-            server = new ServerHandling(8080);
 
-            // Subscribe to events
-            server.OnMessageReceived += UpdateReceivedTextMessage;
-            server.OnImageReceived += UpdateReceivedImage;
+            //initially hide chat UI components to ensure they are only visible when the chat is active
+            lstChat.Visible = txtMessage.Visible = btnSendMessage.Visible = btnSendImage.Visible = btnClearChat.Visible = false;
 
-            server.Start(); // Start the server to listen for incoming connections
+            //ensure the Connect to Server button is visible and Disconnect Server button is hidden at startup
+            //this indicates that the user needs to connect before being able to chat
+            guna2Button1.Visible = true;
+            btnDisconnectServer.Visible = false;
+            pictureBoxReceived.Visible = false;             //hide the picture box until an image is received.
+
+            //setup the event handler for clearing the chat history
+            //this allows the user to clear all messages from the chat interface
+            btnClearChat.Click += (sender, e) => lstChat.Items.Clear();
         }
 
-        private void button1_Click(object sender, EventArgs e)      //close chatbox
+        private void guna2Button1_Click(object sender, EventArgs e) // Start Server Button
         {
-            // Close the chatbox form
-            this.Close();
-        }
+            // Initialize and start the server on a specific port (e.g., 13000)
+            server = new ServerHandling(13000);
 
-        private void label1_Click(object sender, EventArgs e)       //sender label
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)       //PC Name label
-        {
-            string senderName = "PC Name";
-            UpdateSender(senderName);
-        }
-
-        private void label3_Click(object sender, EventArgs e)       //received message label
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)       //textbox to display message
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)           //recieved picture label
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)      //picturebox for picture
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)       //enter reply label
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)       //textbox to type reply
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)      //send button
-        {
-
-        }
-
-
-
-
-
-
-        private void UpdateSender(string senderName)
-        {
-            // Update the sender label with the name of the PC sending the message
-            if (label2.InvokeRequired)
+            // Subscribe to the MessageReceived event
+            server.MessageReceived += (message) =>
             {
-                label2.Invoke((MethodInvoker)delegate
+                // Update the lstChat ListBox with the received message
+                // This needs to be done on the UI thread
+                Invoke(new Action(() =>
                 {
-                    label2.Text = senderName;
-                });
-            }
-            else
+                    lstChat.Items.Add(message);
+                }));
+            };
+
+            // Start the server
+            server.Start();
+
+            // Hide the Start Server button and show the Stop Server button
+            guna2Button1.Visible = false;
+            btnDisconnectServer.Visible = true;
+
+            // Optionally, display a message to indicate that the server has started
+            MessageBox.Show("Server started");
+        }
+
+
+
+
+        private void btnToggleChat_Click(object sender, EventArgs e) // Open ChatBox Button
+        {
+            ServerUI.ToggleChatVisibility(btnToggleChat, lstChat, txtMessage, btnSendMessage, btnSendImage, btnClearChat, lblInstructions);
+
+        }
+
+        private void lblInstructions_Click(object sender, EventArgs e) // Instruction Panel
+        {
+
+        }
+
+        private void pictureBoxReceived_Click(object sender, EventArgs e) // Picture Box
+        {
+
+        }
+
+        private void lstChat_SelectedIndexChanged(object sender, EventArgs e) // ChatBox
+        {
+
+        }
+
+        private void btnDisconnectServer_Click(object sender, EventArgs e) // Stop server button
+        {
+            // Stop the server if it's running
+            if (server != null)
             {
-                label2.Text = senderName;
+                server.Stop();
+                server = null; // Set the server instance to null after stopping
+
+                // Show the Start Server button and hide the Stop Server button
+                guna2Button1.Visible = true;
+                btnDisconnectServer.Visible = false;
+
+                // Optionally, display a message to indicate that the server has stopped
+                MessageBox.Show("Server stopped");
             }
         }
 
-        // Updates the UI with received text message
-        private void UpdateReceivedTextMessage(string message)
+        private void txtMessage_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.InvokeRequired)
-            {
-                textBox1.Invoke((MethodInvoker)delegate { textBox1.AppendText(message + Environment.NewLine); });
-            }
-            else
-            {
-                textBox1.AppendText(message + Environment.NewLine);
-            }
+
         }
 
-        // Updates the UI with received image
-        private void UpdateReceivedImage(byte[] imageData)
+        private void btnSendMessage_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.InvokeRequired)
+        }
+
+        private void btnSendMessage_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSendMessage_Click_2(object sender, EventArgs e)
+        {
+
+            // Check if the server is running and there is a message to send
+            if (server != null && !string.IsNullOrEmpty(txtMessage.Text))
             {
-                pictureBox1.Invoke((MethodInvoker)delegate
+                try
                 {
-                    DisplayImage(imageData);
-                });
+                    // Send the message to the client
+                    server.SendMessage(txtMessage.Text);
+
+                    // Update the lstChat ListBox with the sent message
+                    lstChat.Items.Add("Server: " + txtMessage.Text);
+
+                    // Clear the txtMessage TextBox after sending the message
+                    txtMessage.Clear();
+                }
+                catch (Exception ex)
+                {
+                    // Show an error message if something goes wrong
+                    MessageBox.Show("Error sending message: " + ex.Message);
+                }
             }
-            else
-            {
-                DisplayImage(imageData);
-            }
-        }
-
-        // Helper method to display image from byte array
-        private void DisplayImage(byte[] imageData)
-        {
-            using (MemoryStream ms = new MemoryStream(imageData))
-            {
-                pictureBox1.Image = Image.FromStream(ms);
-            }
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-            // Example sender name update
-            UpdateSender("Client Name");
-        }
-
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

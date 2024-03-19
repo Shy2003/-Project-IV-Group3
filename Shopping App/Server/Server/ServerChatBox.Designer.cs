@@ -1,5 +1,4 @@
-﻿
-namespace Server
+﻿namespace Server
 {
     partial class ServerChatBox
     {
@@ -29,168 +28,192 @@ namespace Server
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
-            textBox2 = new TextBox();
-            label5 = new Label();
-            pictureBox1 = new PictureBox();
-            label4 = new Label();
-            textBox1 = new TextBox();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServerChatBox));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            pictureBoxReceived = new PictureBox();
+            lblInstructions = new Label();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            lstChat = new ListBox();
+            txtMessage = new TextBox();
+            btnSendMessage = new Guna.UI2.WinForms.Guna2Button();
+            btnSendImage = new Guna.UI2.WinForms.Guna2Button();
+            btnToggleChat = new Guna.UI2.WinForms.Guna2Button();
+            btnClearChat = new Guna.UI2.WinForms.Guna2Button();
+            btnDisconnectServer = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxReceived).BeginInit();
             SuspendLayout();
             // 
-            // button2
+            // pictureBoxReceived
             // 
-            button2.Location = new Point(1156, 226);
-            button2.Margin = new Padding(4);
-            button2.Name = "button2";
-            button2.Size = new Size(118, 36);
-            button2.TabIndex = 19;
-            button2.Text = "Send";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click_1;
+            pictureBoxReceived.Location = new Point(352, 378);
+            pictureBoxReceived.Name = "pictureBoxReceived";
+            pictureBoxReceived.Size = new Size(508, 341);
+            pictureBoxReceived.TabIndex = 18;
+            pictureBoxReceived.TabStop = false;
+            pictureBoxReceived.Click += pictureBoxReceived_Click;
             // 
-            // textBox2
+            // lblInstructions
             // 
-            textBox2.Location = new Point(1156, 184);
-            textBox2.Margin = new Padding(4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(356, 31);
-            textBox2.TabIndex = 18;
-            textBox2.TextChanged += textBox2_TextChanged_1;
+            lblInstructions.Font = new Font("Segoe UI", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            lblInstructions.Location = new Point(340, 21);
+            lblInstructions.Name = "lblInstructions";
+            lblInstructions.Size = new Size(1228, 781);
+            lblInstructions.TabIndex = 9;
+            lblInstructions.Text = resources.GetString("lblInstructions.Text");
+            lblInstructions.Click += lblInstructions_Click;
             // 
-            // label5
+            // guna2Button1
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(1156, 151);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(167, 25);
-            label5.TabIndex = 17;
-            label5.Text = "Enter reply to Client";
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.Maroon;
+            guna2Button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(14, 88);
+            guna2Button1.Margin = new Padding(2);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(287, 66);
+            guna2Button1.TabIndex = 10;
+            guna2Button1.Text = "Start Server";
+            guna2Button1.Click += guna2Button1_Click;
             // 
-            // pictureBox1
+            // lstChat
             // 
-            pictureBox1.BackColor = Color.Silver;
-            pictureBox1.Location = new Point(314, 365);
-            pictureBox1.Margin = new Padding(4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(702, 399);
-            pictureBox1.TabIndex = 16;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click_1;
+            lstChat.ItemHeight = 25;
+            lstChat.Location = new Point(326, 6);
+            lstChat.Margin = new Padding(2);
+            lstChat.Name = "lstChat";
+            lstChat.Size = new Size(1241, 754);
+            lstChat.TabIndex = 11;
+            lstChat.SelectedIndexChanged += lstChat_SelectedIndexChanged;
             // 
-            // label4
+            // txtMessage
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(314, 308);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(143, 25);
-            label4.TabIndex = 15;
-            label4.Text = "Recieved Picture:";
+            txtMessage.Location = new Point(326, 786);
+            txtMessage.Margin = new Padding(2);
+            txtMessage.Name = "txtMessage";
+            txtMessage.Size = new Size(1077, 31);
+            txtMessage.TabIndex = 12;
+            txtMessage.TextChanged += txtMessage_TextChanged;
             // 
-            // textBox1
+            // btnSendMessage
             // 
-            textBox1.Location = new Point(314, 226);
-            textBox1.Margin = new Padding(4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(690, 31);
-            textBox1.TabIndex = 14;
-            textBox1.TextChanged += textBox1_TextChanged_1;
+            btnSendMessage.CustomizableEdges = customizableEdges3;
+            btnSendMessage.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSendMessage.ForeColor = Color.White;
+            btnSendMessage.Location = new Point(1407, 764);
+            btnSendMessage.Margin = new Padding(2);
+            btnSendMessage.Name = "btnSendMessage";
+            btnSendMessage.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnSendMessage.Size = new Size(160, 36);
+            btnSendMessage.TabIndex = 13;
+            btnSendMessage.Text = "Send";
+            btnSendMessage.Click += btnSendMessage_Click_2;
             // 
-            // label3
+            // btnSendImage
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(314, 184);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(156, 25);
-            label3.TabIndex = 13;
-            label3.Text = "Recieved Message";
+            btnSendImage.CustomizableEdges = customizableEdges5;
+            btnSendImage.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSendImage.ForeColor = Color.White;
+            btnSendImage.Location = new Point(1407, 804);
+            btnSendImage.Margin = new Padding(2);
+            btnSendImage.Name = "btnSendImage";
+            btnSendImage.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnSendImage.Size = new Size(160, 36);
+            btnSendImage.TabIndex = 14;
+            btnSendImage.Text = "Send an Image";
             // 
-            // label2
+            // btnToggleChat
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(501, 82);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(85, 25);
-            label2.TabIndex = 12;
-            label2.Text = "PC Name";
-            label2.Click += label2_Click_1;
+            btnToggleChat.CustomizableEdges = customizableEdges7;
+            btnToggleChat.FillColor = Color.Olive;
+            btnToggleChat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnToggleChat.ForeColor = Color.White;
+            btnToggleChat.Location = new Point(14, 195);
+            btnToggleChat.Name = "btnToggleChat";
+            btnToggleChat.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnToggleChat.Size = new Size(287, 66);
+            btnToggleChat.TabIndex = 15;
+            btnToggleChat.Text = "Open Chatbox";
+            btnToggleChat.Click += btnToggleChat_Click;
             // 
-            // label1
+            // btnClearChat
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(314, 82);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(71, 25);
-            label1.TabIndex = 11;
-            label1.Text = "Sender:";
-            label1.Click += label1_Click_1;
+            btnClearChat.CustomizableEdges = customizableEdges9;
+            btnClearChat.FillColor = Color.Olive;
+            btnClearChat.Font = new Font("Segoe UI", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearChat.ForeColor = Color.White;
+            btnClearChat.Location = new Point(14, 195);
+            btnClearChat.Name = "btnClearChat";
+            btnClearChat.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnClearChat.Size = new Size(287, 66);
+            btnClearChat.TabIndex = 16;
+            btnClearChat.Text = "Clear Chat";
+            btnClearChat.Visible = false;
             // 
-            // button1
+            // btnDisconnectServer
             // 
-            button1.BackColor = Color.FromArgb(192, 0, 0);
-            button1.Location = new Point(68, 161);
-            button1.Margin = new Padding(4);
-            button1.Name = "button1";
-            button1.Size = new Size(162, 71);
-            button1.TabIndex = 10;
-            button1.Text = "Close Chatbox";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnDisconnectServer.CustomizableEdges = customizableEdges11;
+            btnDisconnectServer.FillColor = Color.Green;
+            btnDisconnectServer.Font = new Font("Segoe UI", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDisconnectServer.ForeColor = Color.White;
+            btnDisconnectServer.Location = new Point(14, 88);
+            btnDisconnectServer.Name = "btnDisconnectServer";
+            btnDisconnectServer.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnDisconnectServer.Size = new Size(287, 66);
+            btnDisconnectServer.TabIndex = 17;
+            btnDisconnectServer.Text = "Stop Server";
+            btnDisconnectServer.Visible = false;
+            btnDisconnectServer.Click += btnDisconnectServer_Click;
             // 
             // ServerChatBox
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1580, 846);
-            Controls.Add(button2);
-            Controls.Add(textBox2);
-            Controls.Add(label5);
-            Controls.Add(pictureBox1);
-            Controls.Add(label4);
-            Controls.Add(textBox1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button1);
-            Margin = new Padding(2);
+            ClientSize = new Size(1580, 847);
+            Controls.Add(pictureBoxReceived);
+            Controls.Add(lblInstructions);
+            Controls.Add(guna2Button1);
+            Controls.Add(lstChat);
+            Controls.Add(txtMessage);
+            Controls.Add(btnSendMessage);
+            Controls.Add(btnSendImage);
+            Controls.Add(btnToggleChat);
+            Controls.Add(btnClearChat);
+            Controls.Add(btnDisconnectServer);
             Name = "ServerChatBox";
             Text = "ServerChatBox";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxReceived).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            string replyMessage = textBox2.Text;
-            if (!string.IsNullOrEmpty(replyMessage))
-            {
-                // Send the reply message to the client
-                server.SendMessageToClient(replyMessage);
-                textBox2.Clear();
-            }
-        }
-
         #endregion
 
-        private Button button2;
-        private TextBox textBox2;
-        private Label label5;
-        private PictureBox pictureBox1;
-        private Label label4;
-        private TextBox textBox1;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Button button1;
+        private PictureBox pictureBoxReceived;
+        private Label lblInstructions;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private ListBox lstChat;
+        private TextBox txtMessage;
+        private Guna.UI2.WinForms.Guna2Button btnSendMessage;
+        private Guna.UI2.WinForms.Guna2Button btnSendImage;
+        private Guna.UI2.WinForms.Guna2Button btnToggleChat;
+        private Guna.UI2.WinForms.Guna2Button btnClearChat;
+        private Guna.UI2.WinForms.Guna2Button btnDisconnectServer;
     }
 }

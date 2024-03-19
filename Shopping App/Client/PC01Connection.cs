@@ -64,8 +64,10 @@ namespace Client_PC01
         //sends a text message to the server using the established TCP connection
         public void SendMessage(string message)
         {
+            if (!IsConnected) throw new InvalidOperationException("Not connected to a server.");
+
             var messageBytes = Encoding.UTF8.GetBytes(message);
-            SendData(0x01, messageBytes);
+            SendData(0x01, messageBytes); // 0x01 will denote a text message
         }
 
         //sends an image file to the server by reading the file content and sending it as byte array

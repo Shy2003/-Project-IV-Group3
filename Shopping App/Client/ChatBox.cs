@@ -60,25 +60,27 @@ namespace Client_PC01
                 ServerCommunicationHandler.SendImage(client, DisplayMessage);
             };
 
-            //setup the event handler for connecting to the server
-            //this initiates a connection to the chat server and sets up the interface for chatting
-            guna2Button1.Click += (sender, e) =>
-            {
-                client = ServerConnectionHandler.ConnectToServer(
-                    "127.0.0.1", 13000,
-                    guna2Button1, btnDisconnectServer,
-                    DisplayMessage,             //delegate for handling text messages received from the server
-                    DisplayReceivedImage            //delegate for handling images received from the server
-                );
+            //    setup the event handler for connecting to the server
+            //    this initiates a connection to the chat server and sets up the interface for chatting
+            //    guna2Button1.Click += (sender, e) =>
+            //    {
 
-                // If the connection was successful, start listening for incoming data.
-                if (client != null && client.IsConnected)
-                {
-                    //subscribe to events for receiving text messages and images
-                    client.TextMessageReceived += OnTextMessageReceived;
-                    client.ImageReceived += OnImageReceived;
-                }
-            };
+
+            //    client = ServerConnectionHandler.ConnectToServer(
+            //        "127.0.0.1", 13000,
+            //        guna2Button1, btnDisconnectServer,
+            //        DisplayMessage,             //delegate for handling text messages received from the server
+            //        DisplayReceivedImage            //delegate for handling images received from the server
+            //    );
+
+            //    // If the connection was successful, start listening for incoming data.
+            //    if (client != null && client.IsConnected)
+            //    {
+            //        //subscribe to events for receiving text messages and images
+            //        client.TextMessageReceived += OnTextMessageReceived;
+            //        client.ImageReceived += OnImageReceived;
+            //    }
+            //};
         }
 
         //this method gets called when a text message is received
@@ -132,19 +134,36 @@ namespace Client_PC01
         //attempts to connect or disconnect from the server depending on current state
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            ////show message on successful connection and toggle visibility of connect/disconnect buttons
-            //client = new PC01Connection("127.0.0.1", 13000);
-            //if (client.Connect())
-            //{
-            //    MessageBox.Show("Connected to server.");
-            //    guna2Button1.Visible = false;
-            //    btnDisconnectServer.Visible = true;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Failed to connect to the server.");
-            //}
+            // Instantiate the PC01Connection class with the server IP and port.
+            client = new PC01Connection("127.0.0.1", 13000);
+
+            // Try to connect to the server.
+            if (client.Connect())
+            {
+                MessageBox.Show("Connected to server.");
+                guna2Button1.Visible = false;  // Hide the Connect button.
+                btnDisconnectServer.Visible = true;  // Show the Disconnect button.
+
+                // Subscribe to the TextMessageReceived event to handle incoming text messages.
+                client.TextMessageReceived += (message) =>
+                {
+                    Invoke(new Action(() =>
+                    {
+                        // Add the received message to the lstChat ListBox.
+                        lstChat.Items.Add("Server: " + message);
+                    }));
+                };
+            }
+            else
+            {
+                // If the connection fails, show an error message.
+                MessageBox.Show("Failed to connect to the server.");
+                client = null;  // Dispose of the current client object as it's not connected.
+            }
         }
+
+
+
 
         //handles disconnection from the server
         private void btnDisconnectServer_Click(object sender, EventArgs e)
@@ -162,23 +181,18 @@ namespace Client_PC01
         //sends a message to the server and displays the servers response
         private void btnSendMessage_Click(object sender, EventArgs e)
         {
-            //string message = txtMessage.Text.Trim();
-            //if (!string.IsNullOrEmpty(message))
-            //{
-            //    if (client == null || !client.IsConnected)
-            //    {
-            //        client = new PC01Connection("127.0.0.1", 13000);
-            //        if (!client.Connect())
-            //        {
-            //            MessageBox.Show("Failed to connect to the server.");
-            //            return;
-            //        }
-            //    }
+            // Check if there is a message to send
+            if (!string.IsNullOrEmpty(txtMessage.Text))
+            {
+                // Send the message to the server
+                client.SendMessage(txtMessage.Text);
 
-            //    client.SendMessage(message);
-            //    DisplayMessage("Me: " + message);           //**use DisplayMessage to add to UI
-            //    txtMessage.Clear();
-            //}
+                // Update the lstChat ListBox with the sent message
+                lstChat.Items.Add("You: " + txtMessage.Text);
+
+                // Clear the txtMessage TextBox after sending the message
+                txtMessage.Clear();
+            }
         }
 
 

@@ -1,138 +1,95 @@
 ﻿using System;
-using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
-using System.Windows.Forms;
 
-
-namespace Server
+public class ServerHandling
 {
-    public class ServerHandling
+    private TcpListener listener;
+    private TcpClient client;
+    private NetworkStream stream;
+    private int port;
+    private Thread acceptThread;
+    private volatile bool isListening;
+
+    // Event to notify about received messages
+    public event Action<string> MessageReceived;
+
+    public ServerHandling(int port)
     {
-        private TcpListener listener;
-        private TcpClient client;
-        private NetworkStream stream;
-        public event Action<string> OnMessageReceived;
-        public event Action<byte[]> OnImageReceived;
+        this.port = port;
+    }
 
-        private int port;
+    public void Start()
+    {
+        listener = new TcpListener(IPAddress.Any, port);
+        listener.Start();
+        isListening = true;
+        Console.WriteLine($"Server started on port {port}.");
 
-        // initializes server on a specific port
-        public ServerHandling(int port)
+        acceptThread = new Thread(() =>
         {
-            this.port = port;
-        }
-
-        //starts server and begins listening for client connections
-        public void Start()
-        {
-            listener = new TcpListener(IPAddress.Any, port);
-            listener.Start();
-            Console.WriteLine($"Server started on port {port}.");
-
-            listener.BeginAcceptTcpClient(new AsyncCallback(HandleClientConnection), listener);
-        }
-
-        //handles incoming client connections
-        private void HandleClientConnection(IAsyncResult ar)
-        {
-            client = listener.EndAcceptTcpClient(ar);
-            stream = client.GetStream();
-            Console.WriteLine("Client connected.");
-
-            BeginRead();
-        }
-
-        //begins asynchronous read operation on the network stream
-        private void BeginRead()
-        {
-            var buffer = new byte[4096];
-            stream.BeginRead(buffer, 0, buffer.Length, new AsyncCallback(ReadCallback), buffer);
-        }
-
-        //callback method for asynchronous read operation
-        private void ReadCallback(IAsyncResult ar)
-        {
-            int bytesRead = stream.EndRead(ar);
-            if (bytesRead > 0)
+            try
             {
-                byte[] buffer = (byte[])ar.AsyncState;
-                ProcessDataBuffer(buffer, bytesRead);
-                BeginRead();            //continue reading from the stream
-            }
-            else
-            {
-                DisconnectClient();
-            }
-        }
-
-        //processes received data from client
-        private void ProcessDataBuffer(byte[] buffer, int bytesRead)
-        {
-            byte dataType = buffer[0];
-            // Copy the next 4 bytes for the length, ensuring not to alter the original buffer
-            byte[] lengthBytes = new byte[4];
-            Array.Copy(buffer, 1, lengthBytes, 0, 4);
-
-            // If your system uses little-endian but the data is big-endian, reverse the bytes
-            if (BitConverter.IsLittleEndian)
-            {
-                Array.Reverse(lengthBytes);
-            }
-            int dataLength = BitConverter.ToInt32(lengthBytes, 0);
-
-            //ensure the data length is positive and there is enough data received
-            if (dataLength > 0 && bytesRead >= (dataLength + 5))            //dataType (1 byte) + length (4 bytes) + data
-            {
-                if (dataType == 0x01)       //text message
+                while (isListening)
                 {
-                    //ensure not to read beyond the buffer size
-                    int textLength = Math.Min(dataLength, bytesRead - 5);
-                    string message = Encoding.UTF8.GetString(buffer, 5, textLength);
-                    Console.WriteLine($"Received text: {message}");
-                    OnMessageReceived?.Invoke(message);
-                }
-                else if (dataType == 0x02)          //image
-                {
-                    byte[] imageData = new byte[dataLength];
-                    Array.Copy(buffer, 5, imageData, 0, Math.Min(dataLength, bytesRead - 5));
-                    Console.WriteLine("Received image data.");
-                    OnImageReceived?.Invoke(imageData);
+                    client = listener.AcceptTcpClient();
+                    if (!isListening) break;
+
+                    stream = client.GetStream();
+                    Console.WriteLine("Client connected.");
+
+                    byte[] buffer = new byte[1024];
+                    int bytesRead;
+                    while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) != 0)
+                    {
+                        string message = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                        Console.WriteLine($"Received from client: {message}");
+
+                        // Notify subscribers about the received message
+                        MessageReceived?.Invoke("Client: " + message);
+
+                        // Optionally, you can send a response back to the client here
+                    }
                 }
             }
-        }
-
-        //sends message to the connected client
-        public void SendMessageToClient(string message)
-        {
-            if (client != null && client.Connected)
+            catch (SocketException ex)
             {
-                NetworkStream clientStream = client.GetStream();
-                if (clientStream.CanWrite)
+                if (isListening)
                 {
-                    byte[] messageBytes = Encoding.UTF8.GetBytes(message);
-                    // You might need to prepend the message with its length or a message type identifier,
-                    // depending on your client-server protocol
-                    clientStream.Write(messageBytes, 0, messageBytes.Length);
+                    Console.WriteLine($"SocketException: {ex.Message}");
                 }
             }
-        }
+            finally
+            {
+                client?.Close();
+                stream?.Close();
+            }
+        });
 
-        //disconnects the client
-        private void DisconnectClient()
-        {
-            Console.WriteLine("Client disconnected.");
-            stream.Close();
-            client.Close();
-        }
+        acceptThread.Start();
+    }
 
-        //finally, this stops the server
-        public void Stop()
+    public void Stop()
+    {
+        isListening = false;
+        listener?.Stop();
+
+        client?.Close();
+        stream?.Close();
+        acceptThread?.Join();
+        Console.WriteLine("Server stopped.");
+    }
+
+    // Method to send a message to the connected client
+    public void SendMessage(string message)
+    {
+        if (client != null && client.Connected && stream != null)
         {
-            listener.Stop();
-            Console.WriteLine("Server stopped.");
+            byte[] messageBytes = Encoding.UTF8.GetBytes(message);
+            stream.Write(messageBytes, 0, messageBytes.Length);
+            stream.Flush();
         }
     }
 }
