@@ -1,0 +1,6 @@
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client_PC01_Tests\bin\Debug\net7.0-windows\CoverletSourceRootsMapping
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client_PC01_Tests\obj\Debug\net7.0-windows\Client_PC01_Tests.csproj.AssemblyReference.cache
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client_PC01_Tests\obj\Debug\net7.0-windows\Client_PC01_Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client_PC01_Tests\obj\Debug\net7.0-windows\Client_PC01_Tests.AssemblyInfoInputs.cache
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client_PC01_Tests\obj\Debug\net7.0-windows\Client_PC01_Tests.AssemblyInfo.cs
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client_PC01_Tests\obj\Debug\net7.0-windows\Client_PC01_Tests.csproj.CoreCompileInputs.cache

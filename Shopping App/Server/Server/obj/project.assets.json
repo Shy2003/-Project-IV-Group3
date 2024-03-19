@@ -141,19 +141,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alimm\\.nuget\\packages\\": {}
+    "C:\\Users\\EthanNguyen\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj",
+      "projectUniqueName": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj",
-      "packagesPath": "C:\\Users\\alimm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\obj\\",
+      "projectPath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\Server.csproj",
+      "packagesPath": "C:\\Users\\EthanNguyen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alimm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\EthanNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -173,11 +173,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -208,7 +203,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }
