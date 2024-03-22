@@ -44,22 +44,25 @@
             guna2Button1.FillColor = SystemColors.AppWorkspace;
             guna2Button1.Font = new Font("Segoe UI", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(699, 107);
+            guna2Button1.Location = new Point(466, 71);
+            guna2Button1.Margin = new Padding(2, 2, 2, 2);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(315, 79);
+            guna2Button1.Size = new Size(210, 53);
             guna2Button1.TabIndex = 0;
             guna2Button1.Text = "Open Chatbox";
             guna2Button1.Click += guna2Button1_Click;
             // 
             // ChatBox
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1896, 1016);
+            ClientSize = new Size(1264, 677);
             Controls.Add(guna2Button1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "ChatBox";
             Text = "ChatBox";
+            Load += ChatBox_Load;
             ResumeLayout(false);
         }
 
@@ -67,3 +70,4 @@
 
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
+}

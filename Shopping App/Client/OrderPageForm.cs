@@ -9,8 +9,16 @@ namespace Client_PC01
 {
     public partial class OrderPageForm : Form
     {
-
+        // Constructor with parameter for PC number
+        public string pcNumber;
+        private Button clearButton;
         private PC01Connection connection;
+
+        public OrderPageForm(string pcNumber)
+    {
+        InitializeComponent();
+        this.pcNumber = pcNumber;
+    }
 
         // Constructor
         public OrderPageForm()
@@ -20,45 +28,39 @@ namespace Client_PC01
         }
 
         // Method to initialize form components
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderPageForm));
             headerLabel = new Label();
-
             dishLabel1 = new Label();
             dishLabel2 = new Label();
             dishLabel3 = new Label();
             dishLabel5 = new Label();
             dishLabel6 = new Label();
             dishLabel7 = new Label();
-
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
-
             numericUpDown1 = new NumericUpDown();
             numericUpDown2 = new NumericUpDown();
             numericUpDown3 = new NumericUpDown();
             numericUpDown5 = new NumericUpDown();
             numericUpDown6 = new NumericUpDown();
             numericUpDown7 = new NumericUpDown();
-
             confirmOrderButton = new Button();
-
             priceLabel1 = new Label();
             priceLabel2 = new Label();
             priceLabel3 = new Label();
             priceLabel5 = new Label();
             priceLabel6 = new Label();
             priceLabel7 = new Label();
-
             orderDetailsGroupBox = new GroupBox();
-
             orderDetailsListBox = new ListBox();
-
+            clearButton = new Button();
+            calculateTotalButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -71,9 +73,7 @@ namespace Client_PC01
             ((System.ComponentModel.ISupportInitialize)numericUpDown5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown7).BeginInit();
-
             orderDetailsGroupBox.SuspendLayout();
-
             SuspendLayout();
             // 
             // headerLabel
@@ -326,6 +326,8 @@ namespace Client_PC01
             // orderDetailsGroupBox
             // 
             orderDetailsGroupBox.Controls.Add(orderDetailsListBox);
+            orderDetailsGroupBox.Controls.Add(clearButton);
+            orderDetailsGroupBox.Controls.Add(calculateTotalButton);
             orderDetailsGroupBox.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             orderDetailsGroupBox.ForeColor = Color.DarkRed;
             orderDetailsGroupBox.Location = new Point(600, 77);
@@ -344,9 +346,9 @@ namespace Client_PC01
             orderDetailsListBox.Name = "orderDetailsListBox";
             orderDetailsListBox.Size = new Size(250, 346);
             orderDetailsListBox.TabIndex = 0;
-
-            // Add a clear button to the orderDetailsGroupBox
-            Button clearButton = new Button();
+            // 
+            // clearButton
+            // 
             clearButton.BackColor = Color.Red;
             clearButton.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point);
             clearButton.ForeColor = Color.White;
@@ -357,22 +359,19 @@ namespace Client_PC01
             clearButton.Text = "Clear";
             clearButton.UseVisualStyleBackColor = false;
             clearButton.Click += ClearButton_Click;
-            orderDetailsGroupBox.Controls.Add(clearButton);
-
-            // Create and configure the calculateTotalButton
-            calculateTotalButton = new Button();
+            // 
+            // calculateTotalButton
+            // 
             calculateTotalButton.BackColor = Color.Blue;
             calculateTotalButton.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point);
             calculateTotalButton.ForeColor = Color.White;
-            calculateTotalButton.Location = new Point(100, 460); // Adjust the position as needed
+            calculateTotalButton.Location = new Point(100, 460);
             calculateTotalButton.Name = "calculateTotalButton";
             calculateTotalButton.Size = new Size(80, 30);
             calculateTotalButton.TabIndex = 2;
             calculateTotalButton.Text = "Calculate";
             calculateTotalButton.UseVisualStyleBackColor = false;
             calculateTotalButton.Click += CalculateTotalButton_Click;
-            orderDetailsGroupBox.Controls.Add(calculateTotalButton);
-
             // 
             // OrderPageForm
             // 
@@ -427,50 +426,50 @@ namespace Client_PC01
             PerformLayout();
         }
 
-        private Label headerLabel;
+        public Label headerLabel;
 
-        private Label dishLabel1;
-        private Label dishLabel2;
-        private Label dishLabel3;
-        private Label dishLabel5;
-        private Label dishLabel6;
-        private Label dishLabel7;
+        public Label dishLabel1;
+        public Label dishLabel2;
+        public Label dishLabel3;
+        public Label dishLabel5;
+        public Label dishLabel6;
+        public Label dishLabel7;
 
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
+        public PictureBox pictureBox1;
+        public PictureBox pictureBox2;
+        public PictureBox pictureBox3;
+        public PictureBox pictureBox5;
+        public PictureBox pictureBox6;
+        public PictureBox pictureBox7;
 
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
-        private NumericUpDown numericUpDown3;
-        private NumericUpDown numericUpDown5;
-        private NumericUpDown numericUpDown6;
-        private NumericUpDown numericUpDown7;
+        public NumericUpDown numericUpDown1;
+        public NumericUpDown numericUpDown2;
+        public NumericUpDown numericUpDown3;
+        public NumericUpDown numericUpDown5;
+        public NumericUpDown numericUpDown6;
+        public NumericUpDown numericUpDown7;
 
-        private Label priceLabel1;
-        private Label priceLabel2;
-        private Label priceLabel3;
-        private Label priceLabel5;
-        private Label priceLabel6;
-        private Label priceLabel7;
+        public Label priceLabel1;
+        public Label priceLabel2;
+        public Label priceLabel3;
+        public Label priceLabel5;
+        public Label priceLabel6;
+        public Label priceLabel7;
 
-        private GroupBox orderDetailsGroupBox;
+        public GroupBox orderDetailsGroupBox;
 
-        private ListBox orderDetailsListBox;
+        public ListBox orderDetailsListBox;
 
-        private Button confirmOrderButton;
+        public Button confirmOrderButton;
 
         // Add a field to track the state of the confirmation button
-        private bool isOrderConfirmed = false;
+        public bool isOrderConfirmed = false;
 
         // Add a calculateTotalButton field to your form
-        private Button calculateTotalButton;
+        public Button calculateTotalButton;
 
         // Event handler for the Calculate Total button
-        private void CalculateTotalButton_Click(object sender, EventArgs e)
+        public void CalculateTotalButton_Click(object sender, EventArgs e)
         {
             int total = 0;
 
@@ -490,7 +489,7 @@ namespace Client_PC01
         }
 
         // Handle the click event of the clear button
-        private void ClearButton_Click(object sender, EventArgs e)
+        public void ClearButton_Click(object sender, EventArgs e)
         {
             // Retrieve the order details listbox
             GroupBox orderDetailsGroupBox = Controls.Find("orderDetailsGroupBox", true).FirstOrDefault() as GroupBox;
@@ -503,7 +502,7 @@ namespace Client_PC01
             }
         }
 
-        private void ConfirmOrderButton_Click(object sender, EventArgs e)
+        public void ConfirmOrderButton_Click(object sender, EventArgs e)
         {
             if (!isOrderConfirmed)
             {
@@ -543,7 +542,7 @@ namespace Client_PC01
 
 
 
-        private void numericUpDown_ValueChanged(object sender, EventArgs e)
+        public void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
             // Get the sender control which triggered the event
             var numericUpDown = sender as NumericUpDown;
@@ -565,7 +564,7 @@ namespace Client_PC01
         }
 
         // Helper method to get the price of an item
-        private int GetPrice(Control control)
+        public int GetPrice(Control control)
         {
             // Retrieve the corresponding price label based on the control's name
             string priceLabelName = "priceLabel" + control.Name.Substring(control.Name.Length - 1);
@@ -582,7 +581,7 @@ namespace Client_PC01
         }
 
         // Helper method to update the order details list
-        private void UpdateOrderDetailsList(Control control, int quantity, int totalPrice)
+        public void UpdateOrderDetailsList(Control control, int quantity, int totalPrice)
         {
             // Retrieve the corresponding dish label based on the control's name
             string dishLabelName = "dishLabel" + control.Name.Substring(control.Name.Length - 1);
@@ -599,17 +598,17 @@ namespace Client_PC01
                 orderDetailsListBox.Items.Add(orderDetail);
             }
         }
-        private void OrderPageForm_Load(object sender, EventArgs e)
+        public void OrderPageForm_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void headerLabel_Click(object sender, EventArgs e)
+        public void headerLabel_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        public void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }

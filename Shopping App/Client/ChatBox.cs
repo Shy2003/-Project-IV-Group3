@@ -33,5 +33,10 @@ namespace Client_PC01
 
             // Perform chatting
         }
+
+        private void ChatBox_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,7 +36,23 @@ namespace Client
 
         private void guna2Button17_Click(object sender, EventArgs e)
         {
+            // Open the PC selection form
+            PCSelectionForm pcSelectionForm = new PCSelectionForm();
+            pcSelectionForm.PCSelected += PCSelectionForm_PCSelected; // Subscribe to the PCSelected event
+            pcSelectionForm.ShowDialog();
+        }
+
+        private void PCSelectionForm_PCSelected(object sender, string pcNumber)
+        {
+            // Open the OrderPageForm with the selected PC number
+            OrderPageForm orderPageForm = new OrderPageForm(pcNumber);
+            orderPageForm.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
 }
+
