@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CKl471+G8N8Ptx5BYM42RCUC6mvRDnxLetDMcVMPrT/TerYAwoiiBjjbLr1+h1N+fEGysvDZdR0d7Kmd0SJWxA==",
+  "dgSpecHash": "XU99vfkHzEUkTUpTF9IfRqHFFxegMVx8tMZU3cMW7ADRyDrSKUfb9euf24ozXe4Y39OT4zCNurmaM0W3yJ5/rA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\brian\\Desktop\\Ethan Code\\-Project-IV-Group3\\Shopping App\\EthanTests\\EthanTests.csproj",
+  "projectFilePath": "C:\\Users\\brian\\Desktop\\Testing\\-Project-IV-Group3\\Shopping App\\EthanTests\\EthanTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brian\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\brian\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",

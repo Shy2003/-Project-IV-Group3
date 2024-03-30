@@ -6980,11 +6980,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brian\\Desktop\\Ethan Code\\-Project-IV-Group3\\Shopping App\\Server_ChatBox_Tests\\Server_ChatBox_Tests.csproj",
-      "projectName": "Server_ChatBox_Tests",
-      "projectPath": "C:\\Users\\brian\\Desktop\\Ethan Code\\-Project-IV-Group3\\Shopping App\\Server_ChatBox_Tests\\Server_ChatBox_Tests.csproj",
+      "projectUniqueName": "C:\\Users\\brian\\Desktop\\Testing\\-Project-IV-Group3\\Shopping App\\Server_ChatBox_Tests\\ServerHandling_UnitTests.csproj",
+      "projectName": "ServerHandling_UnitTests",
+      "projectPath": "C:\\Users\\brian\\Desktop\\Testing\\-Project-IV-Group3\\Shopping App\\Server_ChatBox_Tests\\ServerHandling_UnitTests.csproj",
       "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brian\\Desktop\\Ethan Code\\-Project-IV-Group3\\Shopping App\\Server_ChatBox_Tests\\obj\\",
+      "outputPath": "C:\\Users\\brian\\Desktop\\Testing\\-Project-IV-Group3\\Shopping App\\Server_ChatBox_Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7006,8 +7006,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\brian\\Desktop\\Ethan Code\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj": {
-              "projectPath": "C:\\Users\\brian\\Desktop\\Ethan Code\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj"
+            "C:\\Users\\brian\\Desktop\\Testing\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj": {
+              "projectPath": "C:\\Users\\brian\\Desktop\\Testing\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj"
             }
           }
         }

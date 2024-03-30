@@ -2512,11 +2512,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brian\\Desktop\\Ethan Code\\-Project-IV-Group3\\Shopping App\\Client_PC01_Tests\\Client_PC01_Tests.csproj",
+      "projectUniqueName": "C:\\Users\\brian\\Desktop\\Testing\\-Project-IV-Group3\\Shopping App\\Client_PC01_Tests\\Client_PC01_Tests.csproj",
       "projectName": "Client_PC01_Tests",
-      "projectPath": "C:\\Users\\brian\\Desktop\\Ethan Code\\-Project-IV-Group3\\Shopping App\\Client_PC01_Tests\\Client_PC01_Tests.csproj",
+      "projectPath": "C:\\Users\\brian\\Desktop\\Testing\\-Project-IV-Group3\\Shopping App\\Client_PC01_Tests\\Client_PC01_Tests.csproj",
       "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brian\\Desktop\\Ethan Code\\-Project-IV-Group3\\Shopping App\\Client_PC01_Tests\\obj\\",
+      "outputPath": "C:\\Users\\brian\\Desktop\\Testing\\-Project-IV-Group3\\Shopping App\\Client_PC01_Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2538,8 +2538,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\brian\\Desktop\\Ethan Code\\-Project-IV-Group3\\Shopping App\\Client\\Client_PC01.csproj": {
-              "projectPath": "C:\\Users\\brian\\Desktop\\Ethan Code\\-Project-IV-Group3\\Shopping App\\Client\\Client_PC01.csproj"
+            "C:\\Users\\brian\\Desktop\\Testing\\-Project-IV-Group3\\Shopping App\\Client\\Client_PC01.csproj": {
+              "projectPath": "C:\\Users\\brian\\Desktop\\Testing\\-Project-IV-Group3\\Shopping App\\Client\\Client_PC01.csproj"
             }
           }
         }
