@@ -3202,19 +3202,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\EthanNguyen\\.nuget\\packages\\": {}
+    "C:\\Users\\alimm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\EthanTestUI\\EthanTestUI.csproj",
+      "projectUniqueName": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\EthanTestUI\\EthanTestUI.csproj",
       "projectName": "EthanTestUI",
-      "projectPath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\EthanTestUI\\EthanTestUI.csproj",
-      "packagesPath": "C:\\Users\\EthanNguyen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\EthanTestUI\\obj\\",
+      "projectPath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\EthanTestUI\\EthanTestUI.csproj",
+      "packagesPath": "C:\\Users\\alimm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alimm\\Source\\Repos\\-Project-IV-Group3\\Shopping App\\EthanTestUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\EthanNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alimm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3228,11 +3228,11 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client\\Client_PC01.csproj": {
-              "projectPath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client\\Client_PC01.csproj"
+            "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client\\Client_PC01.csproj": {
+              "projectPath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client\\Client_PC01.csproj"
             },
-            "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\Server.csproj": {
-              "projectPath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\Server.csproj"
+            "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj": {
+              "projectPath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj"
             }
           }
         }
@@ -3241,6 +3241,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3292,7 +3297,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

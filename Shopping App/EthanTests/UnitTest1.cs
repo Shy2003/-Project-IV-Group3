@@ -31,6 +31,9 @@ namespace EthanTests
             Assert.IsTrue(connection.Connected, "Connection not marked as connected.");
         }
 
+        // test pushing
+        // abcxyz
+
         [TestMethod]
         public void TestSendingTextMessage()
         {
