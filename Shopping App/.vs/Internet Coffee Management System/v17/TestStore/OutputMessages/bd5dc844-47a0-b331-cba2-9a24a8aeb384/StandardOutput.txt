@@ -1,0 +1,84 @@
+Client connected.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: A connect request was made on an already connected socket.
+Failed to connect to the server: A connect request was made on an already connected socket.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: A connect request was made on an already connected socket.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: An operation was attempted on something that is not a socket. [::ffff:127.0.0.1]:13000
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.TcpClient'.
+Failed to connect to the server: An invalid argument was supplied.
+Failed to connect to the server: An invalid argument was supplied.
+Failed to connect to the server: A connect request was made on an already connected socket.
+Failed to connect to the server: An invalid argument was supplied.
+Failed to connect to the server: A connect request was made on an already connected socket.
+Failed to connect to the server: A connect request was made on an already connected socket. [::ffff:127.0.0.1]:13000
+Failed to connect to the server: A connect request was made on an already connected socket. [::ffff:127.0.0.1]:13000
+Failed to connect to the server: A connect request was made on an already connected socket. [::ffff:127.0.0.1]:13000
+Failed to connect to the server: A connect request was made on an already connected socket. [::ffff:127.0.0.1]:13000
+Failed to connect to the server: An operation was attempted on something that is not a socket. [::ffff:127.0.0.1]:13000
+Failed to connect to the server: A connect request was made on an already connected socket. [::ffff:127.0.0.1]:13000

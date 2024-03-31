@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{A032605D-364A-43AD-B77B-FAF6988895A1}|EthanTests\\EthanTests.csproj|solutionrelative:ethantests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D919E8F-ECA9-43A6-8FC5-38FAEA428D04}|EthanTestUI\\EthanTestUI.csproj|c:\\users\\ajvwo\\source\\repos\\-project-iv-testing\\shopping app\\ethantestui\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D919E8F-ECA9-43A6-8FC5-38FAEA428D04}|EthanTestUI\\EthanTestUI.csproj|C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Testing\\Shopping App\\ethantestui\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D919E8F-ECA9-43A6-8FC5-38FAEA428D04}|EthanTestUI\\EthanTestUI.csproj|solutionrelative:ethantestui\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -98,8 +98,7 @@
               "RelativeToolTip": "EthanTestUI\\UnitTest1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T05:38:43.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-31T05:38:43.187Z"
             },
             {
               "$type": "Document",
@@ -109,7 +108,7 @@
               "RelativeDocumentMoniker": "EthanTests\\UnitTest1.cs",
               "ToolTip": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Testing\\Shopping App\\EthanTests\\UnitTest1.cs",
               "RelativeToolTip": "EthanTests\\UnitTest1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAWAAAA",
+              "ViewState": "AQIAAPkBAAAAAAAAAAAswBUCAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-31T02:05:43.953Z",
               "EditorCaption": ""

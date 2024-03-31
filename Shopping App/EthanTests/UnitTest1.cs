@@ -9,7 +9,7 @@ namespace EthanTests
     public class ConnectionTests
     {
         private ServerHandling server;
-
+        
         [TestInitialize]
         public void Initialize()
         {
@@ -448,6 +448,106 @@ namespace EthanTests
 
             // Assert
             Assert.AreEqual(imageList.Count, imagesSent, "Not all images were sent and received.");
+        }
+
+        [TestMethod]
+        public void INT013_SendingInvalidImageSize()
+        {
+            // Arrange
+            var connection = new PC01Connection("127.0.0.1", 13000);
+            connection.Connect();
+            var largeImageBytes = new byte[int.MaxValue]; // Exceeding practical size limits
+            bool exceptionCaught = false;
+
+            // Act
+            try
+            {
+                connection.SendImage(largeImageBytes);
+            }
+            catch (Exception)
+            {
+                exceptionCaught = true;
+            }
+
+            // Assert
+            Assert.IsTrue(exceptionCaught, "Sending an excessively large image should result in an exception.");
+        }
+
+        [TestMethod]
+        public void INT014_ReceiveImageWhileDisconnected()
+        {
+            // Arrange
+            var connection = new PC01Connection("127.0.0.1", 13000);
+            connection.Connect();
+            connection.Disconnect();
+            bool imageReceived = false;
+
+            // The server attempts to send an image, but the client is disconnected
+            connection.ImageReceived += (imageData) =>
+            {
+                imageReceived = true;
+            };
+
+            // Act
+            server.SendImage($"../../../../image_0.png");
+
+            // Assert
+            Assert.IsFalse(imageReceived, "Client should not receive images after disconnection.");
+        }
+
+        [TestMethod]
+        public void INT015_InvalidServerAddress()
+        {
+            // Arrange
+            var connection = new PC01Connection("not.a.real.address", 13000);
+
+            // Act
+            bool isConnected = connection.Connect();
+
+            // Assert
+            Assert.IsFalse(isConnected, "Should not connect to an invalid server address.");
+        }
+
+
+        [TestMethod]
+        public void INT016_QuickReconnectAfterDisconnect()
+        {
+            // Arrange
+            var connection = new PC01Connection("127.0.0.1", 13000);
+            connection.Connect();
+            connection.Disconnect();
+
+            // Act
+            bool firstReconnect = connection.Connect();
+            Thread.Sleep(100); // Simulate quick disconnect and reconnect
+            connection.Disconnect();
+            bool secondReconnect = connection.Connect();
+
+            // Assert
+            Assert.IsTrue(firstReconnect && secondReconnect, "Should be able to quickly reconnect after disconnect.");
+        }
+
+
+        [TestMethod]
+        public void INT017_SimultaneousConnectionsFromMultipleThreads()
+        {
+            // Arrange
+            int successfulConnections = 0;
+            int attemptCount = 50;
+
+            // Act
+            Parallel.For(0, attemptCount, (i) =>
+            {
+                var connection = new PC01Connection("127.0.0.1", 13000);
+                if (connection.Connect())
+                {
+                    Interlocked.Increment(ref successfulConnections);
+                }
+                connection.Disconnect();
+            });
+
+            // Assert
+            Assert.AreEqual(attemptCount, successfulConnections, "All attempts to connect simultaneously from multiple threads should be successful.");
         }
 
         [TestCleanup]
