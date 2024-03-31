@@ -53,12 +53,12 @@ namespace EthanTests
         }
 
         [TestMethod]
-        public void TestSendingImage()
+        public void INT003_TestSendingImage()
         {
             // Arrange
             var connection = new PC01Connection("127.0.0.1", 13000);
             connection.Connect();
-            byte[] testImageBytes = File.ReadAllBytes("C:\\Users\\EthanNguyen\\Downloads\\pngtest.png");
+            byte[] testImageBytes = File.ReadAllBytes($"../../../../image_0.png");
             bool imageReceived = false;
             server.ImageReceived += (imageBytes) => imageReceived = imageBytes.SequenceEqual(testImageBytes);
 
@@ -403,14 +403,52 @@ namespace EthanTests
             Assert.IsFalse(isConnected, "Should fail to connect when the server is not running.");
         }
 
+        [TestMethod]
+        public void INT011_SendingMultipleMessages() {
+            // arrange
+            var connection = new PC01Connection("127.0.0.1", 13000);
+            connection.Connect();
+            string testMessage1 = "Hello";
+            string testMessage2 = "World";
+            bool messageReceived = false;
+            server.TextMessageReceived += (message) => messageReceived = message == testMessage1;
+            server.TextMessageReceived += (message) => messageReceived = message == testMessage2;
 
+            // act
+            connection.SendTextMessage(testMessage1);
+            connection.SendTextMessage(testMessage2);
+            Thread.Sleep(500);
 
+            // assert
+            Assert.IsTrue(messageReceived, "Text messages were not properly received by server.");
 
+        }
 
+        [TestMethod]
+        public void INT012_MultipleImagesConcurrent()
+        {
+            // Arrange
+            var connection = new PC01Connection("127.0.0.1", 13000);
+            connection.Connect();
+            List<byte[]> imageList = new List<byte[]>();
+            for (int i = 0; i < 10; i++)
+            {
+                byte[] testImageBytes = File.ReadAllBytes($"../../../../image_{i}.png");
+                imageList.Add(testImageBytes);
+            }
+            int imagesSent = 0;
+            server.ImageReceived += (imageBytes) => Interlocked.Increment(ref imagesSent);
 
+            // Act
+            Parallel.ForEach(imageList, (imageBytes) =>
+            {
+                connection.SendImage(imageBytes);
+            });
+            Thread.Sleep(1000); // Wait for all images to be processed
 
-
-
+            // Assert
+            Assert.AreEqual(imageList.Count, imagesSent, "Not all images were sent and received.");
+        }
 
         [TestCleanup]
         public void Cleanup()

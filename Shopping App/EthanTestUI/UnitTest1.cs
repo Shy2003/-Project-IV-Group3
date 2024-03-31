@@ -10,7 +10,7 @@ namespace EthanTestUI
     [TestClass]
     public class UITests
     {
-        private const string ApplicationPath = @"C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\bin\Debug\net7.0-windows\Client_PC01.exe";
+        private const string ApplicationPath = $"Client_PC01.exe";
 
         [TestMethod]
         public void TestChatButtonOpensChatBox()

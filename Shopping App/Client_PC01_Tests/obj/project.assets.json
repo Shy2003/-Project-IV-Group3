@@ -2506,19 +2506,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alimm\\.nuget\\packages\\": {}
+    "C:\\Users\\ajvwo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client_PC01_Tests\\Client_PC01_Tests.csproj",
+      "projectUniqueName": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Testing\\Shopping App\\Client_PC01_Tests\\Client_PC01_Tests.csproj",
       "projectName": "Client_PC01_Tests",
-      "projectPath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client_PC01_Tests\\Client_PC01_Tests.csproj",
-      "packagesPath": "C:\\Users\\alimm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alimm\\Source\\Repos\\-Project-IV-Group3\\Shopping App\\Client_PC01_Tests\\obj\\",
+      "projectPath": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Testing\\Shopping App\\Client_PC01_Tests\\Client_PC01_Tests.csproj",
+      "packagesPath": "C:\\Users\\ajvwo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Testing\\Shopping App\\Client_PC01_Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alimm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ajvwo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2532,8 +2532,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client\\Client_PC01.csproj": {
-              "projectPath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\Client\\Client_PC01.csproj"
+            "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Testing\\Shopping App\\Client\\Client_PC01.csproj": {
+              "projectPath": "C:\\Users\\ajvwo\\source\\repos\\-Project-IV-Testing\\Shopping App\\Client\\Client_PC01.csproj"
             }
           }
         }

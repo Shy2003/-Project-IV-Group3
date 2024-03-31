@@ -192,19 +192,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alimm\\.nuget\\packages\\": {}
+    "C:\\Users\\ajvwo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alimm\\Source\\Repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj",
+      "projectUniqueName": "C:\\Users\\ajvwo\\Source\\Repos\\-Project-IV-Testing\\Shopping App\\Server\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "C:\\Users\\alimm\\Source\\Repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\Server.csproj",
-      "packagesPath": "C:\\Users\\alimm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alimm\\Source\\Repos\\-Project-IV-Group3\\Shopping App\\Server\\Server\\obj\\",
+      "projectPath": "C:\\Users\\ajvwo\\Source\\Repos\\-Project-IV-Testing\\Shopping App\\Server\\Server\\Server.csproj",
+      "packagesPath": "C:\\Users\\ajvwo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ajvwo\\Source\\Repos\\-Project-IV-Testing\\Shopping App\\Server\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alimm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ajvwo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
