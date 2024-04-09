@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\",
+  "WorkspaceRootPath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A032605D-364A-43AD-B77B-FAF6988895A1}|EthanTests\\EthanTests.csproj|c:\\users\\alimm\\source\\repos\\-project-iv-group3\\shopping app\\ethantests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A032605D-364A-43AD-B77B-FAF6988895A1}|EthanTests\\EthanTests.csproj|c:\\users\\ethannguyen\\source\\repos\\[project iv]group 3\\shopping app\\ethantests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A032605D-364A-43AD-B77B-FAF6988895A1}|EthanTests\\EthanTests.csproj|solutionrelative:ethantests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FCF019B-A540-4925-A0DC-103BBA12707E}|Client_PC01_Tests\\Client_PC01_Tests.csproj|c:\\users\\ethannguyen\\source\\repos\\[project iv]group 3\\shopping app\\client_pc01_tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FCF019B-A540-4925-A0DC-103BBA12707E}|Client_PC01_Tests\\Client_PC01_Tests.csproj|solutionrelative:client_pc01_tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D919E8F-ECA9-43A6-8FC5-38FAEA428D04}|EthanTestUI\\EthanTestUI.csproj|c:\\users\\ethannguyen\\source\\repos\\[project iv]group 3\\shopping app\\ethantestui\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D919E8F-ECA9-43A6-8FC5-38FAEA428D04}|EthanTestUI\\EthanTestUI.csproj|solutionrelative:ethantestui\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -57,18 +65,40 @@
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client_PC01_Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "Client_PC01_Tests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client_PC01_Tests\\UnitTest1.cs",
+              "RelativeToolTip": "Client_PC01_Tests\\UnitTest1.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T00:23:32.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\EthanTestUI\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "EthanTestUI\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\EthanTestUI\\UnitTest1.cs",
+              "RelativeToolTip": "EthanTestUI\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAkwDkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T00:22:17.766Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UnitTest1.cs",
-              "DocumentMoniker": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\EthanTests\\UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\EthanTests\\UnitTest1.cs",
               "RelativeDocumentMoniker": "EthanTests\\UnitTest1.cs",
-              "ToolTip": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\EthanTests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\EthanTests\\UnitTest1.cs",
               "RelativeToolTip": "EthanTests\\UnitTest1.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwCEAAAAXAAAA",
+              "ViewState": "AQIAAJ4AAAAAAAAAAAAkwK0AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-31T02:05:43.953Z",
               "EditorCaption": ""
