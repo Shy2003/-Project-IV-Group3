@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fKMwN2lYxEOFODPw2OgOvqXa/XEntnDMdb8yLxj7YUJ4pM7fMHeKvGjs8jiR1D7VP4s3Fw75z8dw0+oi9CuJAw==",
+  "dgSpecHash": "4m7Z6g1pe/G1DCSf5oO6x6qaKI8qKZ6l7mFSAJoTPUY6wjCoXwWi+N3OD4MS/LDWTdi6VcP7b4EkTkI2H6emiw==",
   "success": true,
   "projectFilePath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\IntegrationTestCases\\IntegrationTestCases.csproj",
   "expectedPackageFiles": [
@@ -48,7 +48,10 @@
     "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
-    "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512"
+    "C:\\Users\\EthanNguyen\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512",
+    "C:\\Users\\EthanNguyen\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.16\\microsoft.windowsdesktop.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\EthanNguyen\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.16\\microsoft.netcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\EthanNguyen\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.16\\microsoft.aspnetcore.app.ref.7.0.16.nupkg.sha512"
   ],
   "logs": []
 }

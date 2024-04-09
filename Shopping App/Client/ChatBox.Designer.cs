@@ -95,7 +95,7 @@
             // 
             // lstChat
             // 
-            lstChat.AccessibleName = "lstChat";
+            lstChat.AccessibleName = "ChatBox";
             lstChat.ItemHeight = 25;
             lstChat.Location = new Point(335, 2);
             lstChat.Margin = new Padding(2);

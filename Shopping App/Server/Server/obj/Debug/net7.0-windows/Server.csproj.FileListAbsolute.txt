@@ -66,4 +66,5 @@ C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
-C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\obj\Debug\net7.0-windows\Server.csproj.CopyComplete
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\obj\Debug\net7.0-windows\Server.sourcelink.json
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\obj\Debug\net7.0-windows\Server.csproj.Up2Date

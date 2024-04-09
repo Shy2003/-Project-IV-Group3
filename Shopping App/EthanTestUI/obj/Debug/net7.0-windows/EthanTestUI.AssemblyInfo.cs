@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EthanTestUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5b58ae112c20319566a93a8cb6a4e658463bb43")]
 [assembly: System.Reflection.AssemblyProductAttribute("EthanTestUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EthanTestUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -261,4 +261,5 @@ C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\b
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
-C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\obj\Debug\net7.0-windows\EthanTestUI.csproj.CopyComplete
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\obj\Debug\net7.0-windows\EthanTestUI.sourcelink.json
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\obj\Debug\net7.0-windows\EthanTes.081D9AE6.Up2Date

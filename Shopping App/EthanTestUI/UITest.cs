@@ -105,6 +105,69 @@ namespace EthanTestUI
             okButton?.Invoke();
         }
 
+        [TestMethod]
+        public void TestOpenChatFunctionalityClient()
+        {
+            // Wait for the Open Chat button to become available
+            var openChatButton = Retry.WhileNull(() =>
+                _clientMainWindow.FindFirstDescendant(cf => cf.ByText("OpenChat")).AsButton(),
+                timeout: TimeSpan.FromSeconds(5)).Result;
+            Assert.IsNotNull(openChatButton, "Open Chat button not found.");
+            Assert.IsTrue(openChatButton.IsEnabled, "Open Chat button should be enabled.");
+
+            // Simulate a mouse click on the Open Chat button
+            openChatButton.Focus(); // Bring the button into focus
+            Mouse.Click(openChatButton.GetClickablePoint(), MouseButton.Left); // Simulate a left mouse click on the button
+
+            // Wait for the chat list box to become available and check that it is visible
+            var lstChat = Retry.WhileNull(() =>
+                _clientMainWindow.FindFirstDescendant(cf => cf.ByAutomationId("lstChat")).AsListBox(),
+                timeout: TimeSpan.FromSeconds(5)).Result;
+            Assert.IsNotNull(lstChat, "Chat list control not found.");
+            Assert.IsFalse(lstChat.Properties.IsOffscreen.ValueOrDefault, "Chat list should be visible.");
+
+            var txtMessage = _clientMainWindow.FindFirstDescendant(cf => cf.ByAutomationId("txtMessage")).AsTextBox();
+            Assert.IsNotNull(txtMessage, "Message text box control not found.");
+            Assert.IsTrue(txtMessage.IsEnabled, "Message text box should be visible.");
+
+            // Wait for the Send Message button to become available and check that it is enabled
+            var btnSendMessagea = Retry.WhileNull(() =>
+                _clientMainWindow.FindFirstDescendant(cf => cf.ByName("btnSend")).AsButton(), // Use the button's name
+                timeout: TimeSpan.FromSeconds(5)).Result;
+            Assert.IsNotNull(btnSendMessagea, "Send message button control not found.");
+            Assert.IsTrue(btnSendMessagea.IsEnabled, "Send message button should be visible.");
+
+        }
+
+
+        [TestMethod]
+        public void TestOpenChatFunctionalityServer()
+        {
+            // Wait for the Open Chat button to become available on the server side
+            var openChatButtonServer = Retry.WhileNull(() =>
+                _serverMainWindow.FindFirstDescendant(cf => cf.ByText("OpenChat")).AsButton(),
+                timeout: TimeSpan.FromSeconds(5)).Result;
+            Assert.IsNotNull(openChatButtonServer, "Open Chat button on server not found.");
+            Assert.IsTrue(openChatButtonServer.IsEnabled, "Open Chat button on server should be enabled.");
+
+            // Simulate a mouse click on the Open Chat button on the server side
+            openChatButtonServer.Focus(); // Bring the button into focus
+            Mouse.Click(openChatButtonServer.GetClickablePoint(), MouseButton.Left); // Simulate a left mouse click on the button
+
+            // Wait for the chat list box to become available on the server side and check that it is visible
+            var lstChatServer = Retry.WhileNull(() =>
+                _serverMainWindow.FindFirstDescendant(cf => cf.ByAutomationId("lstChat")).AsListBox(),
+                timeout: TimeSpan.FromSeconds(5)).Result;
+            Assert.IsNotNull(lstChatServer, "Chat list control on server not found.");
+            Assert.IsFalse(lstChatServer.Properties.IsOffscreen.ValueOrDefault, "Chat list on server should be visible.");
+
+          
+        }
+
+
+
+
+
         [TestCleanup]
         public void Cleanup()
         {
@@ -115,7 +178,7 @@ namespace EthanTestUI
     }
 
 
-
+    
 
 
 
