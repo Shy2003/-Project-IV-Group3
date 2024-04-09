@@ -30,8 +30,10 @@ namespace EthanTestUI
                 }
             }
         }
+    }
+}
 
-        [TestMethod]
+        // [TestMethod]
         //public void AttemptConnection_ShouldDisplayConnectedMessage()
         //{
         //    // Start the application
@@ -55,6 +57,4 @@ namespace EthanTestUI
         //        app.Close();
         //    }
         //}
-
-    }
-}
+        // }
