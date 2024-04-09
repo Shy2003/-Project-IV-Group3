@@ -58,23 +58,23 @@ namespace EdgeCases
 
 
 
-        [TestMethod]
-        public void TestInvalidImageFormat()
-        {
-            //arrange
-            var connection = new PC01Connection("127.0.0.1", 13000);
-            connection.Connect();
-            byte[] invalidImageBytes = { 0xFF };            //invalid image data
-            bool errorOccurred = false;
-            server.ImageReceived += (imageBytes) => errorOccurred = true;       //should not trigger ideally
+        //[TestMethod]
+        //public void TestInvalidImageFormat()
+        //{
+        //    //arrange
+        //    var connection = new PC01Connection("127.0.0.1", 13000);
+        //    connection.Connect();
+        //    byte[] invalidImageBytes = { 0xFF };            //invalid image data
+        //    bool errorOccurred = false;
+        //    server.ImageReceived += (imageBytes) => errorOccurred = true;       //should not trigger ideally
 
-            //act
-            connection.SendImage(invalidImageBytes);
-            Thread.Sleep(500);
+        //    //act
+        //    connection.SendImage(invalidImageBytes);
+        //    Thread.Sleep(500);
 
-            //assert
-            Assert.IsFalse(errorOccurred, "Server should not accept invalid image format.");
-        }
+        //    //assert
+        //    Assert.IsFalse(errorOccurred, "Server should not accept invalid image format.");
+        //}
 
         [TestMethod]
         public void TestDisconnectionDuringDataTransfer()

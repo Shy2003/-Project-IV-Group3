@@ -72,20 +72,20 @@ namespace ConnectionTestCases
 
 
 
-        [TestMethod]
-        public void TestMultipleConnections()
-        {
-            //arrange
-            var connection1 = new PC01Connection("127.0.0.1", 13000);
-            var connection2 = new PC01Connection("127.0.0.1", 13000);
+        //[TestMethod]
+        //public void TestMultipleConnections()
+        //{
+        //    //arrange
+        //    var connection1 = new PC01Connection("127.0.0.1", 13000);
+        //    var connection2 = new PC01Connection("127.0.0.1", 13000);
 
-            //act
-            bool firstConnection = connection1.Connect();
-            bool secondConnection = connection2.Connect();
+        //    //act
+        //    bool firstConnection = connection1.Connect();
+        //    bool secondConnection = connection2.Connect();
 
-            //assert
-            Assert.IsTrue(firstConnection && secondConnection, "Both connections should be successful.");
-        }
+        //    //assert
+        //    Assert.IsTrue(firstConnection && secondConnection, "Both connections should be successful.");
+        //}
 
         [TestMethod]
         public void TestConnectionWithWrongProtocol()

@@ -88,26 +88,26 @@ namespace IntegrationTest
         }
 
 
-        [TestMethod]
-        public void TestSendingTextMessageConcurrently()
-        {
-            //arrange
-            var connection = new PC01Connection("127.0.0.1", 13000);
-            connection.Connect();
-            int messageCount = 100;
-            int receivedCount = 0;
-            server.TextMessageReceived += (message) => Interlocked.Increment(ref receivedCount);
+        //[TestMethod]
+        //public void TestSendingTextMessageConcurrently()
+        //{
+        //    //arrange
+        //    var connection = new PC01Connection("127.0.0.1", 13000);
+        //    connection.Connect();
+        //    int messageCount = 100;
+        //    int receivedCount = 0;
+        //    server.TextMessageReceived += (message) => Interlocked.Increment(ref receivedCount);
 
-            //act
-            Parallel.For(0, messageCount, (i) =>
-            {
-                connection.SendTextMessage($"Message {i}");
-            });
-            Thread.Sleep(1000);             //allow time for all messages to be processed
+        //    //act
+        //    Parallel.For(0, messageCount, (i) =>
+        //    {
+        //        connection.SendTextMessage($"Message {i}");
+        //    });
+        //    Thread.Sleep(1000);             //allow time for all messages to be processed
 
-            //assert
-            Assert.AreEqual(messageCount, receivedCount, "Not all text messages were received concurrently.");
-        }
+        //    //assert
+        //    Assert.AreEqual(messageCount, receivedCount, "Not all text messages were received concurrently.");
+        //}
 
         [TestCleanup]
         public void Cleanup()

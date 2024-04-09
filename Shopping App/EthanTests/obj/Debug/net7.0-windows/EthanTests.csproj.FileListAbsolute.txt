@@ -105,7 +105,6 @@ C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTests\ob
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTests\obj\Debug\net7.0-windows\EthanTests.AssemblyInfoInputs.cache
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTests\obj\Debug\net7.0-windows\EthanTests.AssemblyInfo.cs
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTests\obj\Debug\net7.0-windows\EthanTests.csproj.CoreCompileInputs.cache
-C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTests\obj\Debug\net7.0-windows\EthanTests.csproj.CopyComplete
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTests\obj\Debug\net7.0-windows\EthanTests.dll
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTests\obj\Debug\net7.0-windows\refint\EthanTests.dll
 C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTests\obj\Debug\net7.0-windows\EthanTests.pdb
@@ -229,3 +228,5 @@ C:\Users\alimm\Source\Repos\-Project-IV-Group3\Shopping App\EthanTests\obj\Debug
 C:\Users\alimm\Source\Repos\-Project-IV-Group3\Shopping App\EthanTests\obj\Debug\net7.0-windows\EthanTests.pdb
 C:\Users\alimm\Source\Repos\-Project-IV-Group3\Shopping App\EthanTests\obj\Debug\net7.0-windows\EthanTests.genruntimeconfig.cache
 C:\Users\alimm\Source\Repos\-Project-IV-Group3\Shopping App\EthanTests\obj\Debug\net7.0-windows\ref\EthanTests.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTests\obj\Debug\net7.0-windows\EthanTests.sourcelink.json
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTests\obj\Debug\net7.0-windows\EthanTests.csproj.Up2Date
