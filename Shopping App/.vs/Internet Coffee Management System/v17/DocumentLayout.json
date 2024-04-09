@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\",
+  "WorkspaceRootPath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A032605D-364A-43AD-B77B-FAF6988895A1}|EthanTests\\EthanTests.csproj|c:\\users\\alimm\\source\\repos\\-project-iv-group3\\shopping app\\ethantests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A032605D-364A-43AD-B77B-FAF6988895A1}|EthanTests\\EthanTests.csproj|solutionrelative:ethantests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86099B4F-E0DA-4FAD-90BF-043AC11165C5}|EdgeTestCases\\EdgeTestCases.csproj|c:\\users\\ethannguyen\\source\\repos\\[project iv]group 3\\shopping app\\edgetestcases\\edgetestcases.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86099B4F-E0DA-4FAD-90BF-043AC11165C5}|EdgeTestCases\\EdgeTestCases.csproj|solutionrelative:edgetestcases\\edgetestcases.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA6E76E2-9F30-4F6D-A5E4-96779D483DE7}|IntegrationTestCases\\IntegrationTestCases.csproj|c:\\users\\ethannguyen\\source\\repos\\[project iv]group 3\\shopping app\\integrationtestcases\\integrationtestcases.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA6E76E2-9F30-4F6D-A5E4-96779D483DE7}|IntegrationTestCases\\IntegrationTestCases.csproj|solutionrelative:integrationtestcases\\integrationtestcases.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD143366-863F-4E15-A8D3-0458594CECD5}|ConnectionTestCases\\ConnectionTestCases.csproj|c:\\users\\ethannguyen\\source\\repos\\[project iv]group 3\\shopping app\\connectiontestcases\\conectiontestcases.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD143366-863F-4E15-A8D3-0458594CECD5}|ConnectionTestCases\\ConnectionTestCases.csproj|solutionrelative:connectiontestcases\\conectiontestcases.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -16,6 +24,10 @@
           "DockedWidth": 200,
           "SelectedChildIndex": 11,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -57,21 +69,41 @@
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EdgeTestCases.cs",
+              "DocumentMoniker": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\EdgeTestCases\\EdgeTestCases.cs",
+              "RelativeDocumentMoniker": "EdgeTestCases\\EdgeTestCases.cs",
+              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\EdgeTestCases\\EdgeTestCases.cs",
+              "RelativeToolTip": "EdgeTestCases\\EdgeTestCases.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T00:56:18.288Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\EthanTests\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "EthanTests\\UnitTest1.cs",
-              "ToolTip": "C:\\Users\\alimm\\source\\repos\\-Project-IV-Group3\\Shopping App\\EthanTests\\UnitTest1.cs",
-              "RelativeToolTip": "EthanTests\\UnitTest1.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwCEAAAAXAAAA",
+              "DocumentIndex": 1,
+              "Title": "IntegrationTestCases.cs",
+              "DocumentMoniker": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\IntegrationTestCases\\IntegrationTestCases.cs",
+              "RelativeDocumentMoniker": "IntegrationTestCases\\IntegrationTestCases.cs",
+              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\IntegrationTestCases\\IntegrationTestCases.cs",
+              "RelativeToolTip": "IntegrationTestCases\\IntegrationTestCases.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T02:05:43.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-09T00:55:08.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConectionTestCases.cs",
+              "DocumentMoniker": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\ConnectionTestCases\\ConectionTestCases.cs",
+              "RelativeDocumentMoniker": "ConnectionTestCases\\ConectionTestCases.cs",
+              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\ConnectionTestCases\\ConectionTestCases.cs",
+              "RelativeToolTip": "ConnectionTestCases\\ConectionTestCases.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T00:52:11.431Z"
             }
           ]
         }
