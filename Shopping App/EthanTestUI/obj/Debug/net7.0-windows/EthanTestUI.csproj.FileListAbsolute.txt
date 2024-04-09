@@ -244,5 +244,21 @@ C:\Users\alimm\Source\Repos\-Project-IV-Group3\Shopping App\EthanTestUI\obj\Debu
 C:\Users\alimm\Source\Repos\-Project-IV-Group3\Shopping App\EthanTestUI\obj\Debug\net7.0-windows\EthanTestUI.pdb
 C:\Users\alimm\Source\Repos\-Project-IV-Group3\Shopping App\EthanTestUI\obj\Debug\net7.0-windows\EthanTestUI.genruntimeconfig.cache
 C:\Users\alimm\Source\Repos\-Project-IV-Group3\Shopping App\EthanTestUI\obj\Debug\net7.0-windows\ref\EthanTestUI.dll
-C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\obj\Debug\net7.0-windows\EthanTestUI.sourcelink.json
-C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\obj\Debug\net7.0-windows\EthanTes.081D9AE6.Up2Date
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\selenium-manager\linux\selenium-manager
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\selenium-manager\macos\selenium-manager
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\selenium-manager\windows\selenium-manager.exe
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\Appium.Net.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\Aquality.Selenium.Core.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\Aquality.WinAppDriver.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\SeleniumExtras.PageObjects.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\NLog.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\WebDriver.Support.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\WebDriver.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\SkiaSharp.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\bin\Debug\net7.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\EthanTestUI\obj\Debug\net7.0-windows\EthanTestUI.csproj.CopyComplete

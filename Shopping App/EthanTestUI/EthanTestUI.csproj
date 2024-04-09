@@ -49,12 +49,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Aquality.WinAppDriver" Version="3.0.3" />
     <PackageReference Include="FlaUI.UIA3.Signed" Version="4.0.0" />
     <PackageReference Include="Microsoft.CodeCoverage" Version="17.5.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
     <PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
     <PackageReference Include="coverlet.collector" Version="3.2.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.19.0" />
     <PackageReference Include="System.Windows.Extensions" Version="8.0.0" />
   </ItemGroup>
 

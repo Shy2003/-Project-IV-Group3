@@ -13,11 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EthanTests", "EthanTests\Et
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EthanTestUI", "EthanTestUI\EthanTestUI.csproj", "{7D919E8F-ECA9-43A6-8FC5-38FAEA428D04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionTestCases", "ConnectionTestCases\ConnectionTestCases.csproj", "{BD143366-863F-4E15-A8D3-0458594CECD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionTestCases", "ConnectionTestCases\ConnectionTestCases.csproj", "{BD143366-863F-4E15-A8D3-0458594CECD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTestCases", "IntegrationTestCases\IntegrationTestCases.csproj", "{BA6E76E2-9F30-4F6D-A5E4-96779D483DE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTestCases", "IntegrationTestCases\IntegrationTestCases.csproj", "{BA6E76E2-9F30-4F6D-A5E4-96779D483DE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeTestCases", "EdgeTestCases\EdgeTestCases.csproj", "{86099B4F-E0DA-4FAD-90BF-043AC11165C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdgeTestCases", "EdgeTestCases\EdgeTestCases.csproj", "{86099B4F-E0DA-4FAD-90BF-043AC11165C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

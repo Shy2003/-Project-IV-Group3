@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D919E8F-ECA9-43A6-8FC5-38FAEA428D04}|EthanTestUI\\EthanTestUI.csproj|c:\\users\\ethannguyen\\source\\repos\\[project iv]group 3\\shopping app\\ethantestui\\uitest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D919E8F-ECA9-43A6-8FC5-38FAEA428D04}|EthanTestUI\\EthanTestUI.csproj|solutionrelative:ethantestui\\uitest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F825379-AC11-456A-8528-8A67021A378F}|GUITest\\GUITest.csproj|c:\\users\\ethannguyen\\source\\repos\\[project iv]group 3\\shopping app\\guitest\\nunitguitest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F825379-AC11-456A-8528-8A67021A378F}|GUITest\\GUITest.csproj|solutionrelative:guitest\\nunitguitest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|c:\\users\\ethannguyen\\source\\repos\\[project iv]group 3\\shopping app\\server\\server\\serverchatbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\serverchatbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|c:\\users\\ethannguyen\\source\\repos\\[project iv]group 3\\shopping app\\client\\chatbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|solutionrelative:client\\chatbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|c:\\users\\ethannguyen\\source\\repos\\[project iv]group 3\\shopping app\\server\\server\\serverchatbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{680818BE-84AE-418A-BA9A-179E0A476039}|Server\\Server\\Server.csproj|solutionrelative:server\\server\\serverchatbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|c:\\users\\ethannguyen\\source\\repos\\[project iv]group 3\\shopping app\\client\\client_pc01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|solutionrelative:client\\client_pc01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|c:\\users\\ethannguyen\\source\\repos\\[project iv]group 3\\shopping app\\client\\client_pc01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A32B694C-F9ED-41CE-919D-18EB5A3973F4}|Client\\Client_PC01.csproj|solutionrelative:client\\client_pc01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,41 +74,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ServerChatBox.cs",
-              "DocumentMoniker": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\ServerChatBox.cs",
-              "RelativeDocumentMoniker": "Server\\Server\\ServerChatBox.cs",
-              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\ServerChatBox.cs",
-              "RelativeToolTip": "Server\\Server\\ServerChatBox.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAD4vxwAAAAIAAAA",
+              "DocumentIndex": 0,
+              "Title": "NUnitGUITest.cs",
+              "DocumentMoniker": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\GUITest\\NUnitGUITest.cs",
+              "RelativeDocumentMoniker": "GUITest\\NUnitGUITest.cs",
+              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\GUITest\\NUnitGUITest.cs",
+              "RelativeToolTip": "GUITest\\NUnitGUITest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T01:57:47.632Z",
+              "WhenOpened": "2024-04-09T02:19:23.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ServerChatBox.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\ServerChatBox.cs",
-              "RelativeDocumentMoniker": "Server\\Server\\ServerChatBox.cs",
-              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Server\\Server\\ServerChatBox.cs [Design]",
-              "RelativeToolTip": "Server\\Server\\ServerChatBox.cs [Design]",
+              "Title": "ChatBox.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client\\ChatBox.cs",
+              "RelativeDocumentMoniker": "Client\\ChatBox.cs",
+              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client\\ChatBox.cs [Design]",
+              "RelativeToolTip": "Client\\ChatBox.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T01:20:16.559Z",
+              "WhenOpened": "2024-04-09T02:18:20.558Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UITest.cs",
-              "DocumentMoniker": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\EthanTestUI\\UITest.cs",
-              "RelativeDocumentMoniker": "EthanTestUI\\UITest.cs",
-              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\EthanTestUI\\UITest.cs",
-              "RelativeToolTip": "EthanTestUI\\UITest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "DocumentIndex": 2,
+              "Title": "Client_PC01.cs",
+              "DocumentMoniker": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client\\Client_PC01.cs",
+              "RelativeDocumentMoniker": "Client\\Client_PC01.cs",
+              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client\\Client_PC01.cs",
+              "RelativeToolTip": "Client\\Client_PC01.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAUwFgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T01:08:13.437Z",
+              "WhenOpened": "2024-04-09T02:18:03.229Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Client_PC01.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client\\Client_PC01.cs",
+              "RelativeDocumentMoniker": "Client\\Client_PC01.cs",
+              "ToolTip": "C:\\Users\\EthanNguyen\\source\\repos\\[Project IV]Group 3\\Shopping App\\Client\\Client_PC01.cs [Design]",
+              "RelativeToolTip": "Client\\Client_PC01.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T02:17:59.229Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

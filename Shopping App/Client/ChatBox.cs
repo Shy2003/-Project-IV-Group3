@@ -131,7 +131,7 @@ namespace Client_PC01
 
         private void btnSendImage_Click(object sender, EventArgs e)
         {
-       
+
         }
 
         private void btnToggleChat_Click(object sender, EventArgs e)

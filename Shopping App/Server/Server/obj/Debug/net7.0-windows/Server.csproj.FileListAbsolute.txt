@@ -48,5 +48,22 @@ C:\Users\alimm\Source\Repos\-Project-IV-Group3\Shopping App\Server\Server\obj\De
 C:\Users\alimm\Source\Repos\-Project-IV-Group3\Shopping App\Server\Server\obj\Debug\net7.0-windows\Server.pdb
 C:\Users\alimm\Source\Repos\-Project-IV-Group3\Shopping App\Server\Server\obj\Debug\net7.0-windows\Server.genruntimeconfig.cache
 C:\Users\alimm\Source\Repos\-Project-IV-Group3\Shopping App\Server\Server\obj\Debug\net7.0-windows\ref\Server.dll
-C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\obj\Debug\net7.0-windows\Server.sourcelink.json
-C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\obj\Debug\net7.0-windows\Server.csproj.Up2Date
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\selenium-manager\linux\selenium-manager
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\selenium-manager\macos\selenium-manager
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\selenium-manager\windows\selenium-manager.exe
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\Appium.Net.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\Aquality.Selenium.Core.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\Aquality.WinAppDriver.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\SeleniumExtras.PageObjects.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\NLog.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\WebDriver.Support.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\WebDriver.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\SkiaSharp.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\obj\Debug\net7.0-windows\Server.csproj.CopyComplete

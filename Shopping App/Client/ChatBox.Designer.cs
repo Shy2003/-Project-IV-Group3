@@ -66,7 +66,7 @@
             // lblInstructions
             // 
             lblInstructions.Font = new Font("Segoe UI", 14.1428576F, FontStyle.Bold, GraphicsUnit.Point);
-            lblInstructions.Location = new Point(348, 32);
+            lblInstructions.Location = new Point(348, 15);
             lblInstructions.Name = "lblInstructions";
             lblInstructions.Size = new Size(1228, 781);
             lblInstructions.TabIndex = 0;
@@ -75,7 +75,7 @@
             // 
             // guna2Button1
             // 
-            guna2Button1.AccessibleName = "Connect";
+            guna2Button1.AccessibleName = "ConnectServer";
             guna2Button1.CustomizableEdges = customizableEdges1;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -95,6 +95,7 @@
             // 
             // lstChat
             // 
+            lstChat.AccessibleName = "lstChat";
             lstChat.ItemHeight = 25;
             lstChat.Location = new Point(335, 2);
             lstChat.Margin = new Padding(2);
@@ -105,6 +106,7 @@
             // 
             // txtMessage
             // 
+            txtMessage.AccessibleName = "txtMessage";
             txtMessage.Location = new Point(335, 782);
             txtMessage.Margin = new Padding(2);
             txtMessage.Name = "txtMessage";
@@ -114,6 +116,7 @@
             // 
             // btnSendMessage
             // 
+            btnSendMessage.AccessibleName = "btnSend";
             btnSendMessage.CustomizableEdges = customizableEdges3;
             btnSendMessage.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnSendMessage.ForeColor = Color.White;
@@ -142,6 +145,7 @@
             // 
             // btnToggleChat
             // 
+            btnToggleChat.AccessibleName = "OpenChat";
             btnToggleChat.CustomizableEdges = customizableEdges7;
             btnToggleChat.FillColor = Color.Olive;
             btnToggleChat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);

@@ -38,6 +38,243 @@ namespace EthanTestUI
         }
     }
 
+    [TestClass]
+    public class ChatApplicationTests
+    {
+        private Application _serverApp;
+        private Application _clientApp;
+        private UIA3Automation _automation;
+        private Window _serverMainWindow;
+        private Window _clientMainWindow;
+
+        private const string ServerApplicationPath = @"C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\Server.exe";
+        private const string ClientApplicationPath = @"C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\bin\Debug\net7.0-windows\Client_PC01.exe";
+
+        [TestInitialize]
+        public void Initialize()
+        {
+            _automation = new UIA3Automation();
+            _serverApp = Application.Launch(ServerApplicationPath);
+            _clientApp = Application.Launch(ClientApplicationPath);
+            _serverMainWindow = _serverApp.GetMainWindow(_automation);
+            _clientMainWindow = _clientApp.GetMainWindow(_automation);
+        }
+
+        [TestMethod]
+        public void TestServerStartAndClientConnect()
+        {
+            Task.Run(() =>
+            {
+                // Start the server in a separate thread
+                _serverApp = Application.Launch(ServerApplicationPath);
+                _serverMainWindow = _serverApp.GetMainWindow(_automation);
+                var startServerButton = _serverMainWindow.FindFirstDescendant(cf => cf.ByText("StartServer")).AsButton();
+                startServerButton.Click();
+                HandleMessageBox("Server started");
+            });
+
+            Task.Run(() =>
+            {
+                // Connect the client in a separate thread
+                _clientApp = Application.Launch(ClientApplicationPath);
+                _clientMainWindow = _clientApp.GetMainWindow(_automation);
+                var connectServerButton = _clientMainWindow.FindFirstDescendant(cf => cf.ByText("ConnectServer")).AsButton();
+                connectServerButton.Click();
+                HandleMessageBox("Connected to server");
+            });
+
+            // Add a delay to ensure the server and client have started and connected
+            Thread.Sleep(5000);
+        }
+
+        private void HandleMessageBox(string expectedMessage)
+        {
+            var messageBox = Retry.WhileNull(() =>
+                _automation.GetDesktop().FindFirstChild(cf => cf.ByClassName("#32770")),
+                timeout: TimeSpan.FromSeconds(5)).Result;
+            Assert.IsNotNull(messageBox, "Message box did not appear.");
+
+            var messageLabel = messageBox.FindFirstChild(cf => cf.ByControlType(ControlType.Text)).AsLabel();
+            Assert.IsTrue(messageLabel.Text.Contains(expectedMessage), $"Expected message '{expectedMessage}' was not found.");
+
+            var okButtonCondition = new AndCondition(
+                _automation.ConditionFactory.ByControlType(ControlType.Button),
+                _automation.ConditionFactory.ByName("OK")
+            );
+            var okButton = messageBox.FindFirstChild(okButtonCondition).AsButton();
+            okButton?.Invoke();
+        }
+
+        [TestCleanup]
+        public void Cleanup()
+        {
+            _serverApp?.Close();
+            _clientApp?.Close();
+            _automation?.Dispose();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //[TestClass]
+    //public class ChatApplicationTests
+    //{
+    //    private Application _serverApp;
+    //    private Application _clientApp;
+    //    public UIA3Automation _automation;
+    //    private Window _serverMainWindow;
+    //    private Window _clientMainWindow;
+
+    //    private const string ServerApplicationPath = @"C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Server\Server\bin\Debug\net7.0-windows\Server.exe";
+    //    private const string ClientApplicationPath = @"C:\Users\EthanNguyen\source\repos\[Project IV]Group 3\Shopping App\Client\bin\Debug\net7.0-windows\Client_PC01.exe";
+
+    //    [TestInitialize]
+    //    public void Initialize()
+    //    {
+    //        _automation = new UIA3Automation();
+    //        _serverApp = Application.Launch(ServerApplicationPath);
+    //        _clientApp = Application.Launch(ClientApplicationPath);
+    //        _serverMainWindow = _serverApp.GetMainWindow(_automation);
+    //        _clientMainWindow = _clientApp.GetMainWindow(_automation);
+    //    }
+
+    //    [TestMethod]
+    //    public void TestChatFunctionality()
+    //    {
+    //        Task.Run(() =>
+    //        {
+    //            // Start the server in a separate thread
+    //            _serverApp = Application.Launch(ServerApplicationPath);
+    //            _serverMainWindow = _serverApp.GetMainWindow(_automation);
+    //            var startServerButton = _serverMainWindow.FindFirstDescendant(cf => cf.ByText("StartServer")).AsButton();
+    //            startServerButton.Click();
+    //            HandleMessageBox("Server started");
+    //        });
+
+    //        Task.Run(() =>
+    //        {
+    //            // Connect the client in a separate thread
+    //            _clientApp = Application.Launch(ClientApplicationPath);
+    //            _clientMainWindow = _clientApp.GetMainWindow(_automation);
+    //            var connectServerButton = _clientMainWindow.FindFirstDescendant(cf => cf.ByText("ConnectServer")).AsButton();
+    //            connectServerButton.Click();
+    //            HandleMessageBox("Connected to server");
+    //        });
+
+    //        // Add a delay to ensure the server and client have started and connected
+    //        Thread.Sleep(5000);
+
+    //        // Open the chat on the client side
+    //        var openChatButtonClient = _clientMainWindow.FindFirstDescendant(cf => cf.ByText("OpenChat")).AsButton();
+    //        openChatButtonClient.Click();
+    //        HandleClearHistoryMessageBox();
+
+    //        // Open the chat on the server side
+    //        var openChatButtonServer = _serverMainWindow.FindFirstDescendant(cf => cf.ByText("Openchat")).AsButton();
+    //        openChatButtonServer.Click();
+    //        HandleClearHistoryMessageBox();
+
+    //        // Type and send a message on the client side
+    //        var chatBoxClient = _clientMainWindow.ModalWindows.FirstOrDefault(w => w.Title == "ChatBox");
+    //        var messageTextBoxClient = chatBoxClient.FindFirstDescendant(cf => cf.ByAutomationId("txtMessage")).AsTextBox();
+    //        var sendMessageButtonClient = chatBoxClient.FindFirstDescendant(cf => cf.ByAutomationId("btnSend")).AsButton();
+    //        messageTextBoxClient.Enter("Hello from Client");
+    //        sendMessageButtonClient.Click();
+
+    //        // Type and send a message on the server side
+    //        var chatBoxServer = _serverMainWindow.ModalWindows.FirstOrDefault(w => w.Title == "ServerChatBox");
+    //        var messageTextBoxServer = chatBoxServer.FindFirstDescendant(cf => cf.ByAutomationId("txtMessage")).AsTextBox();
+    //        var sendMessageButtonServer = chatBoxServer.FindFirstDescendant(cf => cf.ByAutomationId("btnSend")).AsButton();
+    //        messageTextBoxServer.Enter("Hello from Server");
+    //        sendMessageButtonServer.Click();
+
+    //        // Verify the message was received on the client side
+    //        var messageListClient = chatBoxClient.FindFirstDescendant(cf => cf.ByAutomationId("lstChat")).AsListBox();
+    //        var lastMessageClient = messageListClient.Items.LastOrDefault();
+    //        Assert.AreEqual("Server: Hello from Server", lastMessageClient?.Text, "The client should receive the message from the server.");
+
+    //        // Verify the message was received on the server side
+    //        var messageListServer = chatBoxServer.FindFirstDescendant(cf => cf.ByAutomationId("lstChat")).AsListBox();
+    //        var lastMessageServer = messageListServer.Items.LastOrDefault();
+    //        Assert.AreEqual("Client: Hello from Client", lastMessageServer?.Text, "The server should receive the message from the client.");
+    //    }
+
+    //    private void HandleClearHistoryMessageBox()
+    //    {
+    //        var clearHistoryMessageBox = Retry.WhileNull(() =>
+    //            _automation.GetDesktop().FindFirstChild(cf => cf.ByText("Clear History")),
+    //            timeout: TimeSpan.FromSeconds(5)).Result;
+
+    //        if (clearHistoryMessageBox != null)
+    //        {
+    //            var noButton = clearHistoryMessageBox.FindFirstChild(cf => cf.ByControlType(ControlType.Button).And(cf.ByName("No"))).AsButton();
+    //            noButton?.Invoke();
+    //        }
+    //    }
+
+
+    //    private void HandleMessageBox(string expectedMessage)
+    //    {
+    //        var messageBox = Retry.WhileNull(() =>
+    //            _automation.GetDesktop().FindFirstChild(cf => cf.ByClassName("#32770")),
+    //            timeout: TimeSpan.FromSeconds(5)).Result;
+    //        Assert.IsNotNull(messageBox, "Message box did not appear.");
+
+    //        var messageLabel = messageBox.FindFirstChild(cf => cf.ByControlType(ControlType.Text)).AsLabel();
+    //        Assert.IsTrue(messageLabel.Text.Contains(expectedMessage), $"Expected message '{expectedMessage}' was not found.");
+
+    //        var okButtonCondition = new AndCondition(
+    //            _automation.ConditionFactory.ByControlType(ControlType.Button),
+    //            _automation.ConditionFactory.ByName("OK")
+    //        );
+    //        var okButton = messageBox.FindFirstChild(okButtonCondition).AsButton();
+    //        okButton?.Invoke();
+    //    }
+
+    //    [TestCleanup]
+    //    public void Cleanup()
+    //    {
+    //        _serverApp?.Close();
+    //        _clientApp?.Close();
+    //        _automation?.Dispose();
+    //    }
+    //}
+
+
     //[TestClass]
     //public class ServerChatboxTests
     //{
